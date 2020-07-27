@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>US Daily Trend</title>
+    <meta charset="utf-8">
+    <script src='https://d3js.org/d3.v5.min.js'></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .content {
+            max-width: 1280;
+            margin: auto;
+        }
+
+        #info {
+            max-width: 80%;
+            margin: auto;
+        }
+
+        #tooltip {
+            opacity: 0;
+            position: absolute;
+            text-align: left;
+            background-color: black;
+            color: white;
+            border: 1px;
+            width: 140px;
+            height: 60px;
+            padding-top: 5px;
+            padding-left: 5px;
+        }
+
+        button {
+            position: relative;
+            background: #f08080;
+            padding-right: 26px;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            margin: 0;
+            padding: 0 12px;
+            width: 60px;
+            cursor: pointer;
+            height: 30px;
+        }
+
+        #play-button {
+            top: -30px;
+            display: none;
+        }
+
+        #next-button {
+            top: -30px;
+        }
+
+        #prev-button {
+            top: -30px;
+        }
+
+        button:hover {
+            background-color: #696969;
+        }
+
+        .ticks {
+            font-size: 10px;
+        }
+
+        .track,
+        .track-inset,
+        .track-overlay {
+            stroke-linecap: round;
+        }
+
+        .track {
+            stroke: #000;
+            stroke-opacity: 0.3;
+            stroke-width: 10px;
+        }
+
+        .track-inset {
+            stroke: #dcdcdc;
+            stroke-width: 8px;
+        }
+
+        .track-overlay {
+            pointer-events: stroke;
+            stroke-width: 50px;
+            stroke: transparent;
+            cursor: crosshair;
+        }
+
+        .handle {
+            fill: #fff;
+            stroke: #000;
+            stroke-opacity: 0.5;
+            stroke-width: 1.25px;
+        }
+
+        #sliderdiv {
+            margin: auto;
+            max-width: 80%;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body onload='init()'>
+    <h1 align="center">A Timeline of the Coronavirus Pandemic - US</h1>
+    <div id="sliderdiv">
+        <button id="play-button">Play</button>
+        <button id="prev-button">Prev</button>
+        <button id="next-button">Next</button>
+    </div>
+    <div class="content">
+        <div id="my_dataviz"></div>
+        <div id="tooltip"></div>
+    </div>
+    <div id="info"></div>
+
+    <script>
+        async function init() {
+
+            const data = await d3.csv("assets/US-Daily.csv",
+                function (d) {
+                    return { date: d3.timeParse("%m/%d/%Y")(d.Date), newCases: +d.NewCases, newDeaths: +d.NewDeaths, totalCases: d.TotalCases, totalDeaths: d.TotalDeaths }
+                },
+            );
+
+            data.sort(function (b, a) { return a.date - b.date });
+            var currentSlide = 0;
+            var transitionTimer = 100;
+
+            // set the dimensions and margins of the graph
+            var margin = { top: 10, right: 60, bottom: 30, left: 60 },
+                width = 1280 - margin.left - margin.right,
+                height = 600 - margin.top - margin.bottom;
+
+            // append the svg object to the body of the page
+            var svg = createChartSVG();
+
+            var slmargin = { top: 25, right: 30, bottom: 0, left: 20 },
+                slwidth = 600 - slmargin.left - slmargin.right,
+                slheight = 100 - slmargin.top - slmargin.bottom;
+
+            var formatDateIntoYear = d3.timeFormat("%Y");
+            var formatDate = d3.timeFormat("%b %Y");
+            var parseDate = d3.timeFormat("%m/%d/%y");
+            var timeParse = d3.timeParse("%m/%d/%Y");
+
+            var chartStartDate = new Date(2020, 2, 3);
+            var startDate = d3.min(data, d => d.date);
+            var endDate = d3.max(data, d => d.date);
+            var keyDates = ["4/17/2020", "4/26=7/2020", "6/22/2020", "7/25/2020"];
+
+            const diffDays = Math.ceil((endDate - startDate)) / (1000 * 60 * 60 * 24);
+
+            console.log(startDate);
+            console.log(endDate);
+            console.log("diffDays: " + diffDays);
+
+            var moving = false;
+            var currentValue = 0;
+            var targetValue = slwidth - slmargin.right - slmargin.left - 50
+
+            var playButton = d3.select("#play-button");
+            var prevButton = d3.select("#prev-button");
+            var nextButton = d3.select("#next-button");
+
+            var sliderSVG, xsl, slider, handle, label;
+            createSlider();
+
+            ////////// plot //////////
+
+            /* var plot = svg.append("g")
+                .attr("class", "plot")
+                .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); */
+
+            var dataset = data;
+            var filteredData = dataset.filter(function (d) {
+                return d.date < chartStartDate;
+            });
+            console.log("filteredData: " + filteredData.length);
+
+            // Add X axis --> it is a date format
+            var x = d3.scaleTime()
+                .domain(d3.extent(data, function (d) { return d.date; }))
+                .range([0, width]);
+            var xAxis = svg.append("g")
+                .attr("transform", "translate(0," + height + ")")
+                .call(d3.axisBottom(x));
+
+            var maxCases = d3.max(data, d => d.newCases);
+            var minCases = d3.min(data, d => d.newCases);
+
+            console.log("min/max cases:" + minCases + " / " + maxCases);
+
+            // Add Y axis
+            var y = d3.scaleLinear()//og().base(2)
+                .domain([minCases, maxCases])
+                .range([height, 0]);
+            var yAxis = svg.append("g")
+                .call(d3.axisLeft(y));
+
+            updateYAxis(chartStartDate);
+            var casesPlot = casesLine(filteredData);
+            var deathsPlot = deathsLine(filteredData);
+
+            playButton.on("click", function () {
+                var button = d3.select(this);
+                if (button.text() == "Pause") {
+                    moving = false;
+                    clearInterval(timer);
+                    // timer = 0;
+                    button.text("Play");
+                } else {
+                    moving = true;
+                    timer = setInterval(step, 500);
+                    button.text("Pause");
+                }
+                console.log("Slider moving: " + moving);
+            })
+
+            nextButton.on("click", function () {
+                if (++currentSlide < keyDates.length) {
+                    //update(timeParse(keyDates[currentSlide]));
+                    navTimer = setInterval(moveStep, transitionTimer);
+                } else {
+                    currentSlide = keyDates.length - 1;
+                }
+                infoUpdate(currentSlide);
+            })
+
+            function moveStep() {
+                console.log("----Step - currentValue: " + currentValue)
+                if (currentValue < 0) currentValue = 1;
+                update(xsl.invert(currentValue));
+                currentValue = currentValue + (targetValue / diffDays);
+                if (xsl.invert(currentValue) >= timeParse(keyDates[currentSlide])) {
+                    moving = false;
+                    //currentValue = 0;
+                    clearInterval(navTimer);
+                    console.log("Slider moving: " + moving);
+                }
+            }
+
+            prevButton.on("click", function () {
+                console.log("currentSlide:" + currentSlide);
+                currentSlide = currentSlide - 1;
+                if (currentSlide >= 0 && currentSlide < keyDates.length) {
+                    currentValue = xsl(keyDates[currentSlide]);
+                    update(timeParse(keyDates[currentSlide]));
+                } else {
+                    currentSlide = 0;
+                }
+                infoUpdate(currentSlide);
+            })
+
+            function infoUpdate(slide) {
+                d3.select("#info")
+                    .text("Current slide: " + slide + " / " + (keyDates.length - 1))
+            }
+
+
+            function step() {
+                console.log("----Step - currentValue: " + currentValue)
+                if (currentValue < 0) currentValue = 1;
+                update(xsl.invert(currentValue));
+                currentValue = currentValue + (targetValue / diffDays);
+                if (currentValue > targetValue) {
+                    moving = false;
+                    currentValue = 0;
+                    clearInterval(timer);
+                    // timer = 0;
+                    playButton.text("Play");
+                    console.log("Slider moving: " + moving);
+                }
+            }
+
+            function casesLine(data) {
+                // Line
+                line = svg.append("path")
+                    .datum(data)
+                    .attr("fill", "none")
+                    .attr("stroke", "steelblue")
+                    .attr("stroke-width", 3.5)
+                    .attr("d", d3.line()
+                        .x(function (d) { return x(d.date) })
+                        .y(function (d) { return y(d.newCases) })
+                    )
+                return line;
+            }
+
+            function deathsLine(data) {
+                // Line
+                line = svg.append("path")
+                    .datum(data)
+                    .attr("fill", "none")
+                    .attr("stroke", "red")
+                    .attr("stroke-width", 3.5)
+                    .attr("d", d3.line()
+                        .x(function (d) { return x(d.date) })
+                        .y(function (d) { return y(d.newDeaths) })
+                    )
+                return line;
+            }
+
+            function updateYAxis(chartStartDate) {
+                if (chartStartDate < timeParse("3/6/2020")) {
+                    console.log("YESSss");
+                    y = d3.scaleLinear()
+                        .domain([0, 60])
+                        .range([height, 0]);
+                    yAxis.transition().duration(500).call(d3.axisLeft(y));
+                } else {
+                    y = d3.scaleLinear()
+                        .domain([minCases, maxCases])
+                        .range([height, 0]);
+                    yAxis.transition().duration(500).call(d3.axisLeft(y));
+                }
+
+            }
+
+            function update(h) {
+                if (currentValue < 0) {
+                    currentValue = 2;
+                    h = xsl.invert(currentValue);
+                }
+                handle.attr("cx", xsl(h));
+                label
+                    .attr("x", xsl(h))
+                    .text(parseDate(h));
+
+                // filter data set and redraw plot
+                var filteredData = dataset.filter(function (d) {
+                    return d.date < h;
+                });
+                console.log("filtered dataset Size: " + filteredData.length);
+
+                /* maxCases = d3.max(filteredData, d => d.newCases);
+                minCases = d3.min(filteredData, d => d.newCases);
+                console.log("min/max cases:" + minCases + " / " + maxCases); */
+                updateYAxis(h);
+                /*                 if (h < timeParse("3/3/2020")) {
+                                    console.log("YESSss");
+                                    y = d3.scaleLinear()
+                                        .domain([0, 20])
+                                        .range([height, 0]);
+                                    yAxis.transition().duration(500).call(d3.axisLeft(y));
+                                } else {
+                                    y = d3.scaleLinear()
+                                        .domain([minCases, maxCases])
+                                        .range([height, 0]);
+                                    yAxis.transition().duration(500).call(d3.axisLeft(y));
+                                } */
+
+
+                /* else if (h < timeParse("4/16/2020")) {
+                    console.log("YESSss");
+                    y = d3.scaleLinear()
+                        .domain([0, 36000])
+                        .range([height, 0]);
+                    yAxis.transition().duration(500).call(d3.axisLeft(y));
+                } else if (h < timeParse("4/27/2020")) {
+                    console.log("YESSss");
+                    y = d3.scaleLinear()
+                        .domain([0, 50000])
+                        .range([height, 0]);
+                    yAxis.transition().duration(500).call(d3.axisLeft(y));
+                } else {
+                    y = d3.scaleLinear()
+                        .domain([minCases, maxCases])
+                        .range([height, 0]);
+                    yAxis.transition().duration(500).call(d3.axisLeft(y));
+                } */
+
+                /* //Update X Axis
+                x = d3.scaleTime()
+                    .domain(d3.extent(filteredData, function (d) { return d.date; }))
+                    .range([0, width]);
+                xAxis.transition().duration(500).call(d3.axisBottom(x));
+                //Update Y Axis
+                y = d3.scaleLinear()//og().base(2)
+                    .domain([minCases, maxCases])
+                    .range([height, 0]);
+                //y.domain([minCases, maxCases]);
+                yAxis.transition().duration(500).call(d3.axisLeft(y)); */
+
+                casesPlot.datum(filteredData)
+                    //.transition().duration(transitionTimer)
+                    .attr("d", d3.line()
+                        .x(function (d) { return x(d.date) })
+                        .y(function (d) { return y(d.newCases) })
+                    );
+
+                deathsPlot.datum(filteredData)
+                    //.transition().duration(transitionTimer)
+                    .attr("d", d3.line()
+                        .x(function (d) { return x(d.date) })
+                        .y(function (d) { return y(d.newDeaths) })
+                    );
+            }
+
+            function dateToString(d) {
+                return d.toISOString().substring(0, 10);
+            }
+
+            function createSlider() {
+                xsl = d3.scaleTime().domain([startDate, endDate]).range([0, targetValue]).clamp(true);
+                sliderSVG = d3.select("#sliderdiv")
+                    .append("svg")
+                    .attr("width", slwidth)
+                    .attr("height", slheight)
+                    .append("g")
+                    .attr("transform",
+                        "translate(" + slmargin.left + "," + slmargin.top + ")");
+
+                slider = sliderSVG.append("g")
+                    .attr("class", "slider")
+                    .attr("transform", "translate(" + slmargin.left + "," + slheight / 5 + ")");
+
+                slider.append("line")
+                    .attr("class", "track")
+                    .attr("x1", xsl.range()[0])
+                    .attr("x2", xsl.range()[1])
+                    .select(function () { return this.parentNode.appendChild(this.cloneNode(true)); })
+                    .attr("class", "track-inset")
+                    .select(function () { return this.parentNode.appendChild(this.cloneNode(true)); })
+                    .attr("class", "track-overlay")
+                    .call(d3.drag()
+                        .on("start.interrupt", function () { slider.interrupt(); })
+                        .on("start drag", function () {
+                            currentValue = d3.event.x;
+                            update(xsl.invert(currentValue));
+                        })
+                    );
+
+                slider.insert("g", ".track-overlay")
+                    .attr("class", "ticks")
+                    .attr("transform", "translate(0," + 18 + ")")
+                    .selectAll("text")
+                    .data(xsl.ticks(10))
+                    .enter()
+                    .append("text")
+                    .attr("x", xsl)
+                    .attr("y", 10)
+                    .attr("text-anchor", "middle")
+                    .text(function (d) { return formatDate(d); });
+
+                handle = slider.insert("circle", ".track-overlay")
+                    .attr("class", "handle")
+                    .attr("r", 9);
+
+                label = slider.append("text")
+                    .attr("class", "label")
+                    .attr("text-anchor", "middle")
+                    .text(parseDate(startDate))
+                    .attr("transform", "translate(0," + (-25) + ")")
+            }
+
+            function createChartSVG() {
+                return d3.select("#my_dataviz")
+                    .append("svg")
+                    .attr("id", "chartsvg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                    .append("g")
+                    .attr("transform",
+                        "translate(" + margin.left + "," + margin.top + ")");
+            }
+        }
+    </script>
+</body>
+
+</html>

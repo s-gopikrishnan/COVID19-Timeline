@@ -3,11 +3,52 @@
 
 <head>
     <meta charset="utf-8">
-    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* On mouse hover, lighten state color */
+        path:hover {
+            fill-opacity: .7;
+        }
+
+        /* Style for Custom Tooltip */
+        div.tooltip {
+            position: absolute;
+            text-align: center;
+            width: 60px;
+            height: 28px;
+            padding: 2px;
+            font: 12px sans-serif;
+            color: white;
+            background: black;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+
+        /* Legend Font Style */
+        body {
+            font: 11px sans-serif;
+            background-color: black;
+            color: white;
+        }
+
+        text {
+            color: white;
+        }
+
+        /* Legend Position Style */
+        .legend {
+            position: absolute;
+            left: 800px;
+            top: 350px;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="map-div"></div>
 </body>
 
 </html>
