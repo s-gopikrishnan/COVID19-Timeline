@@ -8,12 +8,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         .content {
-            max-width: 1280;
+            max-width: 100%;
             margin: auto;
         }
 
         #info {
+            float: right;
+            position: relative;
+            max-width: 30%;
+            margin: auto;
+        }
+
+        #sliderdiv {
+            margin: auto;
             max-width: 80%;
+            align-content: center;
+        }
+
+        #my_dataviz {
+            float: left;
+            position: relative;
+            max-width: 70%;
             margin: auto;
         }
 
@@ -61,6 +76,10 @@
             background-color: #696969;
         }
 
+        button:disabled {
+            background-color: #d6d6d6;
+        }
+
         .ticks {
             font-size: 10px;
         }
@@ -96,10 +115,9 @@
             stroke-width: 1.25px;
         }
 
-        #sliderdiv {
-            margin: auto;
-            max-width: 80%;
-            align-content: center;
+        circle {
+            fill: red;
+            stroke: black;
         }
     </style>
 </head>
@@ -112,11 +130,10 @@
         <button id="next-button">Next</button>
     </div>
     <div class="content">
+        <div id="info"></div>
         <div id="my_dataviz"></div>
         <div id="tooltip"></div>
     </div>
-    <div id="info"></div>
-
     <script>
         async function init() {
 
@@ -129,11 +146,14 @@
             data.sort(function (b, a) { return a.date - b.date });
             var currentSlide = 0;
             var transitionTimer = 100;
+            var infoMap = [];
+            var coords = [];
+            initInfoMap();
 
             // set the dimensions and margins of the graph
             var margin = { top: 10, right: 60, bottom: 30, left: 60 },
-                width = 1280 - margin.left - margin.right,
-                height = 600 - margin.top - margin.bottom;
+                width = 960 - margin.left - margin.right,
+                height = 500 - margin.top - margin.bottom;
 
             // append the svg object to the body of the page
             var svg = createChartSVG();
@@ -147,10 +167,10 @@
             var parseDate = d3.timeFormat("%m/%d/%y");
             var timeParse = d3.timeParse("%m/%d/%Y");
 
-            var chartStartDate = new Date(2020, 2, 3);
+            var chartStartDate = new Date(2020, 1, 3);
             var startDate = d3.min(data, d => d.date);
             var endDate = d3.max(data, d => d.date);
-            var keyDates = ["4/17/2020", "4/26=7/2020", "6/22/2020", "7/25/2020"];
+            var keyDates = ["1/25/2020","3/3/2020", "4/18/2020", "5/2/2020", "6/29/2020", "7/26/2020"];
 
             const diffDays = Math.ceil((endDate - startDate)) / (1000 * 60 * 60 * 24);
 
@@ -165,16 +185,12 @@
             var playButton = d3.select("#play-button");
             var prevButton = d3.select("#prev-button");
             var nextButton = d3.select("#next-button");
-
+            document.getElementById("prev-button").disabled = true;
+            ////////// Slider //////////
             var sliderSVG, xsl, slider, handle, label;
             createSlider();
 
             ////////// plot //////////
-
-            /* var plot = svg.append("g")
-                .attr("class", "plot")
-                .attr("transform", "translate(" + margin.left + "," + margin.top + ")"); */
-
             var dataset = data;
             var filteredData = dataset.filter(function (d) {
                 return d.date < chartStartDate;
@@ -202,8 +218,10 @@
                 .call(d3.axisLeft(y));
 
             updateYAxis(chartStartDate);
+            updateSlider(chartStartDate);
             var casesPlot = casesLine(filteredData);
             var deathsPlot = deathsLine(filteredData);
+            infoUpdate(currentSlide);
 
             playButton.on("click", function () {
                 var button = d3.select(this);
@@ -223,9 +241,10 @@
             nextButton.on("click", function () {
                 if (++currentSlide < keyDates.length) {
                     //update(timeParse(keyDates[currentSlide]));
-                    navTimer = setInterval(moveStep, transitionTimer);
+                    navTimer = setInterval(moveStep, 50);
                 } else {
                     currentSlide = keyDates.length - 1;
+                    document.getElementById("next-button").disabled = true;
                 }
                 infoUpdate(currentSlide);
             })
@@ -234,10 +253,13 @@
                 console.log("----Step - currentValue: " + currentValue)
                 if (currentValue < 0) currentValue = 1;
                 update(xsl.invert(currentValue));
+                document.getElementById("next-button").disabled = true;
                 currentValue = currentValue + (targetValue / diffDays);
                 if (xsl.invert(currentValue) >= timeParse(keyDates[currentSlide])) {
                     moving = false;
                     //currentValue = 0;
+                    document.getElementById("next-button").disabled = false;
+                    annotate(chartStartDate, 12)
                     clearInterval(navTimer);
                     console.log("Slider moving: " + moving);
                 }
@@ -247,17 +269,22 @@
                 console.log("currentSlide:" + currentSlide);
                 currentSlide = currentSlide - 1;
                 if (currentSlide >= 0 && currentSlide < keyDates.length) {
+                    document.getElementById("prev-button").disabled = true;
+                    document.getElementById("next-button").disabled = false;
                     currentValue = xsl(keyDates[currentSlide]);
                     update(timeParse(keyDates[currentSlide]));
                 } else {
+                    document.getElementById("prev-button").disabled = false;
                     currentSlide = 0;
                 }
                 infoUpdate(currentSlide);
             })
 
             function infoUpdate(slide) {
+
                 d3.select("#info")
-                    .text("Current slide: " + slide + " / " + (keyDates.length - 1))
+                    .html(infoMap[slide].data);
+                //.text("Current slide: " + slide + " / " + (keyDates.length - 1) + "------" + " Date: " + keyDates[slide])
             }
 
 
@@ -304,11 +331,11 @@
                 return line;
             }
 
-            function updateYAxis(chartStartDate) {
-                if (chartStartDate < timeParse("3/6/2020")) {
+            function updateYAxis(startDate) {
+                if (startDate < timeParse("3/4/2020")) {
                     console.log("YESSss");
                     y = d3.scaleLinear()
-                        .domain([0, 60])
+                        .domain([0, 40])
                         .range([height, 0]);
                     yAxis.transition().duration(500).call(d3.axisLeft(y));
                 } else {
@@ -318,6 +345,14 @@
                     yAxis.transition().duration(500).call(d3.axisLeft(y));
                 }
 
+            }
+
+            function updateSlider(h) {
+                handle.attr("cx", xsl(h));
+                label
+                    .attr("x", xsl(h))
+                    .text(parseDate(h));
+                currentValue = xsl(h);
             }
 
             function update(h) {
@@ -325,83 +360,62 @@
                     currentValue = 2;
                     h = xsl.invert(currentValue);
                 }
-                handle.attr("cx", xsl(h));
-                label
-                    .attr("x", xsl(h))
-                    .text(parseDate(h));
-
+                updateSlider(h);
                 // filter data set and redraw plot
                 var filteredData = dataset.filter(function (d) {
                     return d.date < h;
                 });
                 console.log("filtered dataset Size: " + filteredData.length);
-
-                /* maxCases = d3.max(filteredData, d => d.newCases);
-                minCases = d3.min(filteredData, d => d.newCases);
-                console.log("min/max cases:" + minCases + " / " + maxCases); */
+                var tempDate, tempCases;
                 updateYAxis(h);
-                /*                 if (h < timeParse("3/3/2020")) {
-                                    console.log("YESSss");
-                                    y = d3.scaleLinear()
-                                        .domain([0, 20])
-                                        .range([height, 0]);
-                                    yAxis.transition().duration(500).call(d3.axisLeft(y));
-                                } else {
-                                    y = d3.scaleLinear()
-                                        .domain([minCases, maxCases])
-                                        .range([height, 0]);
-                                    yAxis.transition().duration(500).call(d3.axisLeft(y));
-                                } */
-
-
-                /* else if (h < timeParse("4/16/2020")) {
-                    console.log("YESSss");
-                    y = d3.scaleLinear()
-                        .domain([0, 36000])
-                        .range([height, 0]);
-                    yAxis.transition().duration(500).call(d3.axisLeft(y));
-                } else if (h < timeParse("4/27/2020")) {
-                    console.log("YESSss");
-                    y = d3.scaleLinear()
-                        .domain([0, 50000])
-                        .range([height, 0]);
-                    yAxis.transition().duration(500).call(d3.axisLeft(y));
-                } else {
-                    y = d3.scaleLinear()
-                        .domain([minCases, maxCases])
-                        .range([height, 0]);
-                    yAxis.transition().duration(500).call(d3.axisLeft(y));
-                } */
-
-                /* //Update X Axis
-                x = d3.scaleTime()
-                    .domain(d3.extent(filteredData, function (d) { return d.date; }))
-                    .range([0, width]);
-                xAxis.transition().duration(500).call(d3.axisBottom(x));
-                //Update Y Axis
-                y = d3.scaleLinear()//og().base(2)
-                    .domain([minCases, maxCases])
-                    .range([height, 0]);
-                //y.domain([minCases, maxCases]);
-                yAxis.transition().duration(500).call(d3.axisLeft(y)); */
-
                 casesPlot.datum(filteredData)
-                    //.transition().duration(transitionTimer)
                     .attr("d", d3.line()
-                        .x(function (d) { return x(d.date) })
-                        .y(function (d) { return y(d.newCases) })
+                        .x(function (d) {
+                            tempDate = d.date;
+                            return x(d.date);
+                        })
+                        .y(function (d) {
+                            tempCases = d.newCases;
+                            return y(d.newCases)
+                        })
                     );
-
                 deathsPlot.datum(filteredData)
-                    //.transition().duration(transitionTimer)
                     .attr("d", d3.line()
                         .x(function (d) { return x(d.date) })
                         .y(function (d) { return y(d.newDeaths) })
                     );
-            }
+                /* if (currentSlide - 1 == 0) {
+                    casesPlot.datum(filteredData)
+                        .attr("d", d3.line()
+                            .x(function (d) {
+                                tempDate = d.date;
+                                return x(d.date);
+                            })
+                            .y(function (d) {
+                                tempCases = d.newCases;
+                                return y(d.newCases)
+                            })
+                        );
+                    deathsPlot.datum(filteredData)
+                        .attr("d", d3.line()
+                            .x(function (d) { return x(d.date) })
+                            .y(function (d) { return y(d.newDeaths) })
+                        );
+                } else {
+                    casesPlot.datum(filteredData)
+                        .attr("d", d3.line()
+                            .x(function (d) { return x(d.date) })
+                            .y(function (d) { return y(d.newCases) })
+                        );
+                    deathsPlot.datum(filteredData)
+                        .attr("d", d3.line()
+                            .x(function (d) { return x(d.date) })
+                            .y(function (d) { return y(d.newDeaths) })
+                        );
+                } */
+                //console.log("tempDate:" + tempDate + " tempCases: " + tempCases);
 
-            function dateToString(d) {
-                return d.toISOString().substring(0, 10);
+
             }
 
             function createSlider() {
@@ -466,6 +480,34 @@
                     .append("g")
                     .attr("transform",
                         "translate(" + margin.left + "," + margin.top + ")");
+            }
+
+            function initInfoMap() {
+                infoMap = [];
+                infoMap.push({"data":"<h3>Jan. 21, 2020: First confirmed case in the United States</h3><p>A man in his 30s from Washington state, who traveled to Wuhan, is diagnosed with novel coronavirus. Japan, South Korea and Thailand also report their first cases one day prior.</p>"});
+                infoMap.push({"data":"<h3>Feb. 29, 2020: 1st death reported in United States</h3><p>The first COVID-19 death is reported in Washington state, after a man with no travel history to China dies on Feb. 28 at Evergreen Health Medical Center in Kirkland, Washington.Two deaths that occurred Feb. 26 at a nearby nursing home would later be recorded as the first COVID-19 deaths to occur in the United States. Later still, a death in Santa Clara, California, on Feb. 6 would be deemed the country's first COVID-19 fatality after an April autopsy.</p>"});
+                infoMap.push({"data":"<h3>Mar. 13, 2020: Trump declares national emergency</h3><p>President Donald Trump declares a U.S. national emergency, which he says will open up $50 billion in federal funding to fight COVID-19.</p>"});
+                infoMap.push({"data":"<h3>Apr. 16, 2020: Max deaths in one day</h3><p>The country reports a record high of 4,928 in one day.</p>"});
+                infoMap.push({"data":"<h3>Jun. 1, 2020: Lift of Stay-at-home order</h3><p>Multiple states have lifted the stay-at-home order; outdoor gatherings of up to a hundred are allowed. Meanwhile, the total number of cases continued to increase</p>"});
+                //infoMap.push({"data":"<h3>June 29, 2020</h3><p>The US government starts Lockdown process across the country</p><h3>June 27, 2020</h3><p>The US government eases the Lockdown and the cases starts to rise across the country</p>"});
+                infoMap.push({"data":"<h3>Jul. 25, 2020: 78,427 Cases in one day</h3><p>Nationwide, cases increased by 78,427, the highest daily count on record, according to data compiled by Johns Hopkins University.</p>"});
+
+                coords.push({"x": "1/21/2020", "y": 1});
+                coords.push({"x": "2/29/2020", "y": 1});
+                coords.push({"x": "3/13/2020", "y": 351});
+                coords.push({"x": "4/16/2020", "y": 4928});
+                //coords.push({"x": "4/28/2020", "y": 22541});
+                coords.push({"x": "6/1/2020", "y": 19807});
+                coords.push({"x": "7/25/2020", "y": 78427});
+            }
+
+            function annotate(date, cases) {
+                console.log("date" + x(date) + " cases: " + y(cases));
+                svg.selectAll("circle").remove();
+                svg.append("circle")
+                    .attr("cx", x(date))
+                    .attr("cy", y(1))
+                    .attr("r", 5)
             }
         }
     </script>
