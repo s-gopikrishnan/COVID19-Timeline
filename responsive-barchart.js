@@ -1,84 +1,75 @@
 function barchart(states) {
     // set the dimensions and margins of the graph
-    var stmargin = {
+    var barmargin = {
             top: 20,
             right: 30,
             bottom: 100,
             left: 30
         },
-        width = 820 - stmargin.left - stmargin.right,
-        height = 320 - stmargin.top - stmargin.bottom;
+        bwidth = 820 - barmargin.left - barmargin.right,
+        bheight = 320 - barmargin.top - barmargin.bottom;
 
     // append the svg object to the body of the page
-    var svg = createChartSVG();
+    var barsvg = createBarChartSVG();
 
 
-    ////////// plot //////////
+    var bdataset = states;
 
-    var plot = svg.append("g")
-        .attr("class", "plot")
-        .attr("transform", "translate(" + stmargin.left + "," + stmargin.top + ")");
-
-    var dataset = states;
-    var formatDateIntoYear = d3.timeFormat("%Y");
-    var formatDate = d3.timeFormat("%b %Y");
-    var parseDate = d3.timeFormat("%m/%d/%y");
-    var startDate = d3.min(states, d => d.date);
-    var endDate = d3.max(states, d => d.date);
-    var filteredData = dataset.filter(function(d) {
-        return d.dateStr == dateToString(startDate);
+    var bstartDate = d3.min(states, d => d.date);
+    var filteredStateData = bdataset.filter(function(d) {
+        return d.dateStr == dateToString(bstartDate);
     });
-    console.log("filteredData: " + filteredData.length);
+    console.log("filteredData: " + filteredStateData.length);
 
 
-    var xdomain = filteredData.map(function(d) {
+    var xdomainBar = filteredStateData.map(function(d) {
         return d.state;
     });
-    var x = d3.scaleBand()
-        .range([0, width])
-        .domain(xdomain)
+    var xscaleBar = d3.scaleBand()
+        .range([0, bwidth])
+        .domain(xdomainBar)
         .padding(0.2);
-    var xAxis = svg.append("g")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x));
-    xAxis
+    var xAxisBar = barsvg.append("g")
+        .attr("transform", "translate(0," + bheight + ")")
+        .call(d3.axisBottom(xscaleBar));
+    xAxisBar
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end");
 
-    console.log("Data size to plot:" + filteredData.length)
-    var maxCases = d3.max(filteredData, d => d.cases);
-    var minCases = d3.min(filteredData, d => d.cases);
+    console.log("Data size to plot:" + filteredStateData.length)
+    var maxCasesBar = d3.max(filteredStateData, d => d.cases);
+    var minCasesBar = d3.min(filteredStateData, d => d.cases);
 
-    console.log("min/max cases:" + minCases + " / " + maxCases);
+    console.log("min/max cases:" + minCasesBar + " / " + maxCasesBar);
 
     // Add Y axis
-    var y = d3.scaleLinear() //og().base(2)
-        .domain([minCases, maxCases])
-        .range([height, 0]);
-    var yAxis = svg.append("g")
-        .call(d3.axisLeft(y));
+    var yscaleBar = d3.scaleLinear() //og().base(2)
+        .domain([minCasesBar, maxCasesBar])
+        .range([bheight, 0]);
+    var yAxisBar = barsvg.append("g")
+        .call(d3.axisLeft(yscaleBar));
 
-    drawPlot(filteredData);
+    drawBarchart(filteredStateData);
 
-    function drawPlot(data) {
+    function drawBarchart(data) {
         // Bars
-        svg.selectAll("rect")
+        barsvg.selectAll("rect")
             .data(data)
             .enter()
             .append("rect")
             .attr("x", function(d) {
-                return x(d.state);
+                return xscaleBar(d.state);
             })
             .attr("y", function(d) {
-                return y(d.cases);
+                return yscaleBar(d.cases);
             })
-            .attr("width", x.bandwidth())
+            .attr("width", xscaleBar.bandwidth())
             .attr("height", function(d) {
-                console.log("height: " + height + "\n" +
+                console.log("height: " + bheight + "\n" +
                     "d.cases: " + d.cases + "\n" +
-                    "y(d.cases): " + y(d.cases) + "\n");
-                return height - y(d.cases);
+                    "y(d.cases): " + yscaleBar(d.cases) + "\n");
+                return bheight - yscaleBar(d.cases);
             })
             .attr("fill", "#69b3a2")
             .exit().remove()
@@ -88,7 +79,7 @@ function barchart(states) {
     function updateBars(h) {
 
         // filter data set and redraw plot
-        var filteredData = dataset.filter(function(d) {
+        var filteredData = bdataset.filter(function(d) {
             return d.dateStr == dateToString(h);
         });
         console.log("filtered dataset Size: " + filteredData.length);
@@ -100,13 +91,13 @@ function barchart(states) {
             return a.cases - b.cases
         });
 
-        maxCases = d3.max(filteredData, d => d.cases);
-        minCases = d3.min(filteredData, d => d.cases);
-        console.log("min/max cases:" + minCases + " / " + maxCases);
+        maxCasesBar = d3.max(filteredData, d => d.cases);
+        minCasesBar = d3.min(filteredData, d => d.cases);
+        console.log("min/max cases:" + minCasesBar + " / " + maxCasesBar);
 
         //Update X Axis
-        x = d3.scaleBand()
-            .range([0, width])
+        xscaleBar = d3.scaleBand()
+            .range([0, bwidth])
             .domain(filteredData.map(function(d) {
                 return d.state;
             }))
@@ -114,17 +105,17 @@ function barchart(states) {
         //xAxis.exit().remove();
 
         //x.domain(filteredData.map(function (d) { return d.state; }));
-        xAxis.transition().duration(500).call(d3.axisBottom(x)).selectAll("text")
+        xAxisBar.transition().duration(500).call(d3.axisBottom(xscaleBar)).selectAll("text")
             .attr("transform", "translate(-10,0)rotate(-45)")
             .style("text-anchor", "end");
         //Update Y Axis
-        y = d3.scaleLinear() //og().base(2)
-            .domain([minCases, maxCases])
-            .range([height, 0]);
+        yscaleBar = d3.scaleLinear() //og().base(2)
+            .domain([minCasesBar, maxCasesBar])
+            .range([bheight, 0]);
         //y.domain([minCases, maxCases]);
-        yAxis.transition().duration(500).call(d3.axisLeft(y));
+        yAxisBar.transition().duration(500).call(d3.axisLeft(yscaleBar));
 
-        var updatedSvg = svg.selectAll("rect")
+        var updatedSvg = barsvg.selectAll("rect")
             .data(filteredData);
         updatedSvg.exit().remove();
         // update bars
@@ -135,17 +126,17 @@ function barchart(states) {
             .transition()
             .duration(500)
             .attr("x", function(d) {
-                return x(d.state);
+                return xscaleBar(d.state);
             })
             .attr("y", function(d) {
-                return y(d.cases);
+                return yscaleBar(d.cases);
             })
-            .attr("width", x.bandwidth())
+            .attr("width", xscaleBar.bandwidth())
             .attr("height", function(d) {
-                console.log("height: " + height + "\n" +
+                console.log("height: " + bheight + "\n" +
                     "d.cases: " + d.cases + "\n" +
-                    "y(d.cases): " + y(d.cases) + "\n");
-                return height - y(d.cases);
+                    "y(d.cases): " + yscaleBar(d.cases) + "\n");
+                return bheight - yscaleBar(d.cases);
             })
             .attr("fill", "#69b3a2")
 
@@ -156,15 +147,15 @@ function barchart(states) {
         //var str = d.getYear() + "-" + d.getMonth() + 
     }
 
-    function createChartSVG() {
+    function createBarChartSVG() {
         return d3.select("#my_barchart")
             .append("svg")
             .attr("id", "chartsvg")
-            .attr("width", width + stmargin.left + stmargin.right)
-            .attr("height", height + stmargin.top + stmargin.bottom)
+            .attr("width", bwidth + barmargin.left + barmargin.right)
+            .attr("height", bheight + barmargin.top + barmargin.bottom)
             .append("g")
             .attr("transform",
-                "translate(" + stmargin.left + "," + stmargin.top + ")");
+                "translate(" + barmargin.left + "," + barmargin.top + ")");
     }
 
 }
