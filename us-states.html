@@ -12,7 +12,7 @@
             max-width: 1280;
             margin: auto;
         }
-
+        
         #tooltip {
             opacity: 0;
             position: absolute;
@@ -25,7 +25,7 @@
             padding-top: 5px;
             padding-left: 5px;
         }
-
+        
         #play-button {
             position: relative;
             top: -30px;
@@ -40,52 +40,51 @@
             cursor: pointer;
             height: 30px;
         }
-
+        
         #play-button:hover {
             background-color: #696969;
         }
-
+        
         .ticks {
             font-size: 10px;
         }
-
+        
         .track,
         .track-inset,
         .track-overlay {
             stroke-linecap: round;
         }
-
+        
         .track {
             stroke: #000;
             stroke-opacity: 0.3;
             stroke-width: 10px;
         }
-
+        
         .track-inset {
             stroke: #dcdcdc;
             stroke-width: 8px;
         }
-
+        
         .track-overlay {
             pointer-events: stroke;
             stroke-width: 50px;
             stroke: transparent;
             cursor: crosshair;
         }
-
+        
         .handle {
             fill: #fff;
             stroke: #000;
             stroke-opacity: 0.5;
             stroke-width: 1.25px;
         }
-
+        
         #sliderdiv {
             margin: auto;
             max-width: 80%;
             align-content: center;
         }
-
     </style>
 </head>
 
@@ -94,7 +93,7 @@
     <div id="sliderdiv">
         <button id="play-button">Play</button>
     </div>
-    <div class="content">        
+    <div class="content">
         <div id="my_dataviz"></div>
         <div id="tooltip"></div>
     </div>
@@ -102,23 +101,41 @@
     <script>
         async function init() {
 
-            const data = await d3.csv("assets/us-states.csv",
-                function (d) {
-                    return { date: d3.timeParse("%Y-%m-%d")(d.date), cases: +d.cases, deaths: +d.deaths, dateStr: d.date, state: d.state }
+            const states = await d3.csv("assets/us-states.csv",
+                function(d) {
+                    return {
+                        date: d3.timeParse("%Y-%m-%d")(d.date),
+                        cases: +d.cases,
+                        deaths: +d.deaths,
+                        dateStr: d.date,
+                        state: d.state
+                    }
                 },
             );
 
-            data.sort(function (b, a) { return a.cases - b.cases });
+            states.sort(function(b, a) {
+                return a.cases - b.cases
+            });
 
             // set the dimensions and margins of the graph
-            var margin = { top: 20, right: 60, bottom: 100, left: 60 },
-                width = 1280 - margin.left - margin.right,
-                height = 600 - margin.top - margin.bottom;
+            var stmargin = {
+                    top: 20,
+                    right: 60,
+                    bottom: 100,
+                    left: 60
+                },
+                width = 1000 - stmargin.left - stmargin.right,
+                height = 500 - stmargin.top - stmargin.bottom;
 
             // append the svg object to the body of the page
             var svg = createChartSVG();
 
-            var slmargin = { top: 25, right: 30, bottom: 0, left: 20 },
+            var slmargin = {
+                    top: 25,
+                    right: 30,
+                    bottom: 0,
+                    left: 20
+                },
                 slwidth = 600 - slmargin.left - slmargin.right,
                 slheight = 100 - slmargin.top - slmargin.bottom;
 
@@ -126,7 +143,7 @@
             var svgsl = d3.select("#sliderdiv")
                 .append("svg")
                 .attr("width", slwidth)
-                .attr("height", slheight )
+                .attr("height", slheight)
                 .append("g")
                 .attr("transform",
                     "translate(" + slmargin.left + "," + slmargin.top + ")");
@@ -134,15 +151,15 @@
             var formatDateIntoYear = d3.timeFormat("%Y");
             var formatDate = d3.timeFormat("%b %Y");
             var parseDate = d3.timeFormat("%m/%d/%y");
-            var startDate = d3.min(data, d => d.date);
-            var endDate = d3.max(data, d => d.date);
+            var startDate = d3.min(states, d => d.date);
+            var endDate = d3.max(states, d => d.date);
 
             console.log(startDate);
             console.log(endDate);
 
             var moving = false;
             var currentValue = 0;
-            var targetValue = slwidth-slmargin.right-slmargin.left-50
+            var targetValue = slwidth - slmargin.right - slmargin.left - 50
 
             var playButton = d3.select("#play-button");
 
@@ -159,13 +176,19 @@
                 .attr("class", "track")
                 .attr("x1", xsl.range()[0])
                 .attr("x2", xsl.range()[1])
-                .select(function () { return this.parentNode.appendChild(this.cloneNode(true)); })
+                .select(function() {
+                    return this.parentNode.appendChild(this.cloneNode(true));
+                })
                 .attr("class", "track-inset")
-                .select(function () { return this.parentNode.appendChild(this.cloneNode(true)); })
+                .select(function() {
+                    return this.parentNode.appendChild(this.cloneNode(true));
+                })
                 .attr("class", "track-overlay")
                 .call(d3.drag()
-                    .on("start.interrupt", function () { slider.interrupt(); })
-                    .on("start drag", function () {
+                    .on("start.interrupt", function() {
+                        slider.interrupt();
+                    })
+                    .on("start drag", function() {
                         currentValue = d3.event.x;
                         update(xsl.invert(currentValue));
                     })
@@ -181,7 +204,9 @@
                 .attr("x", xsl)
                 .attr("y", 10)
                 .attr("text-anchor", "middle")
-                .text(function (d) { return formatDate(d); });
+                .text(function(d) {
+                    return formatDate(d);
+                });
 
             var handle = slider.insert("circle", ".track-overlay")
                 .attr("class", "handle")
@@ -197,16 +222,18 @@
 
             var plot = svg.append("g")
                 .attr("class", "plot")
-                .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+                .attr("transform", "translate(" + stmargin.left + "," + stmargin.top + ")");
 
-            var dataset = data;
-            var filteredData = dataset.filter(function (d) {
+            var dataset = states;
+            var filteredData = dataset.filter(function(d) {
                 return d.dateStr == dateToString(startDate);
             });
             console.log("filteredData: " + filteredData.length);
 
 
-            var xdomain = filteredData.map(function (d) { return d.state; });
+            var xdomain = filteredData.map(function(d) {
+                return d.state;
+            });
             var x = d3.scaleBand()
                 .range([0, width])
                 .domain(xdomain)
@@ -226,7 +253,7 @@
             console.log("min/max cases:" + minCases + " / " + maxCases);
 
             // Add Y axis
-            var y = d3.scaleLinear()//og().base(2)
+            var y = d3.scaleLinear() //og().base(2)
                 .domain([minCases, maxCases])
                 .range([height, 0]);
             var yAxis = svg.append("g")
@@ -235,7 +262,7 @@
             drawPlot(filteredData);
 
             playButton
-                .on("click", function () {
+                .on("click", function() {
                     var button = d3.select(this);
                     if (button.text() == "Pause") {
                         moving = false;
@@ -270,13 +297,17 @@
                     .data(data)
                     .enter()
                     .append("rect")
-                    .attr("x", function (d) { return x(d.state); })
-                    .attr("y", function (d) { return y(d.cases); })
+                    .attr("x", function(d) {
+                        return x(d.state);
+                    })
+                    .attr("y", function(d) {
+                        return y(d.cases);
+                    })
                     .attr("width", x.bandwidth())
-                    .attr("height", function (d) {
-                        console.log("height: " + height + "\n"
-                            + "d.cases: " + d.cases + "\n"
-                            + "y(d.cases): " + y(d.cases) + "\n");
+                    .attr("height", function(d) {
+                        console.log("height: " + height + "\n" +
+                            "d.cases: " + d.cases + "\n" +
+                            "y(d.cases): " + y(d.cases) + "\n");
                         return height - y(d.cases);
                     })
                     .attr("fill", "#69b3a2")
@@ -291,7 +322,7 @@
                     .text(parseDate(h));
 
                 // filter data set and redraw plot
-                var filteredData = dataset.filter(function (d) {
+                var filteredData = dataset.filter(function(d) {
                     return d.dateStr == dateToString(h);
                 });
                 console.log("filtered dataset Size: " + filteredData.length);
@@ -299,7 +330,9 @@
                 svg = createChartSVG(); */
                 //x.domain(filteredData.map(function (d) { return d.state; }));
 
-                filteredData.sort(function (b, a) { return a.cases - b.cases });
+                filteredData.sort(function(b, a) {
+                    return a.cases - b.cases
+                });
 
                 maxCases = d3.max(filteredData, d => d.cases);
                 minCases = d3.min(filteredData, d => d.cases);
@@ -308,7 +341,9 @@
                 //Update X Axis
                 x = d3.scaleBand()
                     .range([0, width])
-                    .domain(filteredData.map(function (d) { return d.state; }))
+                    .domain(filteredData.map(function(d) {
+                        return d.state;
+                    }))
                     .padding(0.2);
                 //xAxis.exit().remove();
 
@@ -317,7 +352,7 @@
                     .attr("transform", "translate(-10,0)rotate(-45)")
                     .style("text-anchor", "end");
                 //Update Y Axis
-                y = d3.scaleLinear()//og().base(2)
+                y = d3.scaleLinear() //og().base(2)
                     .domain([minCases, maxCases])
                     .range([height, 0]);
                 //y.domain([minCases, maxCases]);
@@ -333,13 +368,17 @@
                     .merge(updatedSvg)
                     .transition()
                     .duration(500)
-                    .attr("x", function (d) { return x(d.state); })
-                    .attr("y", function (d) { return y(d.cases); })
+                    .attr("x", function(d) {
+                        return x(d.state);
+                    })
+                    .attr("y", function(d) {
+                        return y(d.cases);
+                    })
                     .attr("width", x.bandwidth())
-                    .attr("height", function (d) {
-                        console.log("height: " + height + "\n"
-                            + "d.cases: " + d.cases + "\n"
-                            + "y(d.cases): " + y(d.cases) + "\n");
+                    .attr("height", function(d) {
+                        console.log("height: " + height + "\n" +
+                            "d.cases: " + d.cases + "\n" +
+                            "y(d.cases): " + y(d.cases) + "\n");
                         return height - y(d.cases);
                     })
                     .attr("fill", "#69b3a2")
@@ -355,11 +394,11 @@
                 return d3.select("#my_dataviz")
                     .append("svg")
                     .attr("id", "chartsvg")
-                    .attr("width", width + margin.left + margin.right)
-                    .attr("height", height + margin.top + margin.bottom)
+                    .attr("width", width + stmargin.left + stmargin.right)
+                    .attr("height", height + stmargin.top + stmargin.bottom)
                     .append("g")
                     .attr("transform",
-                        "translate(" + margin.left + "," + margin.top + ")");
+                        "translate(" + stmargin.left + "," + stmargin.top + ")");
             }
         }
     </script>
