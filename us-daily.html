@@ -166,11 +166,12 @@
             var formatDate = d3.timeFormat("%b %Y");
             var parseDate = d3.timeFormat("%m/%d/%y");
             var timeParse = d3.timeParse("%m/%d/%Y");
+            var navTimer;
 
             var chartStartDate = new Date(2020, 1, 3);
             var startDate = d3.min(data, d => d.date);
             var endDate = d3.max(data, d => d.date);
-            var keyDates = ["1/25/2020","3/3/2020", "4/18/2020", "5/2/2020", "6/29/2020", "7/26/2020"];
+            var keyDates = ["1/25/2020", "3/3/2020", "4/18/2020", "5/2/2020", "6/29/2020", "7/26/2020"];
 
             const diffDays = Math.ceil((endDate - startDate)) / (1000 * 60 * 60 * 24);
 
@@ -193,7 +194,7 @@
             ////////// plot //////////
             var dataset = data;
             var filteredData = dataset.filter(function (d) {
-                return d.date < chartStartDate;
+                return d.date <= chartStartDate;
             });
             console.log("filteredData: " + filteredData.length);
 
@@ -222,6 +223,8 @@
             var casesPlot = casesLine(filteredData);
             var deathsPlot = deathsLine(filteredData);
             infoUpdate(currentSlide);
+            clearAnnotation();
+            annotate();
 
             playButton.on("click", function () {
                 var button = d3.select(this);
@@ -239,13 +242,16 @@
             })
 
             nextButton.on("click", function () {
-                if (++currentSlide < keyDates.length) {
-                    //update(timeParse(keyDates[currentSlide]));
+                clearAnnotation();
+                if (++currentSlide < coords.length) {
                     navTimer = setInterval(moveStep, 50);
+                    document.getElementById("prev-button").disabled = false;
                 } else {
-                    currentSlide = keyDates.length - 1;
+                    currentSlide = coords.length - 1;
+                    annotate();
                     document.getElementById("next-button").disabled = true;
                 }
+                //annotate();
                 infoUpdate(currentSlide);
             })
 
@@ -255,11 +261,11 @@
                 update(xsl.invert(currentValue));
                 document.getElementById("next-button").disabled = true;
                 currentValue = currentValue + (targetValue / diffDays);
-                if (xsl.invert(currentValue) >= timeParse(keyDates[currentSlide])) {
+                if (xsl.invert(currentValue) >= timeParse(coords[currentSlide].date) || currentValue >= targetValue) {
+                    annotate();
                     moving = false;
                     //currentValue = 0;
                     document.getElementById("next-button").disabled = false;
-                    annotate(chartStartDate, 12)
                     clearInterval(navTimer);
                     console.log("Slider moving: " + moving);
                 }
@@ -268,11 +274,11 @@
             prevButton.on("click", function () {
                 console.log("currentSlide:" + currentSlide);
                 currentSlide = currentSlide - 1;
-                if (currentSlide >= 0 && currentSlide < keyDates.length) {
+                if (currentSlide >= 0 && currentSlide < coords.length) {
                     document.getElementById("prev-button").disabled = true;
                     document.getElementById("next-button").disabled = false;
-                    currentValue = xsl(keyDates[currentSlide]);
-                    update(timeParse(keyDates[currentSlide]));
+                    currentValue = xsl(timeParse(coords[currentSlide].date));
+                    update(timeParse(coords[currentSlide].date));
                 } else {
                     document.getElementById("prev-button").disabled = false;
                     currentSlide = 0;
@@ -363,59 +369,21 @@
                 updateSlider(h);
                 // filter data set and redraw plot
                 var filteredData = dataset.filter(function (d) {
-                    return d.date < h;
+                    return d.date <= h;
                 });
-                console.log("filtered dataset Size: " + filteredData.length);
+                console.log("update date:" + h);
                 var tempDate, tempCases;
                 updateYAxis(h);
                 casesPlot.datum(filteredData)
                     .attr("d", d3.line()
-                        .x(function (d) {
-                            tempDate = d.date;
-                            return x(d.date);
-                        })
-                        .y(function (d) {
-                            tempCases = d.newCases;
-                            return y(d.newCases)
-                        })
+                        .x(function (d) { return x(d.date); })
+                        .y(function (d) { return y(d.newCases) })
                     );
                 deathsPlot.datum(filteredData)
                     .attr("d", d3.line()
                         .x(function (d) { return x(d.date) })
                         .y(function (d) { return y(d.newDeaths) })
-                    );
-                /* if (currentSlide - 1 == 0) {
-                    casesPlot.datum(filteredData)
-                        .attr("d", d3.line()
-                            .x(function (d) {
-                                tempDate = d.date;
-                                return x(d.date);
-                            })
-                            .y(function (d) {
-                                tempCases = d.newCases;
-                                return y(d.newCases)
-                            })
-                        );
-                    deathsPlot.datum(filteredData)
-                        .attr("d", d3.line()
-                            .x(function (d) { return x(d.date) })
-                            .y(function (d) { return y(d.newDeaths) })
-                        );
-                } else {
-                    casesPlot.datum(filteredData)
-                        .attr("d", d3.line()
-                            .x(function (d) { return x(d.date) })
-                            .y(function (d) { return y(d.newCases) })
-                        );
-                    deathsPlot.datum(filteredData)
-                        .attr("d", d3.line()
-                            .x(function (d) { return x(d.date) })
-                            .y(function (d) { return y(d.newDeaths) })
-                        );
-                } */
-                //console.log("tempDate:" + tempDate + " tempCases: " + tempCases);
-
-
+                    );                
             }
 
             function createSlider() {
@@ -484,30 +452,54 @@
 
             function initInfoMap() {
                 infoMap = [];
-                infoMap.push({"data":"<h3>Jan. 21, 2020: First confirmed case in the United States</h3><p>A man in his 30s from Washington state, who traveled to Wuhan, is diagnosed with novel coronavirus. Japan, South Korea and Thailand also report their first cases one day prior.</p>"});
-                infoMap.push({"data":"<h3>Feb. 29, 2020: 1st death reported in United States</h3><p>The first COVID-19 death is reported in Washington state, after a man with no travel history to China dies on Feb. 28 at Evergreen Health Medical Center in Kirkland, Washington.Two deaths that occurred Feb. 26 at a nearby nursing home would later be recorded as the first COVID-19 deaths to occur in the United States. Later still, a death in Santa Clara, California, on Feb. 6 would be deemed the country's first COVID-19 fatality after an April autopsy.</p>"});
-                infoMap.push({"data":"<h3>Mar. 13, 2020: Trump declares national emergency</h3><p>President Donald Trump declares a U.S. national emergency, which he says will open up $50 billion in federal funding to fight COVID-19.</p>"});
-                infoMap.push({"data":"<h3>Apr. 16, 2020: Max deaths in one day</h3><p>The country reports a record high of 4,928 in one day.</p>"});
-                infoMap.push({"data":"<h3>Jun. 1, 2020: Lift of Stay-at-home order</h3><p>Multiple states have lifted the stay-at-home order; outdoor gatherings of up to a hundred are allowed. Meanwhile, the total number of cases continued to increase</p>"});
+                infoMap.push({ "data": "<h3>Jan. 21, 2020: First confirmed case in the United States</h3><p>A man in his 30s from Washington state, who traveled to Wuhan, is diagnosed with novel coronavirus. Japan, South Korea and Thailand also report their first cases one day prior.</p>" });
+                infoMap.push({ "data": "<h3>Mar. 1, 2020: 1st death reported in United States</h3><p>The first COVID-19 death is reported in Washington state, after a man with no travel history to China dies on Feb. 28 at Evergreen Health Medical Center in Kirkland, Washington.Two deaths that occurred Feb. 26 at a nearby nursing home would later be recorded as the first COVID-19 deaths to occur in the United States. Later still, a death in Santa Clara, California, on Feb. 6 would be deemed the country's first COVID-19 fatality after an April autopsy.</p>" });
+                infoMap.push({ "data": "<h3>Mar. 13, 2020: Trump declares national emergency</h3><p>President Donald Trump declares a U.S. national emergency, which he says will open up $50 billion in federal funding to fight COVID-19.</p>" });
+                infoMap.push({ "data": "<h3>Apr. 16, 2020: Max deaths in one day</h3><p>The country reports a record high of 4,928 in one day.</p>" });
+                infoMap.push({ "data": "<h3>Jun. 1, 2020: Lift of Stay-at-home order</h3><p>Multiple states have lifted the stay-at-home order; outdoor gatherings of up to a hundred are allowed. Meanwhile, the total number of cases continued to increase</p>" });
                 //infoMap.push({"data":"<h3>June 29, 2020</h3><p>The US government starts Lockdown process across the country</p><h3>June 27, 2020</h3><p>The US government eases the Lockdown and the cases starts to rise across the country</p>"});
-                infoMap.push({"data":"<h3>Jul. 25, 2020: 78,427 Cases in one day</h3><p>Nationwide, cases increased by 78,427, the highest daily count on record, according to data compiled by Johns Hopkins University.</p>"});
+                infoMap.push({ "data": "<h3>Jul. 25, 2020: 78,427 Cases in one day</h3><p>Nationwide, cases increased by 78,427, the highest daily count on record, according to data compiled by Johns Hopkins University.</p>" });
 
-                coords.push({"x": "1/21/2020", "y": 1});
-                coords.push({"x": "2/29/2020", "y": 1});
-                coords.push({"x": "3/13/2020", "y": 351});
-                coords.push({"x": "4/16/2020", "y": 4928});
+                coords.push({ "x": "1/21/2020", "date": "1/21/2020", "y": 1 });
+                coords.push({ "x": "3/1/2020", "date": "3/3/2020", "y": 1 });
+                coords.push({ "x": "3/13/2020", "date": "3/25/2020", "y": 351 });
+                coords.push({ "x": "4/16/2020", "date": "4/26/2020", "y": 4928 });
                 //coords.push({"x": "4/28/2020", "y": 22541});
-                coords.push({"x": "6/1/2020", "y": 19807});
-                coords.push({"x": "7/25/2020", "y": 78427});
+                coords.push({ "x": "6/1/2020", "date": "6/11/2020", "y": 19807 });
+                coords.push({ "x": "7/25/2020", "date": "7/27/2020", "y": 78427 });
             }
 
-            function annotate(date, cases) {
-                console.log("date" + x(date) + " cases: " + y(cases));
-                svg.selectAll("circle").remove();
+            function clearAnnotation() {
+                svg.selectAll("#antCir").remove();
+                svg.selectAll("#antPath").remove();
+            }
+
+            function annotate() {
+                console.log();
+                var xcoord = 0, ycoord = 0;
                 svg.append("circle")
-                    .attr("cx", x(date))
-                    .attr("cy", y(1))
-                    .attr("r", 5)
+                    .transition().duration(900)
+                    .attr("id", "antCir")
+                    .attr("cx", function () {
+                        xcoord = x(timeParse(coords[currentSlide].x));
+                        return xcoord;
+                    })
+                    .attr("cy", function () {
+                        ycoord = y(coords[currentSlide].y);
+                        return ycoord;
+                    })
+                    .attr("r", 5);
+                console.log("xcoord:" + xcoord + ", ycoord:" + ycoord);
+                svg.append("line")
+                    .transition().duration(900)
+                    .attr("id", "antPath")
+                    .attr("stroke", "black")
+                    .attr("stroke-width", 1.5)
+                    .attr("x1", xcoord)
+                    .attr("y1", ycoord)
+                    .attr("x2", xcoord + 50)
+                    .attr("y2", ycoord - 150)
+
             }
         }
     </script>
