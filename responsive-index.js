@@ -4,6 +4,7 @@ var infoMap = [];
 var coords = [];
 var formatDateIntoYear = d3.timeFormat("%Y");
 var formatDate = d3.timeFormat("%b %Y");
+var formatDay = d3.timeFormat("%b %d, %Y");
 var formatMonth = d3.timeFormat("%b");
 var parseDate = d3.timeFormat("%m/%d/%y");
 var timeParse = d3.timeParse("%m/%d/%Y");
@@ -13,7 +14,7 @@ var playButton, prevButton, nextButton;
 var targetValue, currentValue = 0;
 var sliderSVG, xsl, slider, handle, label;
 var chartSVG, xscaleChart, xAxis, yscaleChart, yAxis, minCases, maxCases, casesPlot, deathsPlot, dataset, diffDays, filteredData;
-var bars, tooltip;
+var bars, tooltip, tooltipLine;
 var margin = {
         top: 10,
         right: 30,
@@ -61,7 +62,7 @@ async function init() {
     );
 
     dailyData.sort(function(b, a) {
-        return a.date - b.date
+        return b.date - a.date
     });
 
     const states = await d3.csv("assets/us-states.csv",
@@ -128,8 +129,63 @@ async function init() {
     nextButton.on("click", nextFunction);
     prevButton.on("click", prevFunction);
 
-    tooltip = d3.select("#tooltip");
-    initTooltip()
+    tooltip = d3.select('#tooltip');
+    tooltipLine = chartSVG.append('line');
+
+    tipBox = chartSVG.append('rect')
+        .attr('width', width)
+        .attr('height', height)
+        .attr('opacity', 0)
+        .on('mousemove', drawTooltip)
+        .on('mouseout', removeTooltip);
+}
+
+function removeTooltip() {
+    if (tooltip) tooltip.style('display', 'none');
+    if (tooltipLine) tooltipLine.attr('stroke', 'none');
+}
+
+function drawTooltip() {
+    const hoverDate = xscaleChart.invert(d3.mouse(tipBox.node())[0]);
+
+    tooltipLine.attr('stroke', 'black')
+        .attr('x1', xscaleChart(hoverDate))
+        .attr('x2', xscaleChart(hoverDate))
+        .attr('y1', 0)
+        .attr('y2', height);
+    /*states.sort((a, b) => {
+        return b.history.find(h => h.year == year).population - a.history.find(h => h.year == year).population;
+    })*/
+    if (hoverDate < filteredData[filteredData.length - 1].date && hoverDate >= filteredData[0].date) {
+        var bisect = d3.bisector(function(d) { return d.date; }).left;
+        var i = bisect(filteredData, hoverDate, 1);
+        var selectedData = filteredData[i];
+        if (hoverDate > new Date(2020, 5, 10)) {
+            tooltip.style("opacity", 0.8)
+                .style("display", "block")
+                .style("left", (d3.event.pageX) - 205 + "px")
+                .style("top", (d3.event.pageY) + 5 + "px")
+                .html(getTooltipString(selectedData));
+        } else {
+            tooltip.style("opacity", 0.8)
+                .style("display", "block")
+                .style("left", (d3.event.pageX) + 5 + "px")
+                .style("top", (d3.event.pageY) + 5 + "px")
+                .html(getTooltipString(selectedData));
+        }
+    } else {
+        removeTooltip();
+    }
+}
+
+function getTooltipString(selectedData) {
+    return "<p align='center'>" + formatDay(selectedData.date) + "</p>" +
+        "<table>" +
+        "<tr><td>Total Cases</td><td>" + selectedData.totalCases + "</td></tr>" +
+        "<tr><td>Total Deaths</td><td>" + selectedData.totalDeaths + "</td></tr>" +
+        "<tr><td>New Cases</td><td>" + selectedData.newCases + "</td></tr>" +
+        "<tr><td>New Deaths</td><td>" + selectedData.newDeaths + "</td></tr>" +
+        "</table>";
 }
 
 function prevFunction() {
@@ -339,58 +395,6 @@ function infoUpdate() {
     d3.select("#info")
         .html(infoMap[currentSlide].data);
     //.text("Current slide: " + slide + " / " + (keyDates.length - 1) + "------" + " Date: " + keyDates[slide])
-}
-
-function initTooltip() {
-    // This allows to find the closest X index of the mouse:
-    var bisect = d3.bisector(function(d) { return d.date; }).left;
-
-    // Create the circle that travels along the curve of chart
-    var focus = chartSVG
-        .append('g')
-        .append('circle')
-        .style("fill", "none")
-        .attr("stroke", "red")
-        .attr("stroke-width", 2)
-        .attr('r', 3.5)
-        .style("opacity", 0)
-
-    chartSVG
-        .append('rect')
-        .style("fill", "none")
-        .style("pointer-events", "all")
-        .attr('width', width)
-        .attr('height', height)
-        .on('mouseover', function() {
-            focus.style("opacity", 1)
-        })
-        .on('mousemove', function() {
-            // recover coordinate we need
-            focus.style("opacity", 1)
-            var x0 = xscaleChart.invert(d3.mouse(this)[0]);
-            var i = bisect(filteredData, x0, 1);
-            console.log("i:" + i + " x0:" + x0);
-            if (i >= filteredData.length) {
-                console.log("outside the filtered data")
-                return;
-            }
-            selectedData = filteredData[i];
-            focus
-                .attr("cx", xscaleChart(selectedData.date))
-                .attr("cy", yscaleChart(selectedData.newCases));
-            tooltip.style("opacity", 0.8)
-                .style("left", (d3.event.pageX) + 5 + "px")
-                .style("top", (d3.event.pageY) + 5 + "px")
-                //.style("left", x(selectedData.date) - 20 + "px")
-                //.style("top", y(selectedData.cases) - 5 + "px")
-                .html("<table><tr><td>Cases</td><td>" + selectedData.newCases + "</td></tr>" +
-                    "<tr><td>Date</td><td>" + selectedData.date + "</td></tr>");
-        })
-        .on('mouseout', function() {
-            focus.style("opacity", 0)
-            tooltip.transition().duration(500)
-                .style("opacity", 0);
-        });
 }
 
 function annotate() {
