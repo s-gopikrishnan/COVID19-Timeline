@@ -12,8 +12,8 @@ var chartStartDate, startDate, endDate;
 var playButton, prevButton, nextButton;
 var targetValue, currentValue = 0;
 var sliderSVG, xsl, slider, handle, label;
-var chartSVG, xscaleChart, xAxis, yscaleChart, yAxis, minCases, maxCases, casesPlot, deathsPlot, dataset, diffDays;
-var bars;
+var chartSVG, xscaleChart, xAxis, yscaleChart, yAxis, minCases, maxCases, casesPlot, deathsPlot, dataset, diffDays, filteredData;
+var bars, tooltip;
 var margin = {
         top: 10,
         right: 30,
@@ -91,7 +91,7 @@ async function init() {
 
     createSlider();
     dataset = dailyData;
-    var filteredData = dataset.filter(function(d) {
+    filteredData = dataset.filter(function(d) {
         return d.date <= chartStartDate;
     });
 
@@ -127,6 +127,9 @@ async function init() {
     playButton.on("click", playFunction);
     nextButton.on("click", nextFunction);
     prevButton.on("click", prevFunction);
+
+    tooltip = d3.select("#tooltip");
+    initTooltip()
 }
 
 function prevFunction() {
@@ -248,6 +251,16 @@ function updateYAxis(startDate) {
             .domain([0, 40])
             .range([height, 0]);
         yAxis.transition().duration(500).call(d3.axisLeft(yscaleChart));
+    } else if (startDate < timeParse("3/25/2020")) {
+        yscaleChart = d3.scaleLinear()
+            .domain([0, 15000])
+            .range([height, 0]);
+        yAxis.transition().duration(500).call(d3.axisLeft(yscaleChart));
+    } else if (startDate < timeParse("4/30/2020")) {
+        yscaleChart = d3.scaleLinear()
+            .domain([0, 50000])
+            .range([height, 0]);
+        yAxis.transition().duration(500).call(d3.axisLeft(yscaleChart));
     } else {
         yscaleChart = d3.scaleLinear()
             .domain([minCases, maxCases])
@@ -274,7 +287,7 @@ function update(h) {
     }
     updateSlider(h);
     // filter data set and redraw plot
-    var filteredData = dataset.filter(function(d) {
+    filteredData = dataset.filter(function(d) {
         return d.date <= h;
     });
     //console.log("update date:" + h);
@@ -318,6 +331,7 @@ function createButtons() {
 function clearAnnotation() {
     chartSVG.selectAll("#antCir").remove();
     chartSVG.selectAll("#antPath").remove();
+    chartSVG.selectAll("#antText").remove();
 }
 
 function infoUpdate() {
@@ -327,10 +341,64 @@ function infoUpdate() {
     //.text("Current slide: " + slide + " / " + (keyDates.length - 1) + "------" + " Date: " + keyDates[slide])
 }
 
+function initTooltip() {
+    // This allows to find the closest X index of the mouse:
+    var bisect = d3.bisector(function(d) { return d.date; }).left;
+
+    // Create the circle that travels along the curve of chart
+    var focus = chartSVG
+        .append('g')
+        .append('circle')
+        .style("fill", "none")
+        .attr("stroke", "red")
+        .attr("stroke-width", 2)
+        .attr('r', 3.5)
+        .style("opacity", 0)
+
+    chartSVG
+        .append('rect')
+        .style("fill", "none")
+        .style("pointer-events", "all")
+        .attr('width', width)
+        .attr('height', height)
+        .on('mouseover', function() {
+            focus.style("opacity", 1)
+        })
+        .on('mousemove', function() {
+            // recover coordinate we need
+            focus.style("opacity", 1)
+            var x0 = xscaleChart.invert(d3.mouse(this)[0]);
+            var i = bisect(filteredData, x0, 1);
+            console.log("i:" + i + " x0:" + x0);
+            if (i >= filteredData.length) {
+                console.log("outside the filtered data")
+                return;
+            }
+            selectedData = filteredData[i];
+            focus
+                .attr("cx", xscaleChart(selectedData.date))
+                .attr("cy", yscaleChart(selectedData.newCases));
+            tooltip.style("opacity", 0.8)
+                .style("left", (d3.event.pageX) + 5 + "px")
+                .style("top", (d3.event.pageY) + 5 + "px")
+                //.style("left", x(selectedData.date) - 20 + "px")
+                //.style("top", y(selectedData.cases) - 5 + "px")
+                .html("<table><tr><td>Cases</td><td>" + selectedData.newCases + "</td></tr>" +
+                    "<tr><td>Date</td><td>" + selectedData.date + "</td></tr>");
+        })
+        .on('mouseout', function() {
+            focus.style("opacity", 0)
+            tooltip.transition().duration(500)
+                .style("opacity", 0);
+        });
+}
+
 function annotate() {
     console.log();
     var xcoord = 0,
-        ycoord = 0;
+        ycoord = 0,
+        x2coord = 0,
+        y2coord = 0;
     chartSVG.append("circle")
         .transition().duration(900)
         .attr("id", "antCir")
@@ -342,8 +410,10 @@ function annotate() {
             ycoord = yscaleChart(coords[currentSlide].y);
             return ycoord;
         })
-        .attr("r", 5);
+        .attr("r", 3);
     console.log("xcoord:" + xcoord + ", ycoord:" + ycoord + " - currentSlide]: " + currentSlide);
+    x2coord = xcoord + coords[currentSlide].ax;
+    y2coord = ycoord + coords[currentSlide].ay;
     chartSVG.append("line")
         .transition().duration(900)
         .attr("id", "antPath")
@@ -351,8 +421,15 @@ function annotate() {
         .attr("stroke-width", 1.5)
         .attr("x1", xcoord)
         .attr("y1", ycoord)
-        .attr("x2", xcoord + coords[currentSlide].ax)
-        .attr("y2", ycoord + coords[currentSlide].ay)
+        .attr("x2", x2coord)
+        .attr("y2", y2coord)
+
+    chartSVG.append("text")
+        .transition().duration(900)
+        .attr("id", "antText")
+        .attr("x", x2coord + coords[currentSlide].textx)
+        .attr("y", y2coord + coords[currentSlide].texty)
+        .text(coords[currentSlide].text);
 }
 
 function createSlider() {
@@ -463,28 +540,40 @@ function initInfoMap() {
         "date": "2/3/2020",
         "y": 1,
         "ax": 50,
-        "ay": -150
+        "ay": -150,
+        "text": "1st Confirmed Case in the US",
+        "textx": 0,
+        "texty": 0
     });
     coords.push({
         "x": "3/1/2020",
         "date": "3/3/2020",
         "y": 1,
         "ax": 50,
-        "ay": -150
+        "ay": -150,
+        "text": "1st death in the US",
+        "textx": 0,
+        "texty": 0
     });
     coords.push({
         "x": "3/13/2020",
         "date": "3/25/2020",
         "y": 351,
         "ax": 50,
-        "ay": -150
+        "ay": -150,
+        "text": "National Emergency declared",
+        "textx": 0,
+        "texty": 0
     });
     coords.push({
         "x": "4/16/2020",
         "date": "4/26/2020",
         "y": 4928,
         "ax": 50,
-        "ay": -150
+        "ay": -150,
+        "text": "Max deaths in one day",
+        "textx": 0,
+        "texty": 0
     });
     //coords.push({"x": "4/28/2020", "y": 22541, "ax": 50, "ay": -150 });
     coords.push({
@@ -492,13 +581,19 @@ function initInfoMap() {
         "date": "6/11/2020",
         "y": 19807,
         "ax": 50,
-        "ay": -150
+        "ay": -150,
+        "text": "Stay-at-home order lifted",
+        "textx": 0,
+        "texty": 0
     });
     coords.push({
         "x": "7/25/2020",
         "date": "7/27/2020",
         "y": 78427,
         "ax": -150,
-        "ay": 50
+        "ay": 50,
+        "text": "Max cases in one day",
+        "textx": -100,
+        "texty": 20
     });
 }
