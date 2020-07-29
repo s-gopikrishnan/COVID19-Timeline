@@ -18,7 +18,7 @@ var margin = {
         top: 10,
         right: 30,
         bottom: 30,
-        left: 30
+        left: 40
     },
     width = 820 - margin.left - margin.right,
     height = 280 - margin.top - margin.bottom;
@@ -31,6 +31,20 @@ var slmargin = {
     slwidth = 400 - slmargin.left - slmargin.right,
     slheight = 100 - slmargin.top - slmargin.bottom;
 var moving = false;
+
+
+//////////Bar chart Vars
+
+var barsvg, bdataset, bstartDate, filteredStateData, xdomainBar, xAxisBar, xscaleBar, maxCasesBar, minCasesBar, yscaleBar, yAxisBar;
+var barmargin = {
+        top: 20,
+        right: 30,
+        bottom: 100,
+        left: 50
+    },
+    bwidth = 820 - barmargin.left - barmargin.right,
+    bheight = 320 - barmargin.top - barmargin.bottom;
+
 
 async function init() {
 
@@ -74,16 +88,12 @@ async function init() {
     prevButton = d3.select("#prev-button");
     nextButton = d3.select("#next-button");
     document.getElementById("prev-button").disabled = true;
-    ////////// Slider //////////
 
     createSlider();
-
-    ////////// plot //////////
     dataset = dailyData;
     var filteredData = dataset.filter(function(d) {
         return d.date <= chartStartDate;
     });
-    // Add X axis --> it is a date format
 
     xscaleChart = d3.scaleTime()
         .domain(d3.extent(dailyData, function(d) {
@@ -114,13 +124,9 @@ async function init() {
 
     bars = barchart(states);
 
-    playButton.on("click", playFunction)
-
-    nextButton.on("click", nextFunction)
-
-
-    prevButton.on("click", prevFunction)
-
+    playButton.on("click", playFunction);
+    nextButton.on("click", nextFunction);
+    prevButton.on("click", prevFunction);
 }
 
 function prevFunction() {
@@ -260,7 +266,8 @@ function updateSlider(h) {
 }
 
 function update(h) {
-    //bars.updateBars(h);
+    updateBars(h);
+
     if (currentValue < 0) {
         currentValue = 2;
         h = xsl.invert(currentValue);
