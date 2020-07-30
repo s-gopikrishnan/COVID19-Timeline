@@ -29,7 +29,7 @@ function barchart(states) {
     maxCasesBar = d3.max(filteredStateData, d => d.cases);
     minCasesBar = d3.min(filteredStateData, d => d.cases);
 
-    console.log("min/max cases:" + minCasesBar + " / " + maxCasesBar);
+    //console.log("min/max cases:" + minCasesBar + " / " + maxCasesBar);
 
     // Add Y axis
     yscaleBar = d3.scaleLinear() //og().base(2)
@@ -39,6 +39,10 @@ function barchart(states) {
         .call(d3.axisLeft(yscaleBar));
 
     drawBarchart(filteredStateData);
+}
+
+function changeBars() {
+    updateBars(bstartDate);
 }
 
 function drawBarchart(data) {
@@ -59,74 +63,131 @@ function drawBarchart(data) {
                 "y(d.cases): " + yscaleBar(d.cases) + "\n");
             return bheight - yscaleBar(d.cases);
         })
-        .attr("fill", "#69b3a2")
+        .attr("fill", "steelblue")
         .exit().remove()
 
 }
 
 function updateBars(h) {
+    bstartDate = h;
 
-    // filter data set and redraw plot
-    var filteredData = bdataset.filter(function(d) {
-        return d.dateStr == dateToString(h);
-    });
-    console.log("filtered dataset Size: " + filteredData.length);
-    /* svg.remove();
-    svg = createChartSVG(); */
-    //x.domain(filteredData.map(function (d) { return d.state; }));
 
-    filteredData.sort(function(b, a) {
-        return a.cases - b.cases
-    });
+    if ('cases' == barselect.node().value) {
+        // filter data set and redraw plot
+        var filteredData = bdataset.filter(function(d) {
+            return d.dateStr == dateToString(h);
+        });
+        filteredData.sort(function(b, a) {
+            return a.cases - b.cases
+        });
 
-    maxCasesBar = d3.max(filteredData, d => d.cases);
-    minCasesBar = d3.min(filteredData, d => d.cases);
-    console.log("min/max cases:" + minCasesBar + " / " + maxCasesBar);
+        maxCasesBar = d3.max(filteredData, d => d.cases);
+        minCasesBar = d3.min(filteredData, d => d.cases);
+        //console.log("min/max cases:" + minCasesBar + " / " + maxCasesBar);
 
-    //Update X Axis
-    xscaleBar = d3.scaleBand()
-        .range([0, bwidth])
-        .domain(filteredData.map(function(d) {
-            return d.state;
-        }))
-        .padding(0.2);
-    //xAxis.exit().remove();
+        //Update X Axis
+        xscaleBar = d3.scaleBand()
+            .range([0, bwidth])
+            .domain(filteredData.map(function(d) {
+                return d.state;
+            }))
+            .padding(0.2);
 
-    //x.domain(filteredData.map(function (d) { return d.state; }));
-    xAxisBar.transition().duration(500).call(d3.axisBottom(xscaleBar)).selectAll("text")
-        .attr("transform", "translate(-10,0)rotate(-45)")
-        .style("text-anchor", "end");
-    //Update Y Axis
-    yscaleBar = d3.scaleLinear() //og().base(2)
-        .domain([minCasesBar, maxCasesBar])
-        .range([bheight, 0]);
-    //y.domain([minCases, maxCases]);
-    yAxisBar.transition().duration(500).call(d3.axisLeft(yscaleBar));
+        xAxisBar.transition().call(d3.axisBottom(xscaleBar)).selectAll("text")
+            .attr("transform", "translate(-10,0)rotate(-45)")
+            .style("text-anchor", "end");
+        //Update Y Axis
+        yscaleBar = d3.scaleLinear() //og().base(2)
+            .domain([minCasesBar, maxCasesBar])
+            .range([bheight, 0]);
+        yAxisBar.transition().call(d3.axisLeft(yscaleBar));
 
-    var updatedSvg = barsvg.selectAll("rect")
-        .data(filteredData);
-    updatedSvg.exit().remove();
-    // update bars
-    updatedSvg
-        .enter()
-        .append("rect")
-        .merge(updatedSvg)
-        .transition()
-        .duration(500)
+        var updatedSvg = barsvg.selectAll("rect")
+            .data(filteredData);
+        updatedSvg.exit().remove();
+        // update bars
+        updatedSvg
+            .enter()
+            .append("rect")
+            .merge(updatedSvg)
+            .transition()
+
         .attr("x", function(d) {
-            return xscaleBar(d.state);
-        })
-        .attr("y", function(d) {
-            return yscaleBar(d.cases);
-        })
-        .attr("width", xscaleBar.bandwidth())
-        .attr("height", function(d) {
-            console.log("height: " + bheight + "\n" +
-                "d.cases: " + d.cases + "\n" +
-                "y(d.cases): " + yscaleBar(d.cases) + "\n");
-            return bheight - yscaleBar(d.cases);
-        })
-        .attr("fill", "#69b3a2")
+                return xscaleBar(d.state);
+            })
+            .attr("y", function(d) {
+                return yscaleBar(d.cases);
+            })
+            .attr("width", xscaleBar.bandwidth())
+            .attr("height", function(d) {
+                /* console.log("height: " + bheight + "\n" +
+                    "d.cases: " + d.cases + "\n" +
+                    "y(d.cases): " + yscaleBar(d.cases) + "\n"); */
+                return bheight - yscaleBar(d.cases);
+            })
+            .attr("fill", "steelblue")
+    } else if ('deaths' == barselect.node().value) {
+        // filter data set and redraw plot
+        var filteredData = bdataset.filter(function(d) {
+            return (d.dateStr == dateToString(h) && d.deaths > 0);
+        });
+        filteredData.sort(function(b, a) {
+            return a.deaths - b.deaths
+        });
+
+        maxCasesBar = d3.max(filteredData, d => d.deaths);
+        minCasesBar = d3.min(filteredData, d => d.deaths);
+        //console.log("min/max deaths:" + minCasesBar + " / " + maxCasesBar);
+
+        //Update X Axis
+        xscaleBar = d3.scaleBand()
+            .range([0, bwidth])
+            .domain(filteredData.map(function(d) {
+                return d.state;
+            }))
+            .padding(0.2);
+
+        xAxisBar.transition().call(d3.axisBottom(xscaleBar)).selectAll("text")
+            .attr("transform", "translate(-10,0)rotate(-45)")
+            .style("text-anchor", "end");
+        //Update Y Axis
+        yscaleBar = d3.scaleLinear() //og().base(2)
+            .domain([minCasesBar, maxCasesBar])
+            .range([bheight, 0]);
+        //y.domain([minCases, maxCases]);
+        yAxisBar.transition().call(d3.axisLeft(yscaleBar));
+
+        var updatedSvg = barsvg.selectAll("rect")
+            .data(filteredData);
+        updatedSvg.exit().remove();
+        // update bars
+        updatedSvg
+            .enter()
+            .append("rect")
+            .merge(updatedSvg)
+            .transition()
+
+        .attr("x", function(d) {
+                return xscaleBar(d.state);
+            })
+            .attr("y", function(d) {
+                return yscaleBar(d.deaths);
+            })
+            .attr("width", xscaleBar.bandwidth())
+            .attr("height", function(d) {
+                /* console.log("height: " + bheight + "\n" +
+                    "d.deaths: " + d.deaths + "\n" +
+                    "y(d.deaths): " + yscaleBar(d.deaths) + "\n"); */
+                return bheight - yscaleBar(d.deaths);
+            })
+            .attr("fill", "red")
+            /* if (filteredData[filteredData.length - 1].deaths == 0) {
+                console.log("removing coz 0 data");
+                barsvg.selectAll("rect").remove();
+            } */
+    }
+
+
 
 }
 

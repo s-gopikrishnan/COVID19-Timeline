@@ -36,7 +36,7 @@ var moving = false;
 
 //////////Bar chart Vars
 
-var barsvg, bdataset, bstartDate, filteredStateData, xdomainBar, xAxisBar, xscaleBar, maxCasesBar, minCasesBar, yscaleBar, yAxisBar;
+var barsvg, bdataset, bstartDate, filteredStateData, xdomainBar, xAxisBar, xscaleBar, maxCasesBar, minCasesBar, yscaleBar, yAxisBar, barselect;
 var barmargin = {
         top: 20,
         right: 30,
@@ -122,15 +122,19 @@ async function init() {
     infoUpdate(currentSlide);
     clearAnnotation();
     annotate();
+    toggleSceneBtns();
 
     bars = barchart(states);
 
     playButton.on("click", playFunction);
-    nextButton.on("click", nextFunction);
-    prevButton.on("click", prevFunction);
+    nextButton.on("click", nextslide);
+    prevButton.on("click", previous);
 
     tooltip = d3.select('#tooltip');
     tooltipLine = chartSVG.append('line');
+    barselect = d3.select("#barSelect");
+
+    barselect.on("change", changeBars);
 
     tipBox = chartSVG.append('rect')
         .attr('width', width)
@@ -153,9 +157,7 @@ function drawTooltip() {
         .attr('x2', xscaleChart(hoverDate))
         .attr('y1', 0)
         .attr('y2', height);
-    /*states.sort((a, b) => {
-        return b.history.find(h => h.year == year).population - a.history.find(h => h.year == year).population;
-    })*/
+
     if (hoverDate < filteredData[filteredData.length - 1].date && hoverDate >= filteredData[0].date) {
         var bisect = d3.bisector(function(d) { return d.date; }).left;
         var i = bisect(filteredData, hoverDate, 1);
@@ -188,34 +190,35 @@ function getTooltipString(selectedData) {
         "</table>";
 }
 
-function prevFunction() {
+function previous() {
     clearAnnotation();
     console.log("currentSlide:" + currentSlide);
     currentSlide = currentSlide - 1;
     currentValue = xsl(timeParse(coords[currentSlide].date));
     update(timeParse(coords[currentSlide].date));
-    if (currentSlide > 0 && currentSlide < coords.length - 1) {
+    /* if (currentSlide > 0 && currentSlide < coords.length - 1) {
         document.getElementById("prev-button").disabled = false;
     } else {
         document.getElementById("prev-button").disabled = true;
         document.getElementById("next-button").disabled = false;
         currentSlide = 0;
-    }
+    } */
     infoUpdate(currentSlide);
     annotate();
+    toggleSceneBtns();
 }
 
-function nextFunction() {
+function nextslide() {
     clearAnnotation();
     if (++currentSlide < coords.length) {
-        navTimer = setInterval(moveStep, 50);
-        document.getElementById("prev-button").disabled = false;
+        navTimer = setInterval(moveForward, 50);
     } else {
         currentSlide = coords.length - 1;
         annotate();
-        document.getElementById("next-button").disabled = true;
+        //document.getElementById("next-button").disabled = true;
     }
     //annotate();
+    toggleSceneBtns();
     infoUpdate(currentSlide);
 }
 
@@ -234,18 +237,21 @@ function playFunction() {
     console.log("Slider moving: " + moving);
 }
 
-function moveStep() {
+function moveForward() {
     //console.log("----Step - currentValue: " + currentValue)
     if (currentValue < 0) currentValue = 1;
     update(xsl.invert(currentValue));
-    document.getElementById("next-button").disabled = true;
-    currentValue = currentValue + (targetValue / diffDays);
+
     if (xsl.invert(currentValue) >= timeParse(coords[currentSlide].date) || currentValue >= targetValue) {
         annotate();
         moving = false;
         //currentValue = 0;
-        document.getElementById("next-button").disabled = false;
+        //document.getElementById("next-button").disabled = false;
         clearInterval(navTimer);
+        d3.select("#scene-btn").style("pointer-events", "all");
+    } else {
+        d3.select("#scene-btn").style("pointer-events", "none");
+        currentValue = currentValue + (targetValue / diffDays);
     }
 }
 
@@ -306,22 +312,22 @@ function updateYAxis(startDate) {
         yscaleChart = d3.scaleLinear()
             .domain([0, 40])
             .range([height, 0]);
-        yAxis.transition().duration(500).call(d3.axisLeft(yscaleChart));
-    } else if (startDate < timeParse("3/25/2020")) {
+        yAxis.transition().call(d3.axisLeft(yscaleChart));
+    } else if (startDate < timeParse("3/26/2020")) {
         yscaleChart = d3.scaleLinear()
             .domain([0, 15000])
             .range([height, 0]);
-        yAxis.transition().duration(500).call(d3.axisLeft(yscaleChart));
+        yAxis.transition().call(d3.axisLeft(yscaleChart));
     } else if (startDate < timeParse("4/30/2020")) {
         yscaleChart = d3.scaleLinear()
             .domain([0, 50000])
             .range([height, 0]);
-        yAxis.transition().duration(500).call(d3.axisLeft(yscaleChart));
+        yAxis.transition().call(d3.axisLeft(yscaleChart));
     } else {
         yscaleChart = d3.scaleLinear()
             .domain([minCases, maxCases])
             .range([height, 0]);
-        yAxis.transition().duration(500).call(d3.axisLeft(yscaleChart));
+        yAxis.transition().call(d3.axisLeft(yscaleChart));
     }
 
 }
@@ -335,6 +341,7 @@ function updateSlider(h) {
 }
 
 function update(h) {
+    chartStartDate = h;
     updateBars(h);
 
     if (currentValue < 0) {
@@ -367,6 +374,45 @@ function update(h) {
                 return yscaleChart(d.newDeaths)
             })
         );
+    //toggleSceneBtns();
+}
+
+
+function updateScene(num) {
+    clearAnnotation();
+    console.log("Scenbutton selected: " + num);
+    if (currentSlide < num) {
+        currentSlide = num;
+        //toggleSceneBtns();
+        navTimer = setInterval(moveForward, 50);
+    } else {
+        currentSlide = num;
+        currentValue = xsl(timeParse(coords[currentSlide].date));
+        update(timeParse(coords[currentSlide].date));
+        annotate();
+    }
+    toggleSceneBtns();
+    infoUpdate(currentSlide);
+}
+
+function toggleSceneBtns() {
+    console.log("currentSlide:" + currentSlide + " maxSlides:" + coords.length);
+    for (var i = 0; i < coords.length; i++) {
+        document.getElementById("scenebtn-" + i).disabled = false;
+    }
+    document.getElementById("scenebtn-" + currentSlide).disabled = true;
+
+    if (currentSlide >= coords.length - 1) {
+        document.getElementById("next-button").disabled = true;
+    } else {
+        document.getElementById("next-button").disabled = false;
+    }
+
+    if (currentSlide > 0 && currentSlide <= coords.length - 1) {
+        document.getElementById("prev-button").disabled = false;
+    } else {
+        document.getElementById("prev-button").disabled = true;
+    }
 }
 
 function createButtons() {
@@ -375,8 +421,9 @@ function createButtons() {
         .text("Prev")
     coords.forEach((d, i) => {
         d3.select("#scene-btn").append("button")
-            .attr("onclick", "updateSlide(" + i + ")")
+            .attr("onclick", "updateScene(" + i + ")")
             .attr("class", "numbtns")
+            .attr("id", "scenebtn-" + i)
             .text(i + 1);
     })
     d3.select("#scene-btn").append("button")
@@ -477,6 +524,7 @@ function createSlider() {
                 clearAnnotation();
                 annotate();
                 infoUpdate();
+                toggleSceneBtns();
                 update(xsl.invert(currentValue));
             })
         );

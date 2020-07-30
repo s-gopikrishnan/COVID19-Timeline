@@ -58,6 +58,15 @@
             width: 30px
         }
         
+        .numbtns:disabled {
+            background-color: steelblue;
+            border-color: #000;
+            color: white;
+            font-size: 15px;
+            width: 35px;
+            height: 35px;
+        }
+        
         .ticks {
             font-size: 10px;
         }
@@ -109,7 +118,7 @@
         <div style="height: 100px;">
             <br>
         </div>
-        <div id="scene-btn" class="card" style="background-color: transparent;">
+        <div id="scene-btn" class="card" style="background-color: transparent;padding:16px 0 16px 0">
             <!-- <button id="prev-button">Prev</button>
              <div id="scene-btn"></div> 
             <button id="next-button">Next</button> -->
@@ -127,10 +136,15 @@
     </div>
 
     <div class="main column">
-        <h4 style="align-items: center; align-self: center;">Daily new cases and deaths</h4>
+        <h4 style="align-items: center; align-self: center;">US Daily new cases and deaths</h4>
         <div id="my_dataviz" class="equal"></div>
-        <h4>Total cases by state</h4>
-        <div id="my_barchart" class="equal"></div>
+        <h4 style="align-items: center; align-self: center;">Total cases by state</h4>
+        <select id="barSelect">
+            <option value="cases">Confirmed Cases</option>
+            <option value="deaths">Deaths</option>
+        </select>
+        <div id="my_barchart" class="equal">
+        </div>
         <div id="tooltip"></div>
     </div>
 </body>
