@@ -49,7 +49,7 @@ var barmargin = {
 
 async function init() {
 
-    const dailyData = await d3.csv("US-Daily.csv",
+    const dailyData = await d3.csv("US-daily.csv",
         function(d) {
             return {
                 date: d3.timeParse("%m/%d/%Y")(d.Date),
