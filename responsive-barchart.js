@@ -1,8 +1,4 @@
 var filteredBarData;
-var deathsColor = "#d92626",
-    deathsHighlight = "#cc0000",
-    casesColor = "#4682b4",
-    casesHighlight = "#2b506e";
 
 function barchart(states) {
     // append the svg object to the body of the page
@@ -95,8 +91,8 @@ function showBarTooltip(d) {
 
     bartooltip.style("opacity", 0.8)
         .style("display", "block")
-        .style("left", (d3.event.pageX) + 15 + "px")
-        .style("top", (d3.event.pageY) + 10 + "px")
+        .style("left", (d3.event.pageX) - 200 + "px")
+        .style("top", (d3.event.pageY) - 140 + "px")
         .html(getBarTooltipString(d));
 }
 
@@ -264,14 +260,43 @@ function createBarChartSVG() {
         .attr("transform",
             "translate(" + barmargin.left + "," + barmargin.top + ")");
 }
-/* 
-function createToolitpSVG() {
-    return d3.select("#my_barchart")
-        .append("svg")
-        .attr("id", "asdf")
-        .attr("width", bwidth + barmargin.left + barmargin.right)
-        .attr("height", bheight + barmargin.top + barmargin.bottom)
-        .append("g")
-        .attr("transform",
-            "translate(" + barmargin.left + "," + barmargin.top + ")");
-} */
+
+function annotateBars() {
+    if ('cases' != barselect.node().value || coords[currentSlide].state == null) return;
+    var xcoord = 0,
+        ycoord = 0,
+        x2coord = 0,
+        y2coord = 0;
+    barsvg.append("circle")
+        .transition().duration(900)
+        .attr("id", "antCir")
+        .style("opacity", "0.5")
+        .style("border", "2px")
+        .attr("cx", function() {
+            xcoord = xscaleBar(coords[currentSlide].state);
+            return xcoord;
+        })
+        .attr("cy", function() {
+            ycoord = yscaleBar(coords[currentSlide].cases);
+            return ycoord + 15;
+        })
+        .attr("r", 30);
+    x2coord = xcoord + 50;
+    y2coord = ycoord + 25;
+    barsvg.append("line")
+        .transition().duration(900)
+        .attr("id", "antPath")
+        .attr("stroke", "black")
+        .attr("stroke-width", 1.5)
+        .attr("x1", xcoord + 15)
+        .attr("y1", ycoord + 15)
+        .attr("x2", x2coord)
+        .attr("y2", y2coord)
+
+    barsvg.append("text")
+        .transition().duration(900)
+        .attr("id", "antText")
+        .attr("x", x2coord + 5)
+        .attr("y", y2coord + 5)
+        .text(coords[currentSlide].bartext);
+}

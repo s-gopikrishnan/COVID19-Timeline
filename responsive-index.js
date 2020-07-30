@@ -32,7 +32,10 @@ var slmargin = {
     slwidth = 400 - slmargin.left - slmargin.right,
     slheight = 100 - slmargin.top - slmargin.bottom;
 var moving = false;
-
+var deathsColor = "#f90606",
+    deathsHighlight = "#c70505",
+    casesColor = "#4682b4",
+    casesHighlight = "#2b506e";
 
 //////////Bar chart Vars
 
@@ -122,15 +125,10 @@ async function init() {
 
 
     // Handmade legend
-    chartSVG.append("circle").attr("cx", (width / 2) - 120).attr("cy", height + 30).attr("r", 6).style("fill", "steelblue")
-    chartSVG.append("circle").attr("cx", (width / 2)).attr("cy", height + 30).attr("r", 6).style("fill", "#d92626")
+    chartSVG.append("circle").attr("cx", (width / 2) - 120).attr("cy", height + 30).attr("r", 6).style("fill", casesColor)
+    chartSVG.append("circle").attr("cx", (width / 2)).attr("cy", height + 30).attr("r", 6).style("fill", deathsColor)
     chartSVG.append("text").attr("x", (width / 2) - 110).attr("y", height + 32).text("New Cases").style("font-size", "12px").attr("alignment-baseline", "middle")
     chartSVG.append("text").attr("x", (width / 2) + 10).attr("y", height + 32).text("New Deaths").style("font-size", "12px").attr("alignment-baseline", "middle")
-
-    infoUpdate(currentSlide);
-    clearAnnotation();
-    annotate();
-    toggleSceneBtns();
 
     bars = barchart(states);
 
@@ -151,6 +149,11 @@ async function init() {
         .attr('opacity', 0)
         .on('mousemove', drawTooltip)
         .on('mouseout', removeTooltip);
+
+    infoUpdate(currentSlide);
+    clearAnnotation();
+    annotate();
+    toggleSceneBtns();
 
     var intro = introJs();
     intro.setOptions({
@@ -296,7 +299,7 @@ function casesLine(data) {
     line = chartSVG.append("path")
         .datum(data)
         .attr("fill", "none")
-        .attr("stroke", "steelblue")
+        .attr("stroke", casesColor)
         .attr("stroke-width", 3.5)
         .attr("d", d3.line()
             .x(function(d) {
@@ -314,7 +317,7 @@ function deathsLine(data) {
     line = chartSVG.append("path")
         .datum(data)
         .attr("fill", "none")
-        .attr("stroke", "#d92626")
+        .attr("stroke", deathsColor)
         .attr("stroke-width", 3.5)
         .attr("d", d3.line()
             .x(function(d) {
@@ -455,6 +458,9 @@ function clearAnnotation() {
     chartSVG.selectAll("#antCir").remove();
     chartSVG.selectAll("#antPath").remove();
     chartSVG.selectAll("#antText").remove();
+    barsvg.selectAll("#antCir").remove();
+    barsvg.selectAll("#antPath").remove();
+    barsvg.selectAll("#antText").remove();
 }
 
 function infoUpdate() {
@@ -501,6 +507,8 @@ function annotate() {
         .attr("x", x2coord + coords[currentSlide].textx)
         .attr("y", y2coord + coords[currentSlide].texty)
         .text(coords[currentSlide].text);
+
+    annotateBars();
 }
 
 function createSlider() {
@@ -668,6 +676,9 @@ function initInfoMap() {
         "ay": 50,
         "text": "Max cases in one day",
         "textx": -100,
-        "texty": 20
+        "texty": 20,
+        "state": "California",
+        "cases": 487855,
+        "bartext": "California becomes the most infected state"
     });
 }
