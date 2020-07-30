@@ -40,7 +40,7 @@ var barsvg, bdataset, bstartDate, filteredStateData, xdomainBar, xAxisBar, xscal
 var barmargin = {
         top: 20,
         right: 30,
-        bottom: 100,
+        bottom: 80,
         left: 50
     },
     bwidth = 820 - barmargin.left - barmargin.right,
@@ -151,6 +151,17 @@ async function init() {
         .attr('opacity', 0)
         .on('mousemove', drawTooltip)
         .on('mouseout', removeTooltip);
+
+    var intro = introJs();
+    intro.setOptions({
+        showBullets: true,
+        showProgress: true,
+        exitOnOverlayClick: false,
+        showStepNumbers: false,
+        keyboardNavigation: true
+    });
+
+    intro.start();
 }
 
 function removeTooltip() {
@@ -500,7 +511,9 @@ function createSlider() {
         .attr("height", slheight)
         .append("g")
         .attr("transform",
-            "translate(" + slmargin.left + "," + slmargin.top + ")");
+            "translate(" + slmargin.left + "," + slmargin.top + ")")
+        .attr("data-intro", 'You can also use the slider to navigate the scenes')
+        .attr("data-position", "top");
 
     slider = sliderSVG.append("g")
         .attr("class", "slider")

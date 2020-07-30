@@ -11,8 +11,11 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="introjs.min.css">
     <script src="responsive-index.js"></script>
     <script src="responsive-barchart.js"></script>
+    <script src="intro.min.js"></script>
+
     <style>
         /* .content {
             max-width: 100%;
@@ -122,7 +125,7 @@
         <div style="height: 100px;">
             <br>
         </div>
-        <div id="scene-btn" class="card" style="background-color: transparent;padding:16px 0 16px 0">
+        <div id="scene-btn" class="card" data-intro='Use this to navigate through different scenes' data-position="bottom" style="background-color: transparent;padding:16px 0 16px 0">
             <!-- <button id="prev-button">Prev</button>
              <div id="scene-btn"></div> 
             <button id="next-button">Next</button> -->
@@ -136,14 +139,14 @@
         <div style="height: 50px;">
             <br>
         </div>
-        <div id="info" class="card"></div>
+        <div id="info" class="card" data-intro='Find important information about the current scene'></div>
     </div>
 
     <div class="main">
         <h4>US Daily new cases and deaths</h4>
-        <div id="my_dataviz"></div>
+        <div id="my_dataviz" data-intro='Mouse over the plot for more details'></div>
         <h4>Total cases by state</h4>
-        <select id="barSelect">
+        <select id="barSelect" data-intro='Switch between Confirmed cases & deaths'>
             <option value="cases">Confirmed Cases</option>
             <option value="deaths">Deaths</option>
         </select>

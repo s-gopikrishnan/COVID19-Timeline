@@ -1,4 +1,8 @@
 var filteredBarData;
+var deathsColor = "#d92626",
+    deathsHighlight = "#cc0000",
+    casesColor = "#4682b4",
+    casesHighlight = "#2b506e";
 
 function barchart(states) {
     // append the svg object to the body of the page
@@ -71,7 +75,7 @@ function drawBarchart(data) {
         .attr("height", function(d) {
             return bheight - yscaleBar(d.cases);
         })
-        .attr("fill", "steelblue")
+        .attr("fill", casesColor)
         .on("mouseover", showBarTooltip)
         .on("mouseout", hideBarTooltip)
         .exit().remove()
@@ -81,6 +85,14 @@ function drawBarchart(data) {
 }
 
 function showBarTooltip(d) {
+    if ('cases' == barselect.node().value) {
+        d3.select(this)
+            .attr("fill", casesHighlight);
+    } else {
+        d3.select(this)
+            .attr("fill", deathsHighlight);
+    }
+
     bartooltip.style("opacity", 0.8)
         .style("display", "block")
         .style("left", (d3.event.pageX) + 15 + "px")
@@ -89,6 +101,13 @@ function showBarTooltip(d) {
 }
 
 function hideBarTooltip(d) {
+    if ('cases' == barselect.node().value) {
+        d3.select(this)
+            .attr("fill", casesColor);
+    } else {
+        d3.select(this)
+            .attr("fill", deathsColor);
+    }
     if (bartooltip) bartooltip.style('display', 'none');
 }
 
@@ -158,7 +177,7 @@ function updateBars(h) {
                     "y(d.cases): " + yscaleBar(d.cases) + "\n"); */
                 return bheight - yscaleBar(d.cases);
             })
-            .attr("fill", "steelblue")
+            .attr("fill", casesColor)
     } else if ('deaths' == barselect.node().value) {
         // filter data set and redraw plot
         var filteredBarData = bdataset.filter(function(d) {
@@ -213,7 +232,7 @@ function updateBars(h) {
                     "y(d.deaths): " + yscaleBar(d.deaths) + "\n"); */
                 return bheight - yscaleBar(d.deaths);
             })
-            .attr("fill", "#d92626")
+            .attr("fill", deathsColor)
             /* if (filteredData[filteredData.length - 1].deaths == 0) {
                 console.log("removing coz 0 data");
                 barsvg.selectAll("rect").remove();
@@ -239,6 +258,8 @@ function createBarChartSVG() {
         .attr("id", "chartsvg")
         .attr("width", bwidth + barmargin.left + barmargin.right)
         .attr("height", bheight + barmargin.top + barmargin.bottom)
+        .attr("data-intro", 'Mouse over the bars for more details')
+        .attr("data-position", "top")
         .append("g")
         .attr("transform",
             "translate(" + barmargin.left + "," + barmargin.top + ")");
