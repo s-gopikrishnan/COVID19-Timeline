@@ -13,7 +13,7 @@ table {
     table-layout: auto;
 }
 
-#tooltip {
+.tooltip {
     opacity: 0;
     position: absolute;
     text-align: left;

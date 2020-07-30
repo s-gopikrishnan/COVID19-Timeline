@@ -683,7 +683,6 @@ date,state,fips,cases,deaths
 2020-03-14,Texas,48,69,0
 2020-03-14,Utah,49,21,0
 2020-03-14,Vermont,50,5,0
-2020-03-14,Virgin Islands,78,1,0
 2020-03-14,Virginia,51,42,1
 2020-03-14,Washington,53,609,40
 2020-03-14,Wisconsin,55,27,0
@@ -699,7 +698,6 @@ date,state,fips,cases,deaths
 2020-03-15,District of Columbia,11,17,0
 2020-03-15,Florida,12,109,3
 2020-03-15,Georgia,13,97,1
-2020-03-15,Guam,66,3,0
 2020-03-15,Hawaii,15,7,0
 2020-03-15,Idaho,16,5,0
 2020-03-15,Illinois,17,94,0
@@ -736,7 +734,6 @@ date,state,fips,cases,deaths
 2020-03-15,Texas,48,80,0
 2020-03-15,Utah,49,29,0
 2020-03-15,Vermont,50,8,0
-2020-03-15,Virgin Islands,78,1,0
 2020-03-15,Virginia,51,45,1
 2020-03-15,Washington,53,675,42
 2020-03-15,Wisconsin,55,33,0
@@ -752,7 +749,6 @@ date,state,fips,cases,deaths
 2020-03-16,District of Columbia,11,22,0
 2020-03-16,Florida,12,141,4
 2020-03-16,Georgia,13,118,1
-2020-03-16,Guam,66,3,0
 2020-03-16,Hawaii,15,10,0
 2020-03-16,Idaho,16,5,0
 2020-03-16,Illinois,17,104,0
@@ -789,7 +785,6 @@ date,state,fips,cases,deaths
 2020-03-16,Texas,48,87,1
 2020-03-16,Utah,49,40,0
 2020-03-16,Vermont,50,12,0
-2020-03-16,Virgin Islands,78,2,0
 2020-03-16,Virginia,51,51,1
 2020-03-16,Washington,53,794,48
 2020-03-16,Wisconsin,55,47,0
@@ -805,7 +800,6 @@ date,state,fips,cases,deaths
 2020-03-17,District of Columbia,11,31,0
 2020-03-17,Florida,12,210,6
 2020-03-17,Georgia,13,142,1
-2020-03-17,Guam,66,3,0
 2020-03-17,Hawaii,15,14,0
 2020-03-17,Idaho,16,9,0
 2020-03-17,Illinois,17,159,1
@@ -842,7 +836,6 @@ date,state,fips,cases,deaths
 2020-03-17,Texas,48,106,1
 2020-03-17,Utah,49,51,0
 2020-03-17,Vermont,50,14,0
-2020-03-17,Virgin Islands,78,2,0
 2020-03-17,Virginia,51,67,2
 2020-03-17,Washington,53,908,54
 2020-03-17,West Virginia,54,1,0
@@ -859,7 +852,6 @@ date,state,fips,cases,deaths
 2020-03-18,District of Columbia,11,36,0
 2020-03-18,Florida,12,326,7
 2020-03-18,Georgia,13,193,3
-2020-03-18,Guam,66,8,0
 2020-03-18,Hawaii,15,16,0
 2020-03-18,Idaho,16,11,0
 2020-03-18,Illinois,17,286,1
@@ -896,7 +888,6 @@ date,state,fips,cases,deaths
 2020-03-18,Texas,48,166,2
 2020-03-18,Utah,49,65,0
 2020-03-18,Vermont,50,19,0
-2020-03-18,Virgin Islands,78,3,0
 2020-03-18,Virginia,51,78,2
 2020-03-18,Washington,53,1026,68
 2020-03-18,West Virginia,54,2,0
@@ -913,7 +904,6 @@ date,state,fips,cases,deaths
 2020-03-19,District of Columbia,11,39,0
 2020-03-19,Florida,12,434,8
 2020-03-19,Georgia,13,282,10
-2020-03-19,Guam,66,12,0
 2020-03-19,Hawaii,15,26,0
 2020-03-19,Idaho,16,23,0
 2020-03-19,Illinois,17,420,4
@@ -950,7 +940,6 @@ date,state,fips,cases,deaths
 2020-03-19,Texas,48,248,4
 2020-03-19,Utah,49,80,0
 2020-03-19,Vermont,50,22,2
-2020-03-19,Virgin Islands,78,3,0
 2020-03-19,Virginia,51,94,2
 2020-03-19,Washington,53,1228,75
 2020-03-19,West Virginia,54,5,0
@@ -967,7 +956,6 @@ date,state,fips,cases,deaths
 2020-03-20,District of Columbia,11,71,0
 2020-03-20,Florida,12,564,9
 2020-03-20,Georgia,13,482,14
-2020-03-20,Guam,66,14,0
 2020-03-20,Hawaii,15,37,0
 2020-03-20,Idaho,16,31,0
 2020-03-20,Illinois,17,583,5
@@ -1004,7 +992,6 @@ date,state,fips,cases,deaths
 2020-03-20,Texas,48,386,5
 2020-03-20,Utah,49,112,0
 2020-03-20,Vermont,50,29,2
-2020-03-20,Virgin Islands,78,6,0
 2020-03-20,Virginia,51,115,2
 2020-03-20,Washington,53,1404,83
 2020-03-20,West Virginia,54,8,0
@@ -1021,7 +1008,6 @@ date,state,fips,cases,deaths
 2020-03-21,District of Columbia,11,77,1
 2020-03-21,Florida,12,764,11
 2020-03-21,Georgia,13,552,20
-2020-03-21,Guam,66,15,0
 2020-03-21,Hawaii,15,48,0
 2020-03-21,Idaho,16,42,0
 2020-03-21,Illinois,17,751,6
@@ -1058,7 +1044,6 @@ date,state,fips,cases,deaths
 2020-03-21,Texas,48,547,5
 2020-03-21,Utah,49,138,0
 2020-03-21,Vermont,50,49,2
-2020-03-21,Virgin Islands,78,6,0
 2020-03-21,Virginia,51,152,3
 2020-03-21,Washington,53,1655,95
 2020-03-21,West Virginia,54,12,0
@@ -1075,7 +1060,6 @@ date,state,fips,cases,deaths
 2020-03-22,District of Columbia,11,98,1
 2020-03-22,Florida,12,1000,13
 2020-03-22,Georgia,13,620,25
-2020-03-22,Guam,66,27,1
 2020-03-22,Hawaii,15,56,0
 2020-03-22,Idaho,16,47,0
 2020-03-22,Illinois,17,1047,9
@@ -1112,7 +1096,6 @@ date,state,fips,cases,deaths
 2020-03-22,Texas,48,639,7
 2020-03-22,Utah,49,182,1
 2020-03-22,Vermont,50,52,2
-2020-03-22,Virgin Islands,78,17,0
 2020-03-22,Virginia,51,219,6
 2020-03-22,Washington,53,1844,97
 2020-03-22,West Virginia,54,16,0
@@ -1129,7 +1112,6 @@ date,state,fips,cases,deaths
 2020-03-23,District of Columbia,11,116,2
 2020-03-23,Florida,12,1222,18
 2020-03-23,Georgia,13,800,25
-2020-03-23,Guam,66,29,1
 2020-03-23,Hawaii,15,77,0
 2020-03-23,Idaho,16,50,0
 2020-03-23,Illinois,17,1285,12
@@ -1166,7 +1148,6 @@ date,state,fips,cases,deaths
 2020-03-23,Texas,48,728,7
 2020-03-23,Utah,49,257,1
 2020-03-23,Vermont,50,75,2
-2020-03-23,Virgin Islands,78,17,0
 2020-03-23,Virginia,51,254,6
 2020-03-23,Washington,53,2101,110
 2020-03-23,West Virginia,54,16,0
@@ -1183,7 +1164,6 @@ date,state,fips,cases,deaths
 2020-03-24,District of Columbia,11,137,2
 2020-03-24,Florida,12,1467,20
 2020-03-24,Georgia,13,1095,38
-2020-03-24,Guam,66,32,1
 2020-03-24,Hawaii,15,90,0
 2020-03-24,Idaho,16,73,0
 2020-03-24,Illinois,17,1535,16
@@ -1220,7 +1200,6 @@ date,state,fips,cases,deaths
 2020-03-24,Texas,48,857,11
 2020-03-24,Utah,49,299,1
 2020-03-24,Vermont,50,95,7
-2020-03-24,Virgin Islands,78,17,0
 2020-03-24,Virginia,51,291,7
 2020-03-24,Washington,53,2469,123
 2020-03-24,West Virginia,54,39,0
@@ -1237,7 +1216,6 @@ date,state,fips,cases,deaths
 2020-03-25,District of Columbia,11,183,2
 2020-03-25,Florida,12,1971,23
 2020-03-25,Georgia,13,1385,47
-2020-03-25,Guam,66,32,1
 2020-03-25,Hawaii,15,95,0
 2020-03-25,Idaho,16,123,0
 2020-03-25,Illinois,17,1874,21
@@ -1274,7 +1252,6 @@ date,state,fips,cases,deaths
 2020-03-25,Texas,48,1132,13
 2020-03-25,Utah,49,346,1
 2020-03-25,Vermont,50,123,8
-2020-03-25,Virgin Islands,78,17,0
 2020-03-25,Virginia,51,390,9
 2020-03-25,Washington,53,2585,130
 2020-03-25,West Virginia,54,51,0
@@ -1291,7 +1268,6 @@ date,state,fips,cases,deaths
 2020-03-26,District of Columbia,11,231,3
 2020-03-26,Florida,12,2478,29
 2020-03-26,Georgia,13,1641,56
-2020-03-26,Guam,66,49,1
 2020-03-26,Hawaii,15,106,0
 2020-03-26,Idaho,16,189,3
 2020-03-26,Illinois,17,2538,26
@@ -1328,7 +1304,6 @@ date,state,fips,cases,deaths
 2020-03-26,Texas,48,1542,21
 2020-03-26,Utah,49,402,1
 2020-03-26,Vermont,50,158,9
-2020-03-26,Virgin Islands,78,17,0
 2020-03-26,Virginia,51,603,14
 2020-03-26,Washington,53,3208,152
 2020-03-26,West Virginia,54,76,0
@@ -1345,7 +1320,6 @@ date,state,fips,cases,deaths
 2020-03-27,District of Columbia,11,267,3
 2020-03-27,Florida,12,3198,46
 2020-03-27,Georgia,13,2198,64
-2020-03-27,Guam,66,53,1
 2020-03-27,Hawaii,15,120,0
 2020-03-27,Idaho,16,232,4
 2020-03-27,Illinois,17,3029,37
@@ -1382,7 +1356,6 @@ date,state,fips,cases,deaths
 2020-03-27,Texas,48,1971,25
 2020-03-27,Utah,49,480,2
 2020-03-27,Vermont,50,184,10
-2020-03-27,Virgin Islands,78,19,0
 2020-03-27,Virginia,51,605,14
 2020-03-27,Washington,53,3770,179
 2020-03-27,West Virginia,54,96,0
@@ -1399,7 +1372,6 @@ date,state,fips,cases,deaths
 2020-03-28,District of Columbia,11,304,4
 2020-03-28,Florida,12,4038,56
 2020-03-28,Georgia,13,2447,79
-2020-03-28,Guam,66,57,1
 2020-03-28,Hawaii,15,151,0
 2020-03-28,Idaho,16,262,5
 2020-03-28,Illinois,17,3547,50
@@ -1424,7 +1396,6 @@ date,state,fips,cases,deaths
 2020-03-28,New York,36,53517,935
 2020-03-28,North Carolina,37,972,4
 2020-03-28,North Dakota,38,93,1
-2020-03-28,Northern Mariana Islands,69,2,0
 2020-03-28,Ohio,39,1406,25
 2020-03-28,Oklahoma,40,377,15
 2020-03-28,Oregon,41,480,13
@@ -1437,7 +1408,6 @@ date,state,fips,cases,deaths
 2020-03-28,Texas,48,2381,30
 2020-03-28,Utah,49,608,2
 2020-03-28,Vermont,50,211,12
-2020-03-28,Virgin Islands,78,19,0
 2020-03-28,Virginia,51,739,17
 2020-03-28,Washington,53,4311,193
 2020-03-28,West Virginia,54,113,0
@@ -1454,7 +1424,6 @@ date,state,fips,cases,deaths
 2020-03-29,District of Columbia,11,342,5
 2020-03-29,Florida,12,4943,60
 2020-03-29,Georgia,13,2683,83
-2020-03-29,Guam,66,58,1
 2020-03-29,Hawaii,15,175,0
 2020-03-29,Idaho,16,310,6
 2020-03-29,Illinois,17,4615,71
@@ -1479,7 +1448,6 @@ date,state,fips,cases,deaths
 2020-03-29,New York,36,59783,1180
 2020-03-29,North Carolina,37,1166,6
 2020-03-29,North Dakota,38,97,1
-2020-03-29,Northern Mariana Islands,69,2,0
 2020-03-29,Ohio,39,1665,30
 2020-03-29,Oklahoma,40,429,16
 2020-03-29,Oregon,41,549,13
@@ -1492,7 +1460,6 @@ date,state,fips,cases,deaths
 2020-03-29,Texas,48,2722,35
 2020-03-29,Utah,49,719,2
 2020-03-29,Vermont,50,235,12
-2020-03-29,Virgin Islands,78,23,0
 2020-03-29,Virginia,51,889,22
 2020-03-29,Washington,53,4897,209
 2020-03-29,West Virginia,54,124,1
@@ -1509,7 +1476,6 @@ date,state,fips,cases,deaths
 2020-03-30,District of Columbia,11,401,9
 2020-03-30,Florida,12,5695,72
 2020-03-30,Georgia,13,3032,103
-2020-03-30,Guam,66,60,1
 2020-03-30,Hawaii,15,204,0
 2020-03-30,Idaho,16,415,7
 2020-03-30,Illinois,17,5070,84
@@ -1534,7 +1500,6 @@ date,state,fips,cases,deaths
 2020-03-30,New York,36,67504,1512
 2020-03-30,North Carolina,37,1303,6
 2020-03-30,North Dakota,38,109,3
-2020-03-30,Northern Mariana Islands,69,2,0
 2020-03-30,Ohio,39,1933,40
 2020-03-30,Oklahoma,40,481,17
 2020-03-30,Oregon,41,607,16
@@ -1547,7 +1512,6 @@ date,state,fips,cases,deaths
 2020-03-30,Texas,48,3065,46
 2020-03-30,Utah,49,806,4
 2020-03-30,Vermont,50,256,12
-2020-03-30,Virgin Islands,78,30,0
 2020-03-30,Virginia,51,1020,26
 2020-03-30,Washington,53,5180,221
 2020-03-30,West Virginia,54,145,1
@@ -1564,7 +1528,6 @@ date,state,fips,cases,deaths
 2020-03-31,District of Columbia,11,495,9
 2020-03-31,Florida,12,6742,85
 2020-03-31,Georgia,13,4116,126
-2020-03-31,Guam,66,139,2
 2020-03-31,Hawaii,15,224,1
 2020-03-31,Idaho,16,526,9
 2020-03-31,Illinois,17,5992,107
@@ -1589,7 +1552,6 @@ date,state,fips,cases,deaths
 2020-03-31,New York,36,76211,1929
 2020-03-31,North Carolina,37,1527,10
 2020-03-31,North Dakota,38,126,3
-2020-03-31,Northern Mariana Islands,69,2,0
 2020-03-31,Ohio,39,2199,55
 2020-03-31,Oklahoma,40,566,23
 2020-03-31,Oregon,41,690,18
@@ -1602,7 +1564,6 @@ date,state,fips,cases,deaths
 2020-03-31,Texas,48,3588,57
 2020-03-31,Utah,49,887,5
 2020-03-31,Vermont,50,293,13
-2020-03-31,Virgin Islands,78,30,0
 2020-03-31,Virginia,51,1249,27
 2020-03-31,Washington,53,5293,226
 2020-03-31,West Virginia,54,162,1
@@ -1619,7 +1580,6 @@ date,state,fips,cases,deaths
 2020-04-01,District of Columbia,11,586,11
 2020-04-01,Florida,12,7769,100
 2020-04-01,Georgia,13,4747,154
-2020-04-01,Guam,66,147,3
 2020-04-01,Hawaii,15,258,1
 2020-04-01,Idaho,16,669,9
 2020-04-01,Illinois,17,6978,146
@@ -1644,7 +1604,6 @@ date,state,fips,cases,deaths
 2020-04-01,New York,36,84364,2415
 2020-04-01,North Carolina,37,1591,11
 2020-04-01,North Dakota,38,147,3
-2020-04-01,Northern Mariana Islands,69,6,1
 2020-04-01,Ohio,39,2548,65
 2020-04-01,Oklahoma,40,719,30
 2020-04-01,Oregon,41,737,19
@@ -1657,7 +1616,6 @@ date,state,fips,cases,deaths
 2020-04-01,Texas,48,4402,65
 2020-04-01,Utah,49,1012,7
 2020-04-01,Vermont,50,321,16
-2020-04-01,Virgin Islands,78,30,0
 2020-04-01,Virginia,51,1511,18
 2020-04-01,Washington,53,5589,250
 2020-04-01,West Virginia,54,191,2
@@ -1674,7 +1632,6 @@ date,state,fips,cases,deaths
 2020-04-02,District of Columbia,11,653,12
 2020-04-02,Florida,12,9000,144
 2020-04-02,Georgia,13,5444,176
-2020-04-02,Guam,66,152,3
 2020-04-02,Hawaii,15,283,2
 2020-04-02,Idaho,16,891,9
 2020-04-02,Illinois,17,7695,165
@@ -1699,7 +1656,6 @@ date,state,fips,cases,deaths
 2020-04-02,New York,36,93360,2963
 2020-04-02,North Carolina,37,1858,17
 2020-04-02,North Dakota,38,159,3
-2020-04-02,Northern Mariana Islands,69,8,1
 2020-04-02,Ohio,39,2903,81
 2020-04-02,Oklahoma,40,879,34
 2020-04-02,Oregon,41,827,21
@@ -1712,7 +1668,6 @@ date,state,fips,cases,deaths
 2020-04-02,Texas,48,4952,80
 2020-04-02,Utah,49,1077,7
 2020-04-02,Vermont,50,338,17
-2020-04-02,Virgin Islands,78,37,0
 2020-04-02,Virginia,51,1706,18
 2020-04-02,Washington,53,6586,272
 2020-04-02,West Virginia,54,217,2
@@ -1729,7 +1684,6 @@ date,state,fips,cases,deaths
 2020-04-03,District of Columbia,11,757,15
 2020-04-03,Florida,12,10260,169
 2020-04-03,Georgia,13,5967,198
-2020-04-03,Guam,66,154,4
 2020-04-03,Hawaii,15,317,3
 2020-04-03,Idaho,16,1012,10
 2020-04-03,Illinois,17,8904,212
@@ -1754,7 +1708,6 @@ date,state,fips,cases,deaths
 2020-04-03,New York,36,103689,3716
 2020-04-03,North Carolina,37,2093,23
 2020-04-03,North Dakota,38,173,3
-2020-04-03,Northern Mariana Islands,69,8,1
 2020-04-03,Ohio,39,3312,91
 2020-04-03,Oklahoma,40,989,38
 2020-04-03,Oregon,41,899,22
@@ -1767,7 +1720,6 @@ date,state,fips,cases,deaths
 2020-04-03,Texas,48,5773,98
 2020-04-03,Utah,49,1248,7
 2020-04-03,Vermont,50,389,17
-2020-04-03,Virgin Islands,78,38,0
 2020-04-03,Virginia,51,2011,46
 2020-04-03,Washington,53,6967,293
 2020-04-03,West Virginia,54,242,2
@@ -1784,7 +1736,6 @@ date,state,fips,cases,deaths
 2020-04-04,District of Columbia,11,902,21
 2020-04-04,Florida,12,11537,194
 2020-04-04,Georgia,13,6383,208
-2020-04-04,Guam,66,223,4
 2020-04-04,Hawaii,15,349,3
 2020-04-04,Idaho,16,1076,10
 2020-04-04,Illinois,17,10357,248
@@ -1809,7 +1760,6 @@ date,state,fips,cases,deaths
 2020-04-04,New York,36,115963,4535
 2020-04-04,North Carolina,37,2402,30
 2020-04-04,North Dakota,38,186,3
-2020-04-04,Northern Mariana Islands,69,8,1
 2020-04-04,Ohio,39,3739,102
 2020-04-04,Oklahoma,40,1159,42
 2020-04-04,Oregon,41,1000,26
@@ -1822,7 +1772,6 @@ date,state,fips,cases,deaths
 2020-04-04,Texas,48,6566,124
 2020-04-04,Utah,49,1426,8
 2020-04-04,Vermont,50,461,20
-2020-04-04,Virgin Islands,78,42,0
 2020-04-04,Virginia,51,2408,52
 2020-04-04,Washington,53,7499,318
 2020-04-04,West Virginia,54,282,2
@@ -1839,7 +1788,6 @@ date,state,fips,cases,deaths
 2020-04-05,District of Columbia,11,998,22
 2020-04-05,Florida,12,12342,220
 2020-04-05,Georgia,13,6742,219
-2020-04-05,Guam,66,265,4
 2020-04-05,Hawaii,15,369,4
 2020-04-05,Idaho,16,1100,10
 2020-04-05,Illinois,17,11276,283
@@ -1864,7 +1812,6 @@ date,state,fips,cases,deaths
 2020-04-05,New York,36,124085,5335
 2020-04-05,North Carolina,37,2585,37
 2020-04-05,North Dakota,38,207,3
-2020-04-05,Northern Mariana Islands,69,8,1
 2020-04-05,Ohio,39,4043,119
 2020-04-05,Oklahoma,40,1251,46
 2020-04-05,Oregon,41,1068,27
@@ -1877,7 +1824,6 @@ date,state,fips,cases,deaths
 2020-04-05,Texas,48,7117,136
 2020-04-05,Utah,49,1618,8
 2020-04-05,Vermont,50,512,22
-2020-04-05,Virgin Islands,78,42,0
 2020-04-05,Virginia,51,2636,52
 2020-04-05,Washington,53,7985,344
 2020-04-05,West Virginia,54,325,3
@@ -1894,7 +1840,6 @@ date,state,fips,cases,deaths
 2020-04-06,District of Columbia,11,1097,24
 2020-04-06,Florida,12,13621,253
 2020-04-06,Georgia,13,7558,294
-2020-04-06,Guam,66,266,4
 2020-04-06,Hawaii,15,385,5
 2020-04-06,Idaho,16,1170,13
 2020-04-06,Illinois,17,12262,309
@@ -1919,7 +1864,6 @@ date,state,fips,cases,deaths
 2020-04-06,New York,36,133389,6149
 2020-04-06,North Carolina,37,2870,42
 2020-04-06,North Dakota,38,225,3
-2020-04-06,Northern Mariana Islands,69,8,1
 2020-04-06,Ohio,39,4450,142
 2020-04-06,Oklahoma,40,1326,51
 2020-04-06,Oregon,41,1132,29
@@ -1932,7 +1876,6 @@ date,state,fips,cases,deaths
 2020-04-06,Texas,48,8150,159
 2020-04-06,Utah,49,1662,13
 2020-04-06,Vermont,50,543,23
-2020-04-06,Virgin Islands,78,44,1
 2020-04-06,Virginia,51,2877,54
 2020-04-06,Washington,53,8385,383
 2020-04-06,West Virginia,54,347,4
@@ -1949,7 +1892,6 @@ date,state,fips,cases,deaths
 2020-04-07,District of Columbia,11,1211,24
 2020-04-07,Florida,12,14739,295
 2020-04-07,Georgia,13,9156,348
-2020-04-07,Guam,66,274,4
 2020-04-07,Hawaii,15,408,5
 2020-04-07,Idaho,16,1210,15
 2020-04-07,Illinois,17,13549,384
@@ -1974,7 +1916,6 @@ date,state,fips,cases,deaths
 2020-04-07,New York,36,141703,7185
 2020-04-07,North Carolina,37,3220,50
 2020-04-07,North Dakota,38,237,4
-2020-04-07,Northern Mariana Islands,69,8,2
 2020-04-07,Ohio,39,4783,167
 2020-04-07,Oklahoma,40,1470,67
 2020-04-07,Oregon,41,1181,33
@@ -1987,7 +1928,6 @@ date,state,fips,cases,deaths
 2020-04-07,Texas,48,8968,177
 2020-04-07,Utah,49,1737,13
 2020-04-07,Vermont,50,575,23
-2020-04-07,Virgin Islands,78,45,1
 2020-04-07,Virginia,51,3332,69
 2020-04-07,Washington,53,8683,409
 2020-04-07,West Virginia,54,413,4
@@ -2004,7 +1944,6 @@ date,state,fips,cases,deaths
 2020-04-08,District of Columbia,11,1440,27
 2020-04-08,Florida,12,15690,322
 2020-04-08,Georgia,13,10204,370
-2020-04-08,Guam,66,409,4
 2020-04-08,Hawaii,15,433,5
 2020-04-08,Idaho,16,1232,19
 2020-04-08,Illinois,17,15078,464
@@ -2029,7 +1968,6 @@ date,state,fips,cases,deaths
 2020-04-08,New York,36,151271,8138
 2020-04-08,North Carolina,37,3423,61
 2020-04-08,North Dakota,38,251,4
-2020-04-08,Northern Mariana Islands,69,11,2
 2020-04-08,Ohio,39,5149,193
 2020-04-08,Oklahoma,40,1523,79
 2020-04-08,Oregon,41,1239,38
@@ -2042,7 +1980,6 @@ date,state,fips,cases,deaths
 2020-04-08,Texas,48,9897,195
 2020-04-08,Utah,49,1860,13
 2020-04-08,Vermont,50,605,23
-2020-04-08,Virgin Islands,78,46,1
 2020-04-08,Virginia,51,3644,60
 2020-04-08,Washington,53,9098,430
 2020-04-08,West Virginia,54,483,4
@@ -2059,7 +1996,6 @@ date,state,fips,cases,deaths
 2020-04-09,District of Columbia,11,1523,32
 2020-04-09,Florida,12,16819,370
 2020-04-09,Georgia,13,10885,412
-2020-04-09,Guam,66,542,4
 2020-04-09,Hawaii,15,440,6
 2020-04-09,Idaho,16,1366,24
 2020-04-09,Illinois,17,16422,534
@@ -2084,7 +2020,6 @@ date,state,fips,cases,deaths
 2020-04-09,New York,36,162036,9166
 2020-04-09,North Carolina,37,3651,74
 2020-04-09,North Dakota,38,269,5
-2020-04-09,Northern Mariana Islands,69,11,2
 2020-04-09,Ohio,39,5513,213
 2020-04-09,Oklahoma,40,1683,80
 2020-04-09,Oregon,41,1321,44
@@ -2097,7 +2032,6 @@ date,state,fips,cases,deaths
 2020-04-09,Texas,48,11372,228
 2020-04-09,Utah,49,1980,13
 2020-04-09,Vermont,50,628,23
-2020-04-09,Virgin Islands,78,50,1
 2020-04-09,Virginia,51,4041,109
 2020-04-09,Washington,53,9609,456
 2020-04-09,West Virginia,54,524,5
@@ -2114,7 +2048,6 @@ date,state,fips,cases,deaths
 2020-04-10,District of Columbia,11,1660,38
 2020-04-10,Florida,12,17960,418
 2020-04-10,Georgia,13,11859,425
-2020-04-10,Guam,66,577,4
 2020-04-10,Hawaii,15,463,8
 2020-04-10,Idaho,16,1425,25
 2020-04-10,Illinois,17,17887,607
@@ -2139,7 +2072,6 @@ date,state,fips,cases,deaths
 2020-04-10,New York,36,172830,10162
 2020-04-10,North Carolina,37,3906,78
 2020-04-10,North Dakota,38,278,7
-2020-04-10,Northern Mariana Islands,69,11,2
 2020-04-10,Ohio,39,5879,231
 2020-04-10,Oklahoma,40,1794,88
 2020-04-10,Oregon,41,1371,48
@@ -2152,7 +2084,6 @@ date,state,fips,cases,deaths
 2020-04-10,Texas,48,12291,249
 2020-04-10,Utah,49,2103,17
 2020-04-10,Vermont,50,679,24
-2020-04-10,Virgin Islands,78,51,1
 2020-04-10,Virginia,51,4509,121
 2020-04-10,Washington,53,9888,483
 2020-04-10,West Virginia,54,537,5
@@ -2169,7 +2100,6 @@ date,state,fips,cases,deaths
 2020-04-11,District of Columbia,11,1778,47
 2020-04-11,Florida,12,18978,445
 2020-04-11,Georgia,13,12261,432
-2020-04-11,Guam,66,681,5
 2020-04-11,Hawaii,15,484,8
 2020-04-11,Idaho,16,1438,27
 2020-04-11,Illinois,17,19180,682
@@ -2194,7 +2124,6 @@ date,state,fips,cases,deaths
 2020-04-11,New York,36,182990,11159
 2020-04-11,North Carolina,37,4310,86
 2020-04-11,North Dakota,38,293,7
-2020-04-11,Northern Mariana Islands,69,11,2
 2020-04-11,Ohio,39,6251,247
 2020-04-11,Oklahoma,40,1868,93
 2020-04-11,Oregon,41,1447,51
@@ -2207,7 +2136,6 @@ date,state,fips,cases,deaths
 2020-04-11,Texas,48,13208,265
 2020-04-11,Utah,49,2208,18
 2020-04-11,Vermont,50,711,24
-2020-04-11,Virgin Islands,78,51,1
 2020-04-11,Virginia,51,5076,130
 2020-04-11,Washington,53,10227,498
 2020-04-11,West Virginia,54,593,6
@@ -2224,7 +2152,6 @@ date,state,fips,cases,deaths
 2020-04-12,District of Columbia,11,1875,50
 2020-04-12,Florida,12,19855,460
 2020-04-12,Georgia,13,12103,438
-2020-04-12,Guam,66,716,5
 2020-04-12,Hawaii,15,497,9
 2020-04-12,Idaho,16,1457,27
 2020-04-12,Illinois,17,20852,727
@@ -2249,7 +2176,6 @@ date,state,fips,cases,deaths
 2020-04-12,New York,36,191425,12116
 2020-04-12,North Carolina,37,4520,86
 2020-04-12,North Dakota,38,308,8
-2020-04-12,Northern Mariana Islands,69,11,2
 2020-04-12,Ohio,39,6605,253
 2020-04-12,Oklahoma,40,1970,96
 2020-04-12,Oregon,41,1527,52
@@ -2262,7 +2188,6 @@ date,state,fips,cases,deaths
 2020-04-12,Texas,48,13776,288
 2020-04-12,Utah,49,2305,18
 2020-04-12,Vermont,50,727,26
-2020-04-12,Virgin Islands,78,51,1
 2020-04-12,Virginia,51,5273,141
 2020-04-12,Washington,53,10414,511
 2020-04-12,West Virginia,54,615,8
@@ -2279,7 +2204,6 @@ date,state,fips,cases,deaths
 2020-04-13,District of Columbia,11,1955,52
 2020-04-13,Florida,12,21011,498
 2020-04-13,Georgia,13,13125,479
-2020-04-13,Guam,66,719,6
 2020-04-13,Hawaii,15,502,9
 2020-04-13,Idaho,16,1499,33
 2020-04-13,Illinois,17,22025,800
@@ -2304,7 +2228,6 @@ date,state,fips,cases,deaths
 2020-04-13,New York,36,197973,12998
 2020-04-13,North Carolina,37,4788,91
 2020-04-13,North Dakota,38,331,9
-2020-04-13,Northern Mariana Islands,69,11,2
 2020-04-13,Ohio,39,6975,274
 2020-04-13,Oklahoma,40,2069,98
 2020-04-13,Oregon,41,1584,53
@@ -2317,7 +2240,6 @@ date,state,fips,cases,deaths
 2020-04-13,Texas,48,14487,320
 2020-04-13,Utah,49,2368,18
 2020-04-13,Vermont,50,748,27
-2020-04-13,Virgin Islands,78,51,1
 2020-04-13,Virginia,51,5746,149
 2020-04-13,Washington,53,10547,525
 2020-04-13,West Virginia,54,638,9
@@ -2334,7 +2256,6 @@ date,state,fips,cases,deaths
 2020-04-14,District of Columbia,11,2058,67
 2020-04-14,Florida,12,21620,570
 2020-04-14,Georgia,13,13913,517
-2020-04-14,Guam,66,721,6
 2020-04-14,Hawaii,15,511,9
 2020-04-14,Idaho,16,1538,39
 2020-04-14,Illinois,17,23247,878
@@ -2359,7 +2280,6 @@ date,state,fips,cases,deaths
 2020-04-14,New York,36,205375,14001
 2020-04-14,North Carolina,37,4992,116
 2020-04-14,North Dakota,38,341,9
-2020-04-14,Northern Mariana Islands,69,13,2
 2020-04-14,Ohio,39,7280,324
 2020-04-14,Oklahoma,40,2184,109
 2020-04-14,Oregon,41,1633,55
@@ -2372,7 +2292,6 @@ date,state,fips,cases,deaths
 2020-04-14,Texas,48,15303,365
 2020-04-14,Utah,49,2420,19
 2020-04-14,Vermont,50,752,28
-2020-04-14,Virgin Islands,78,51,1
 2020-04-14,Virginia,51,6173,154
 2020-04-14,Washington,53,10711,552
 2020-04-14,West Virginia,54,697,10
@@ -2389,7 +2308,6 @@ date,state,fips,cases,deaths
 2020-04-15,District of Columbia,11,2197,72
 2020-04-15,Florida,12,22526,613
 2020-04-15,Georgia,13,14583,569
-2020-04-15,Guam,66,750,6
 2020-04-15,Hawaii,15,524,9
 2020-04-15,Idaho,16,1587,41
 2020-04-15,Illinois,17,24593,958
@@ -2414,7 +2332,6 @@ date,state,fips,cases,deaths
 2020-04-15,New York,36,217130,14937
 2020-04-15,North Carolina,37,5123,128
 2020-04-15,North Dakota,38,365,9
-2020-04-15,Northern Mariana Islands,69,13,2
 2020-04-15,Ohio,39,7791,361
 2020-04-15,Oklahoma,40,2263,123
 2020-04-15,Oregon,41,1663,58
@@ -2427,7 +2344,6 @@ date,state,fips,cases,deaths
 2020-04-15,Texas,48,16106,395
 2020-04-15,Utah,49,2549,20
 2020-04-15,Vermont,50,759,29
-2020-04-15,Virgin Islands,78,51,1
 2020-04-15,Virginia,51,6502,195
 2020-04-15,Washington,53,10806,572
 2020-04-15,West Virginia,54,725,12
@@ -2444,7 +2360,6 @@ date,state,fips,cases,deaths
 2020-04-16,District of Columbia,11,2350,81
 2020-04-16,Florida,12,23332,667
 2020-04-16,Georgia,13,15644,611
-2020-04-16,Guam,66,790,6
 2020-04-16,Hawaii,15,535,9
 2020-04-16,Idaho,16,1609,41
 2020-04-16,Illinois,17,25734,1081
@@ -2469,7 +2384,6 @@ date,state,fips,cases,deaths
 2020-04-16,New York,36,225761,15669
 2020-04-16,North Carolina,37,5463,140
 2020-04-16,North Dakota,38,393,9
-2020-04-16,Northern Mariana Islands,69,13,2
 2020-04-16,Ohio,39,8414,389
 2020-04-16,Oklahoma,40,2357,131
 2020-04-16,Oregon,41,1736,64
@@ -2482,7 +2396,6 @@ date,state,fips,cases,deaths
 2020-04-16,Texas,48,16928,428
 2020-04-16,Utah,49,2687,21
 2020-04-16,Vermont,50,768,34
-2020-04-16,Virgin Islands,78,51,2
 2020-04-16,Virginia,51,6891,208
 2020-04-16,Washington,53,11180,588
 2020-04-16,West Virginia,54,739,13
@@ -2499,7 +2412,6 @@ date,state,fips,cases,deaths
 2020-04-17,District of Columbia,11,2476,86
 2020-04-17,Florida,12,24745,725
 2020-04-17,Georgia,13,16658,661
-2020-04-17,Guam,66,796,6
 2020-04-17,Hawaii,15,547,9
 2020-04-17,Idaho,16,1655,43
 2020-04-17,Illinois,17,27575,1142
@@ -2524,7 +2436,6 @@ date,state,fips,cases,deaths
 2020-04-17,New York,36,233293,16473
 2020-04-17,North Carolina,37,5859,159
 2020-04-17,North Dakota,38,439,9
-2020-04-17,Northern Mariana Islands,69,14,2
 2020-04-17,Ohio,39,9107,418
 2020-04-17,Oklahoma,40,2465,136
 2020-04-17,Oregon,41,1785,70
@@ -2537,7 +2448,6 @@ date,state,fips,cases,deaths
 2020-04-17,Texas,48,18131,461
 2020-04-17,Utah,49,2813,23
 2020-04-17,Vermont,50,779,34
-2020-04-17,Virgin Islands,78,53,3
 2020-04-17,Virginia,51,7492,238
 2020-04-17,Washington,53,11479,610
 2020-04-17,West Virginia,54,776,16
@@ -2554,7 +2464,6 @@ date,state,fips,cases,deaths
 2020-04-18,District of Columbia,11,2666,91
 2020-04-18,Florida,12,25484,747
 2020-04-18,Georgia,13,17014,670
-2020-04-18,Guam,66,805,6
 2020-04-18,Hawaii,15,568,9
 2020-04-18,Idaho,16,1668,44
 2020-04-18,Illinois,17,29160,1272
@@ -2579,7 +2488,6 @@ date,state,fips,cases,deaths
 2020-04-18,New York,36,240542,17141
 2020-04-18,North Carolina,37,6140,175
 2020-04-18,North Dakota,38,528,9
-2020-04-18,Northern Mariana Islands,69,14,2
 2020-04-18,Ohio,39,10222,451
 2020-04-18,Oklahoma,40,2570,139
 2020-04-18,Oregon,41,1844,72
@@ -2592,7 +2500,6 @@ date,state,fips,cases,deaths
 2020-04-18,Texas,48,18927,487
 2020-04-18,Utah,49,2942,25
 2020-04-18,Vermont,50,803,36
-2020-04-18,Virgin Islands,78,53,3
 2020-04-18,Virginia,51,8053,258
 2020-04-18,Washington,53,11850,629
 2020-04-18,West Virginia,54,825,18
@@ -2609,7 +2516,6 @@ date,state,fips,cases,deaths
 2020-04-19,District of Columbia,11,2793,96
 2020-04-19,Florida,12,26306,773
 2020-04-19,Georgia,13,17619,682
-2020-04-19,Guam,66,808,6
 2020-04-19,Hawaii,15,574,10
 2020-04-19,Idaho,16,1672,45
 2020-04-19,Illinois,17,30357,1302
@@ -2634,7 +2540,6 @@ date,state,fips,cases,deaths
 2020-04-19,New York,36,246741,17793
 2020-04-19,North Carolina,37,6493,183
 2020-04-19,North Dakota,38,585,10
-2020-04-19,Northern Mariana Islands,69,14,2
 2020-04-19,Ohio,39,11602,471
 2020-04-19,Oklahoma,40,2599,140
 2020-04-19,Oregon,41,1910,74
@@ -2647,7 +2552,6 @@ date,state,fips,cases,deaths
 2020-04-19,Texas,48,19441,503
 2020-04-19,Utah,49,3071,27
 2020-04-19,Vermont,50,812,36
-2020-04-19,Virgin Islands,78,53,3
 2020-04-19,Virginia,51,8536,277
 2020-04-19,Washington,53,11864,637
 2020-04-19,West Virginia,54,890,20
@@ -2664,7 +2568,6 @@ date,state,fips,cases,deaths
 2020-04-20,District of Columbia,11,2927,105
 2020-04-20,Florida,12,27050,822
 2020-04-20,Georgia,13,18447,767
-2020-04-20,Guam,66,811,6
 2020-04-20,Hawaii,15,578,10
 2020-04-20,Idaho,16,1736,48
 2020-04-20,Illinois,17,31508,1359
@@ -2689,7 +2592,6 @@ date,state,fips,cases,deaths
 2020-04-20,New York,36,251608,18412
 2020-04-20,North Carolina,37,6764,187
 2020-04-20,North Dakota,38,627,13
-2020-04-20,Northern Mariana Islands,69,14,2
 2020-04-20,Ohio,39,12919,509
 2020-04-20,Oklahoma,40,2680,143
 2020-04-20,Oregon,41,1956,75
@@ -2702,7 +2604,6 @@ date,state,fips,cases,deaths
 2020-04-20,Texas,48,20035,523
 2020-04-20,Utah,49,3213,28
 2020-04-20,Vermont,50,816,37
-2020-04-20,Virgin Islands,78,54,3
 2020-04-20,Virginia,51,8989,300
 2020-04-20,Washington,53,12255,661
 2020-04-20,West Virginia,54,908,26
@@ -2719,7 +2620,6 @@ date,state,fips,cases,deaths
 2020-04-21,District of Columbia,11,3098,112
 2020-04-21,Florida,12,27861,866
 2020-04-21,Georgia,13,19189,810
-2020-04-21,Guam,66,852,6
 2020-04-21,Hawaii,15,580,12
 2020-04-21,Idaho,16,1766,51
 2020-04-21,Illinois,17,33059,1479
@@ -2744,7 +2644,6 @@ date,state,fips,cases,deaths
 2020-04-21,New York,36,255932,19040
 2020-04-21,North Carolina,37,6951,217
 2020-04-21,North Dakota,38,644,13
-2020-04-21,Northern Mariana Islands,69,14,2
 2020-04-21,Ohio,39,13725,557
 2020-04-21,Oklahoma,40,2807,164
 2020-04-21,Oregon,41,2002,78
@@ -2757,7 +2656,6 @@ date,state,fips,cases,deaths
 2020-04-21,Texas,48,20949,552
 2020-04-21,Utah,49,3301,32
 2020-04-21,Vermont,50,818,39
-2020-04-21,Virgin Islands,78,54,3
 2020-04-21,Virginia,51,9629,325
 2020-04-21,Washington,53,12410,683
 2020-04-21,West Virginia,54,929,26
@@ -2774,7 +2672,6 @@ date,state,fips,cases,deaths
 2020-04-22,District of Columbia,11,3206,127
 2020-04-22,Florida,12,28301,926
 2020-04-22,Georgia,13,20099,837
-2020-04-22,Guam,66,911,6
 2020-04-22,Hawaii,15,586,12
 2020-04-22,Idaho,16,1802,54
 2020-04-22,Illinois,17,35108,1577
@@ -2799,7 +2696,6 @@ date,state,fips,cases,deaths
 2020-04-22,New York,36,261591,19647
 2020-04-22,North Carolina,37,7220,242
 2020-04-22,North Dakota,38,679,14
-2020-04-22,Northern Mariana Islands,69,14,2
 2020-04-22,Ohio,39,14117,610
 2020-04-22,Oklahoma,40,2894,169
 2020-04-22,Oregon,41,2059,78
@@ -2812,7 +2708,6 @@ date,state,fips,cases,deaths
 2020-04-22,Texas,48,21769,571
 2020-04-22,Utah,49,3451,34
 2020-04-22,Vermont,50,823,39
-2020-04-22,Virgin Islands,78,54,3
 2020-04-22,Virginia,51,10265,349
 2020-04-22,Washington,53,12606,696
 2020-04-22,West Virginia,54,939,29
@@ -2829,7 +2724,6 @@ date,state,fips,cases,deaths
 2020-04-23,District of Columbia,11,3361,139
 2020-04-23,Florida,12,29640,986
 2020-04-23,Georgia,13,20905,871
-2020-04-23,Guam,66,979,6
 2020-04-23,Hawaii,15,590,12
 2020-04-23,Idaho,16,1836,54
 2020-04-23,Illinois,17,36935,1696
@@ -2854,7 +2748,6 @@ date,state,fips,cases,deaths
 2020-04-23,New York,36,267932,20212
 2020-04-23,North Carolina,37,7608,253
 2020-04-23,North Dakota,38,709,15
-2020-04-23,Northern Mariana Islands,69,14,2
 2020-04-23,Ohio,39,14694,656
 2020-04-23,Oklahoma,40,3017,179
 2020-04-23,Oregon,41,2127,83
@@ -2867,7 +2760,6 @@ date,state,fips,cases,deaths
 2020-04-23,Texas,48,22706,601
 2020-04-23,Utah,49,3621,35
 2020-04-23,Vermont,50,825,42
-2020-04-23,Virgin Islands,78,54,3
 2020-04-23,Virginia,51,10999,375
 2020-04-23,Washington,53,12981,717
 2020-04-23,West Virginia,54,981,31
@@ -2884,7 +2776,6 @@ date,state,fips,cases,deaths
 2020-04-24,District of Columbia,11,3528,153
 2020-04-24,Florida,12,30525,1045
 2020-04-24,Georgia,13,21575,889
-2020-04-24,Guam,66,997,6
 2020-04-24,Hawaii,15,595,13
 2020-04-24,Idaho,16,1870,54
 2020-04-24,Illinois,17,39658,1804
@@ -2909,7 +2800,6 @@ date,state,fips,cases,deaths
 2020-04-24,New York,36,276218,20759
 2020-04-24,North Carolina,37,8052,270
 2020-04-24,North Dakota,38,748,15
-2020-04-24,Northern Mariana Islands,69,14,2
 2020-04-24,Ohio,39,15169,690
 2020-04-24,Oklahoma,40,3120,188
 2020-04-24,Oregon,41,2177,86
@@ -2922,7 +2812,6 @@ date,state,fips,cases,deaths
 2020-04-24,Texas,48,23650,625
 2020-04-24,Utah,49,3782,39
 2020-04-24,Vermont,50,827,43
-2020-04-24,Virgin Islands,78,55,3
 2020-04-24,Virginia,51,11595,413
 2020-04-24,Washington,53,13197,731
 2020-04-24,West Virginia,54,1010,32
@@ -2939,7 +2828,6 @@ date,state,fips,cases,deaths
 2020-04-25,District of Columbia,11,3699,165
 2020-04-25,Florida,12,30831,1054
 2020-04-25,Georgia,13,22225,897
-2020-04-25,Guam,66,997,6
 2020-04-25,Hawaii,15,597,14
 2020-04-25,Idaho,16,1887,56
 2020-04-25,Illinois,17,41777,1884
@@ -2964,7 +2852,6 @@ date,state,fips,cases,deaths
 2020-04-25,New York,36,286901,21326
 2020-04-25,North Carolina,37,8548,304
 2020-04-25,North Dakota,38,803,16
-2020-04-25,Northern Mariana Islands,69,14,2
 2020-04-25,Ohio,39,15587,711
 2020-04-25,Oklahoma,40,3193,194
 2020-04-25,Oregon,41,2253,87
@@ -2977,7 +2864,6 @@ date,state,fips,cases,deaths
 2020-04-25,Texas,48,24494,662
 2020-04-25,Utah,49,3950,41
 2020-04-25,Vermont,50,843,45
-2020-04-25,Virgin Islands,78,57,4
 2020-04-25,Virginia,51,12365,436
 2020-04-25,Washington,53,13565,743
 2020-04-25,West Virginia,54,1025,33
@@ -2994,7 +2880,6 @@ date,state,fips,cases,deaths
 2020-04-26,District of Columbia,11,3841,178
 2020-04-26,Florida,12,31520,1073
 2020-04-26,Georgia,13,22459,907
-2020-04-26,Guam,66,997,6
 2020-04-26,Hawaii,15,599,14
 2020-04-26,Idaho,16,1897,56
 2020-04-26,Illinois,17,43903,1943
@@ -3019,7 +2904,6 @@ date,state,fips,cases,deaths
 2020-04-26,New York,36,292914,21804
 2020-04-26,North Carolina,37,8830,309
 2020-04-26,North Dakota,38,867,17
-2020-04-26,Northern Mariana Islands,69,14,2
 2020-04-26,Ohio,39,15963,728
 2020-04-26,Oklahoma,40,3253,195
 2020-04-26,Oregon,41,2311,91
@@ -3032,7 +2916,6 @@ date,state,fips,cases,deaths
 2020-04-26,Texas,48,25209,676
 2020-04-26,Utah,49,4123,41
 2020-04-26,Vermont,50,851,45
-2020-04-26,Virgin Islands,78,59,4
 2020-04-26,Virginia,51,12969,448
 2020-04-26,Washington,53,13744,757
 2020-04-26,West Virginia,54,1054,34
@@ -3049,7 +2932,6 @@ date,state,fips,cases,deaths
 2020-04-27,District of Columbia,11,3892,185
 2020-04-27,Florida,12,32130,1087
 2020-04-27,Georgia,13,23229,981
-2020-04-27,Guam,66,1113,6
 2020-04-27,Hawaii,15,600,16
 2020-04-27,Idaho,16,1917,58
 2020-04-27,Illinois,17,45883,1992
@@ -3074,7 +2956,6 @@ date,state,fips,cases,deaths
 2020-04-27,New York,36,296991,22267
 2020-04-27,North Carolina,37,9035,331
 2020-04-27,North Dakota,38,942,19
-2020-04-27,Northern Mariana Islands,69,14,2
 2020-04-27,Ohio,39,16325,753
 2020-04-27,Oklahoma,40,3280,197
 2020-04-27,Oregon,41,2354,92
@@ -3087,7 +2968,6 @@ date,state,fips,cases,deaths
 2020-04-27,Texas,48,25963,699
 2020-04-27,Utah,49,4236,41
 2020-04-27,Vermont,50,855,46
-2020-04-27,Virgin Islands,78,59,4
 2020-04-27,Virginia,51,13534,458
 2020-04-27,Washington,53,13958,771
 2020-04-27,West Virginia,54,1078,37
@@ -3104,7 +2984,6 @@ date,state,fips,cases,deaths
 2020-04-28,District of Columbia,11,3994,190
 2020-04-28,Florida,12,32838,1170
 2020-04-28,Georgia,13,23607,1022
-2020-04-28,Guam,66,1114,6
 2020-04-28,Hawaii,15,602,16
 2020-04-28,Idaho,16,1952,60
 2020-04-28,Illinois,17,48102,2132
@@ -3129,7 +3008,6 @@ date,state,fips,cases,deaths
 2020-04-28,New York,36,300276,22777
 2020-04-28,North Carolina,37,9568,353
 2020-04-28,North Dakota,38,991,19
-2020-04-28,Northern Mariana Islands,69,14,2
 2020-04-28,Ohio,39,16769,799
 2020-04-28,Oklahoma,40,3410,207
 2020-04-28,Oregon,41,2385,99
@@ -3142,7 +3020,6 @@ date,state,fips,cases,deaths
 2020-04-28,Texas,48,26868,738
 2020-04-28,Utah,49,4343,45
 2020-04-28,Vermont,50,862,46
-2020-04-28,Virgin Islands,78,62,4
 2020-04-28,Virginia,51,14338,492
 2020-04-28,Washington,53,14165,792
 2020-04-28,West Virginia,54,1096,38
@@ -3159,7 +3036,6 @@ date,state,fips,cases,deaths
 2020-04-29,District of Columbia,11,4106,205
 2020-04-29,Florida,12,33185,1216
 2020-04-29,Georgia,13,24300,1086
-2020-04-29,Guam,66,1114,6
 2020-04-29,Hawaii,15,605,16
 2020-04-29,Idaho,16,1984,60
 2020-04-29,Illinois,17,50355,2221
@@ -3184,7 +3060,6 @@ date,state,fips,cases,deaths
 2020-04-29,New York,36,304994,23287
 2020-04-29,North Carolina,37,9947,366
 2020-04-29,North Dakota,38,1033,19
-2020-04-29,Northern Mariana Islands,69,14,2
 2020-04-29,Ohio,39,17303,937
 2020-04-29,Oklahoma,40,3473,214
 2020-04-29,Oregon,41,2446,101
@@ -3197,7 +3072,6 @@ date,state,fips,cases,deaths
 2020-04-29,Texas,48,27839,776
 2020-04-29,Utah,49,4499,45
 2020-04-29,Vermont,50,862,46
-2020-04-29,Virgin Islands,78,66,4
 2020-04-29,Virginia,51,14961,522
 2020-04-29,Washington,53,14490,805
 2020-04-29,West Virginia,54,1110,40
@@ -3214,7 +3088,6 @@ date,state,fips,cases,deaths
 2020-04-30,District of Columbia,11,4323,224
 2020-04-30,Florida,12,33683,1267
 2020-04-30,Georgia,13,25431,1121
-2020-04-30,Guam,66,1115,6
 2020-04-30,Hawaii,15,609,16
 2020-04-30,Idaho,16,2016,63
 2020-04-30,Illinois,17,52918,2361
@@ -3239,7 +3112,6 @@ date,state,fips,cases,deaths
 2020-04-30,New York,36,309696,23616
 2020-04-30,North Carolina,37,10507,385
 2020-04-30,North Dakota,38,1067,19
-2020-04-30,Northern Mariana Islands,69,14,2
 2020-04-30,Ohio,39,18027,975
 2020-04-30,Oklahoma,40,3618,222
 2020-04-30,Oregon,41,2510,103
@@ -3252,7 +3124,6 @@ date,state,fips,cases,deaths
 2020-04-30,Texas,48,29072,828
 2020-04-30,Utah,49,4672,46
 2020-04-30,Vermont,50,866,48
-2020-04-30,Virgin Islands,78,66,4
 2020-04-30,Virginia,51,15846,552
 2020-04-30,Washington,53,14814,822
 2020-04-30,West Virginia,54,1126,44
@@ -3269,7 +3140,6 @@ date,state,fips,cases,deaths
 2020-05-01,District of Columbia,11,4658,231
 2020-05-01,Florida,12,34720,1313
 2020-05-01,Georgia,13,26436,1153
-2020-05-01,Guam,66,1115,6
 2020-05-01,Hawaii,15,610,16
 2020-05-01,Idaho,16,2035,63
 2020-05-01,Illinois,17,56055,2464
@@ -3294,7 +3164,6 @@ date,state,fips,cases,deaths
 2020-05-01,New York,36,313575,23841
 2020-05-01,North Carolina,37,10922,405
 2020-05-01,North Dakota,38,1107,23
-2020-05-01,Northern Mariana Islands,69,14,2
 2020-05-01,Ohio,39,18743,1002
 2020-05-01,Oklahoma,40,3748,230
 2020-05-01,Oregon,41,2579,104
@@ -3307,7 +3176,6 @@ date,state,fips,cases,deaths
 2020-05-01,Texas,48,30342,853
 2020-05-01,Utah,49,4829,46
 2020-05-01,Vermont,50,879,49
-2020-05-01,Virgin Islands,78,66,4
 2020-05-01,Virginia,51,16901,581
 2020-05-01,Washington,53,15134,829
 2020-05-01,West Virginia,54,1152,47
@@ -3324,7 +3192,6 @@ date,state,fips,cases,deaths
 2020-05-02,District of Columbia,11,4797,240
 2020-05-02,Florida,12,35455,1363
 2020-05-02,Georgia,13,27268,1161
-2020-05-02,Guam,66,1117,6
 2020-05-02,Hawaii,15,611,16
 2020-05-02,Idaho,16,2061,64
 2020-05-02,Illinois,17,58505,2576
@@ -3349,7 +3216,6 @@ date,state,fips,cases,deaths
 2020-05-02,New York,36,318134,24035
 2020-05-02,North Carolina,37,11514,428
 2020-05-02,North Dakota,38,1153,24
-2020-05-02,Northern Mariana Islands,69,14,2
 2020-05-02,Ohio,39,19335,1021
 2020-05-02,Oklahoma,40,3851,238
 2020-05-02,Oregon,41,2635,109
@@ -3362,7 +3228,6 @@ date,state,fips,cases,deaths
 2020-05-02,Texas,48,31433,875
 2020-05-02,Utah,49,4981,49
 2020-05-02,Vermont,50,886,50
-2020-05-02,Virgin Islands,78,66,4
 2020-05-02,Virginia,51,17731,616
 2020-05-02,Washington,53,15383,833
 2020-05-02,West Virginia,54,1185,50
@@ -3379,7 +3244,6 @@ date,state,fips,cases,deaths
 2020-05-03,District of Columbia,11,5016,251
 2020-05-03,Florida,12,36070,1378
 2020-05-03,Georgia,13,27618,1168
-2020-05-03,Guam,66,1118,6
 2020-05-03,Hawaii,15,611,17
 2020-05-03,Idaho,16,2059,64
 2020-05-03,Illinois,17,61499,2632
@@ -3404,7 +3268,6 @@ date,state,fips,cases,deaths
 2020-05-03,New York,36,321833,24576
 2020-05-03,North Carolina,37,11668,436
 2020-05-03,North Dakota,38,1191,25
-2020-05-03,Northern Mariana Islands,69,14,2
 2020-05-03,Ohio,39,19914,1038
 2020-05-03,Oklahoma,40,3972,238
 2020-05-03,Oregon,41,2680,109
@@ -3417,7 +3280,6 @@ date,state,fips,cases,deaths
 2020-05-03,Texas,48,32299,890
 2020-05-03,Utah,49,5175,50
 2020-05-03,Vermont,50,897,52
-2020-05-03,Virgin Islands,78,66,4
 2020-05-03,Virginia,51,18671,660
 2020-05-03,Washington,53,15943,840
 2020-05-03,West Virginia,54,1196,50
@@ -3434,7 +3296,6 @@ date,state,fips,cases,deaths
 2020-05-04,District of Columbia,11,5170,258
 2020-05-04,Florida,12,36889,1398
 2020-05-04,Georgia,13,28350,1228
-2020-05-04,Guam,66,1118,6
 2020-05-04,Hawaii,15,612,17
 2020-05-04,Idaho,16,2106,64
 2020-05-04,Illinois,17,63840,2673
@@ -3459,7 +3320,6 @@ date,state,fips,cases,deaths
 2020-05-04,New York,36,324357,24788
 2020-05-04,North Carolina,37,11871,454
 2020-05-04,North Dakota,38,1225,25
-2020-05-04,Northern Mariana Islands,69,14,2
 2020-05-04,Ohio,39,20474,1056
 2020-05-04,Oklahoma,40,4044,238
 2020-05-04,Oregon,41,2759,109
@@ -3472,7 +3332,6 @@ date,state,fips,cases,deaths
 2020-05-04,Texas,48,33134,914
 2020-05-04,Utah,49,5326,50
 2020-05-04,Vermont,50,902,52
-2020-05-04,Virgin Islands,78,66,4
 2020-05-04,Virginia,51,19492,684
 2020-05-04,Washington,53,16047,846
 2020-05-04,West Virginia,54,1225,50
@@ -3489,7 +3348,6 @@ date,state,fips,cases,deaths
 2020-05-05,District of Columbia,11,5322,264
 2020-05-05,Florida,12,37431,1470
 2020-05-05,Georgia,13,28876,1277
-2020-05-05,Guam,66,1118,6
 2020-05-05,Hawaii,15,615,17
 2020-05-05,Idaho,16,2127,66
 2020-05-05,Illinois,17,65889,2843
@@ -3514,7 +3372,6 @@ date,state,fips,cases,deaths
 2020-05-05,New York,36,326659,25028
 2020-05-05,North Carolina,37,12283,477
 2020-05-05,North Dakota,38,1266,25
-2020-05-05,Northern Mariana Islands,69,14,2
 2020-05-05,Ohio,39,20969,1135
 2020-05-05,Oklahoma,40,4127,247
 2020-05-05,Oregon,41,2839,113
@@ -3527,7 +3384,6 @@ date,state,fips,cases,deaths
 2020-05-05,Texas,48,34286,955
 2020-05-05,Utah,49,5449,56
 2020-05-05,Vermont,50,907,52
-2020-05-05,Virgin Islands,78,66,4
 2020-05-05,Virginia,51,20256,713
 2020-05-05,Washington,53,16234,863
 2020-05-05,West Virginia,54,1243,50
@@ -3544,7 +3400,6 @@ date,state,fips,cases,deaths
 2020-05-06,District of Columbia,11,5461,277
 2020-05-06,Florida,12,37994,1538
 2020-05-06,Georgia,13,29724,1309
-2020-05-06,Guam,66,1118,6
 2020-05-06,Hawaii,15,616,17
 2020-05-06,Idaho,16,2158,67
 2020-05-06,Illinois,17,68164,2977
@@ -3569,7 +3424,6 @@ date,state,fips,cases,deaths
 2020-05-06,New York,36,329405,25956
 2020-05-06,North Carolina,37,12783,497
 2020-05-06,North Dakota,38,1323,31
-2020-05-06,Northern Mariana Islands,69,15,2
 2020-05-06,Ohio,39,21576,1225
 2020-05-06,Oklahoma,40,4201,253
 2020-05-06,Oregon,41,2916,115
@@ -3582,7 +3436,6 @@ date,state,fips,cases,deaths
 2020-05-06,Texas,48,35441,985
 2020-05-06,Utah,49,5605,59
 2020-05-06,Vermont,50,908,52
-2020-05-06,Virgin Islands,78,66,4
 2020-05-06,Virginia,51,20256,713
 2020-05-06,Washington,53,16873,881
 2020-05-06,West Virginia,54,1277,51
@@ -3599,7 +3452,6 @@ date,state,fips,cases,deaths
 2020-05-07,District of Columbia,11,5654,285
 2020-05-07,Florida,12,38820,1599
 2020-05-07,Georgia,13,30524,1332
-2020-05-07,Guam,66,1118,6
 2020-05-07,Hawaii,15,619,17
 2020-05-07,Idaho,16,2178,67
 2020-05-07,Illinois,17,70802,3139
@@ -3624,7 +3476,6 @@ date,state,fips,cases,deaths
 2020-05-07,New York,36,332931,26206
 2020-05-07,North Carolina,37,13431,521
 2020-05-07,North Dakota,38,1371,31
-2020-05-07,Northern Mariana Islands,69,15,2
 2020-05-07,Ohio,39,22131,1271
 2020-05-07,Oklahoma,40,4330,260
 2020-05-07,Oregon,41,2989,121
@@ -3637,7 +3488,6 @@ date,state,fips,cases,deaths
 2020-05-07,Texas,48,36682,1016
 2020-05-07,Utah,49,5724,61
 2020-05-07,Vermont,50,916,53
-2020-05-07,Virgin Islands,78,68,4
 2020-05-07,Virginia,51,21570,769
 2020-05-07,Washington,53,17187,903
 2020-05-07,West Virginia,54,1298,51
@@ -3654,7 +3504,6 @@ date,state,fips,cases,deaths
 2020-05-08,District of Columbia,11,5899,304
 2020-05-08,Florida,12,39191,1668
 2020-05-08,Georgia,13,31089,1378
-2020-05-08,Guam,66,1120,6
 2020-05-08,Hawaii,15,619,17
 2020-05-08,Idaho,16,2205,67
 2020-05-08,Illinois,17,73688,3262
@@ -3679,7 +3528,6 @@ date,state,fips,cases,deaths
 2020-05-08,New York,36,335804,26358
 2020-05-08,North Carolina,37,13879,537
 2020-05-08,North Dakota,38,1425,33
-2020-05-08,Northern Mariana Islands,69,15,2
 2020-05-08,Ohio,39,23018,1306
 2020-05-08,Oklahoma,40,4424,266
 2020-05-08,Oregon,41,3068,124
@@ -3692,7 +3540,6 @@ date,state,fips,cases,deaths
 2020-05-08,Texas,48,37943,1059
 2020-05-08,Utah,49,5919,61
 2020-05-08,Vermont,50,919,53
-2020-05-08,Virgin Islands,78,69,4
 2020-05-08,Virginia,51,22342,812
 2020-05-08,Washington,53,17477,915
 2020-05-08,West Virginia,54,1324,52
@@ -3709,7 +3556,6 @@ date,state,fips,cases,deaths
 2020-05-09,District of Columbia,11,6102,311
 2020-05-09,Florida,12,39993,1714
 2020-05-09,Georgia,13,31481,1380
-2020-05-09,Guam,66,1120,6
 2020-05-09,Hawaii,15,620,17
 2020-05-09,Idaho,16,2230,67
 2020-05-09,Illinois,17,76008,3362
@@ -3734,7 +3580,6 @@ date,state,fips,cases,deaths
 2020-05-09,New York,36,338519,26584
 2020-05-09,North Carolina,37,14387,554
 2020-05-09,North Dakota,38,1464,35
-2020-05-09,Northern Mariana Islands,69,16,2
 2020-05-09,Ohio,39,23697,1331
 2020-05-09,Oklahoma,40,4490,270
 2020-05-09,Oregon,41,3160,127
@@ -3747,7 +3592,6 @@ date,state,fips,cases,deaths
 2020-05-09,Texas,48,38849,1086
 2020-05-09,Utah,49,6103,66
 2020-05-09,Vermont,50,921,53
-2020-05-09,Virgin Islands,78,69,4
 2020-05-09,Virginia,51,23196,827
 2020-05-09,Washington,53,17629,925
 2020-05-09,West Virginia,54,1348,53
@@ -3764,7 +3608,6 @@ date,state,fips,cases,deaths
 2020-05-10,District of Columbia,11,6272,323
 2020-05-10,Florida,12,40588,1720
 2020-05-10,Georgia,13,32267,1383
-2020-05-10,Guam,66,1120,6
 2020-05-10,Hawaii,15,621,17
 2020-05-10,Idaho,16,2232,67
 2020-05-10,Illinois,17,77662,3426
@@ -3789,7 +3632,6 @@ date,state,fips,cases,deaths
 2020-05-10,New York,36,340657,26798
 2020-05-10,North Carolina,37,14783,561
 2020-05-10,North Dakota,38,1491,35
-2020-05-10,Northern Mariana Islands,69,16,2
 2020-05-10,Ohio,39,24086,1341
 2020-05-10,Oklahoma,40,4589,272
 2020-05-10,Oregon,41,3228,127
@@ -3802,7 +3644,6 @@ date,state,fips,cases,deaths
 2020-05-10,Texas,48,40037,1110
 2020-05-10,Utah,49,6251,67
 2020-05-10,Vermont,50,926,53
-2020-05-10,Virgin Islands,78,69,5
 2020-05-10,Virginia,51,24081,839
 2020-05-10,Washington,53,17781,939
 2020-05-10,West Virginia,54,1363,54
@@ -3819,7 +3660,6 @@ date,state,fips,cases,deaths
 2020-05-11,District of Columbia,11,6389,328
 2020-05-11,Florida,12,40974,1734
 2020-05-11,Georgia,13,32448,1420
-2020-05-11,Guam,66,1120,6
 2020-05-11,Hawaii,15,623,17
 2020-05-11,Idaho,16,2261,69
 2020-05-11,Illinois,17,79123,3480
@@ -3844,7 +3684,6 @@ date,state,fips,cases,deaths
 2020-05-11,New York,36,342267,27003
 2020-05-11,North Carolina,37,15069,571
 2020-05-11,North Dakota,38,1518,36
-2020-05-11,Northern Mariana Islands,69,19,2
 2020-05-11,Ohio,39,24785,1357
 2020-05-11,Oklahoma,40,4613,274
 2020-05-11,Oregon,41,3286,130
@@ -3857,7 +3696,6 @@ date,state,fips,cases,deaths
 2020-05-11,Texas,48,40988,1137
 2020-05-11,Utah,49,6364,68
 2020-05-11,Vermont,50,926,53
-2020-05-11,Virgin Islands,78,69,6
 2020-05-11,Virginia,51,25070,850
 2020-05-11,Washington,53,18172,957
 2020-05-11,West Virginia,54,1370,57
@@ -3874,7 +3712,6 @@ date,state,fips,cases,deaths
 2020-05-12,District of Columbia,11,6485,336
 2020-05-12,Florida,12,41915,1778
 2020-05-12,Georgia,13,33311,1470
-2020-05-12,Guam,66,1121,6
 2020-05-12,Hawaii,15,624,17
 2020-05-12,Idaho,16,2294,69
 2020-05-12,Illinois,17,83168,3617
@@ -3899,7 +3736,6 @@ date,state,fips,cases,deaths
 2020-05-12,New York,36,343705,27282
 2020-05-12,North Carolina,37,15402,597
 2020-05-12,North Dakota,38,1571,38
-2020-05-12,Northern Mariana Islands,69,19,2
 2020-05-12,Ohio,39,25257,1436
 2020-05-12,Oklahoma,40,4731,278
 2020-05-12,Oregon,41,3359,130
@@ -3912,7 +3748,6 @@ date,state,fips,cases,deaths
 2020-05-12,Texas,48,42348,1169
 2020-05-12,Utah,49,6454,73
 2020-05-12,Vermont,50,927,53
-2020-05-12,Virgin Islands,78,69,6
 2020-05-12,Virginia,51,25800,891
 2020-05-12,Washington,53,18382,972
 2020-05-12,West Virginia,54,1379,58
@@ -3929,7 +3764,6 @@ date,state,fips,cases,deaths
 2020-05-13,District of Columbia,11,6584,350
 2020-05-13,Florida,12,42394,1826
 2020-05-13,Georgia,13,33866,1494
-2020-05-13,Guam,66,1121,6
 2020-05-13,Hawaii,15,627,17
 2020-05-13,Idaho,16,2325,69
 2020-05-13,Illinois,17,84874,3815
@@ -3954,7 +3788,6 @@ date,state,fips,cases,deaths
 2020-05-13,New York,36,345828,27448
 2020-05-13,North Carolina,37,15850,615
 2020-05-13,North Dakota,38,1647,40
-2020-05-13,Northern Mariana Islands,69,19,2
 2020-05-13,Ohio,39,25727,1483
 2020-05-13,Oklahoma,40,4852,278
 2020-05-13,Oregon,41,3416,134
@@ -3967,7 +3800,6 @@ date,state,fips,cases,deaths
 2020-05-13,Texas,48,43822,1205
 2020-05-13,Utah,49,6624,76
 2020-05-13,Vermont,50,929,53
-2020-05-13,Virgin Islands,78,69,6
 2020-05-13,Virginia,51,26746,927
 2020-05-13,Washington,53,18492,977
 2020-05-13,West Virginia,54,1405,59
@@ -3984,7 +3816,6 @@ date,state,fips,cases,deaths
 2020-05-14,District of Columbia,11,6736,358
 2020-05-14,Florida,12,43202,1874
 2020-05-14,Georgia,13,34422,1521
-2020-05-14,Guam,66,1121,6
 2020-05-14,Hawaii,15,627,17
 2020-05-14,Idaho,16,2352,72
 2020-05-14,Illinois,17,88081,3945
@@ -4009,7 +3840,6 @@ date,state,fips,cases,deaths
 2020-05-14,New York,36,348192,27617
 2020-05-14,North Carolina,37,16593,632
 2020-05-14,North Dakota,38,1712,40
-2020-05-14,Northern Mariana Islands,69,19,2
 2020-05-14,Ohio,39,26363,1534
 2020-05-14,Oklahoma,40,4962,284
 2020-05-14,Oregon,41,3479,137
@@ -4022,7 +3852,6 @@ date,state,fips,cases,deaths
 2020-05-14,Texas,48,45169,1256
 2020-05-14,Utah,49,6760,76
 2020-05-14,Vermont,50,932,53
-2020-05-14,Virgin Islands,78,69,6
 2020-05-14,Virginia,51,27813,955
 2020-05-14,Washington,53,18861,991
 2020-05-14,West Virginia,54,1435,62
@@ -4039,7 +3868,6 @@ date,state,fips,cases,deaths
 2020-05-15,District of Columbia,11,6871,368
 2020-05-15,Florida,12,44130,1916
 2020-05-15,Georgia,13,35242,1563
-2020-05-15,Guam,66,1123,6
 2020-05-15,Hawaii,15,628,17
 2020-05-15,Idaho,16,2389,73
 2020-05-15,Illinois,17,90528,4075
@@ -4064,7 +3892,6 @@ date,state,fips,cases,deaths
 2020-05-15,New York,36,350951,27755
 2020-05-15,North Carolina,37,17190,660
 2020-05-15,North Dakota,38,1761,42
-2020-05-15,Northern Mariana Islands,69,19,2
 2020-05-15,Ohio,39,26956,1581
 2020-05-15,Oklahoma,40,5086,285
 2020-05-15,Oregon,41,3541,137
@@ -4077,7 +3904,6 @@ date,state,fips,cases,deaths
 2020-05-15,Texas,48,46987,1300
 2020-05-15,Utah,49,6930,77
 2020-05-15,Vermont,50,933,53
-2020-05-15,Virgin Islands,78,69,6
 2020-05-15,Virginia,51,28672,977
 2020-05-15,Washington,53,19131,1008
 2020-05-15,West Virginia,54,1448,64
@@ -4094,7 +3920,6 @@ date,state,fips,cases,deaths
 2020-05-16,District of Columbia,11,7042,375
 2020-05-16,Florida,12,44803,1963
 2020-05-16,Georgia,13,35655,1573
-2020-05-16,Guam,66,1123,6
 2020-05-16,Hawaii,15,629,17
 2020-05-16,Idaho,16,2419,73
 2020-05-16,Illinois,17,92669,4149
@@ -4119,7 +3944,6 @@ date,state,fips,cases,deaths
 2020-05-16,New York,36,353136,27953
 2020-05-16,North Carolina,37,18009,671
 2020-05-16,North Dakota,38,1848,42
-2020-05-16,Northern Mariana Islands,69,21,2
 2020-05-16,Ohio,39,27476,1610
 2020-05-16,Oklahoma,40,5237,288
 2020-05-16,Oregon,41,3612,137
@@ -4132,7 +3956,6 @@ date,state,fips,cases,deaths
 2020-05-16,Texas,48,47866,1330
 2020-05-16,Utah,49,7068,78
 2020-05-16,Vermont,50,934,53
-2020-05-16,Virgin Islands,78,69,6
 2020-05-16,Virginia,51,29683,1002
 2020-05-16,Washington,53,19336,1015
 2020-05-16,West Virginia,54,1470,65
@@ -4149,7 +3972,6 @@ date,state,fips,cases,deaths
 2020-05-17,District of Columbia,11,7123,383
 2020-05-17,Florida,12,45580,1972
 2020-05-17,Georgia,13,35954,1584
-2020-05-17,Guam,66,1123,6
 2020-05-17,Hawaii,15,630,17
 2020-05-17,Idaho,16,2421,73
 2020-05-17,Illinois,17,94360,4198
@@ -4174,7 +3996,6 @@ date,state,fips,cases,deaths
 2020-05-17,New York,36,355037,28168
 2020-05-17,North Carolina,37,18537,679
 2020-05-17,North Dakota,38,1900,43
-2020-05-17,Northern Mariana Islands,69,21,2
 2020-05-17,Ohio,39,27925,1625
 2020-05-17,Oklahoma,40,5310,288
 2020-05-17,Oregon,41,3623,137
@@ -4187,7 +4008,6 @@ date,state,fips,cases,deaths
 2020-05-17,Texas,48,48828,1356
 2020-05-17,Utah,49,7238,80
 2020-05-17,Vermont,50,940,54
-2020-05-17,Virgin Islands,78,69,6
 2020-05-17,Virginia,51,30388,1009
 2020-05-17,Washington,53,19514,1016
 2020-05-17,West Virginia,54,1492,67
@@ -4204,7 +4024,6 @@ date,state,fips,cases,deaths
 2020-05-18,District of Columbia,11,7270,392
 2020-05-18,Florida,12,46434,1996
 2020-05-18,Georgia,13,36634,1624
-2020-05-18,Guam,66,1123,6
 2020-05-18,Hawaii,15,630,17
 2020-05-18,Idaho,16,2455,74
 2020-05-18,Illinois,17,96778,4257
@@ -4229,7 +4048,6 @@ date,state,fips,cases,deaths
 2020-05-18,New York,36,356278,28302
 2020-05-18,North Carolina,37,19121,684
 2020-05-18,North Dakota,38,1931,44
-2020-05-18,Northern Mariana Islands,69,21,2
 2020-05-18,Ohio,39,28455,1657
 2020-05-18,Oklahoma,40,5398,288
 2020-05-18,Oregon,41,3687,138
@@ -4242,7 +4060,6 @@ date,state,fips,cases,deaths
 2020-05-18,Texas,48,49788,1362
 2020-05-18,Utah,49,7384,80
 2020-05-18,Vermont,50,940,54
-2020-05-18,Virgin Islands,78,69,6
 2020-05-18,Virginia,51,31140,1014
 2020-05-18,Washington,53,19756,1020
 2020-05-18,West Virginia,54,1502,68
@@ -4259,7 +4076,6 @@ date,state,fips,cases,deaths
 2020-05-19,District of Columbia,11,7434,400
 2020-05-19,Florida,12,46936,2051
 2020-05-19,Georgia,13,37214,1650
-2020-05-19,Guam,66,1123,6
 2020-05-19,Hawaii,15,631,17
 2020-05-19,Idaho,16,2476,77
 2020-05-19,Illinois,17,98298,4399
@@ -4284,7 +4100,6 @@ date,state,fips,cases,deaths
 2020-05-19,New York,36,357757,28437
 2020-05-19,North Carolina,37,19762,711
 2020-05-19,North Dakota,38,1994,45
-2020-05-19,Northern Mariana Islands,69,21,2
 2020-05-19,Ohio,39,28953,1720
 2020-05-19,Oklahoma,40,5489,294
 2020-05-19,Oregon,41,3726,140
@@ -4297,7 +4112,6 @@ date,state,fips,cases,deaths
 2020-05-19,Texas,48,51080,1405
 2020-05-19,Utah,49,7530,88
 2020-05-19,Vermont,50,944,54
-2020-05-19,Virgin Islands,78,69,6
 2020-05-19,Virginia,51,32145,1041
 2020-05-19,Washington,53,19988,1042
 2020-05-19,West Virginia,54,1514,68
@@ -4314,7 +4128,6 @@ date,state,fips,cases,deaths
 2020-05-20,District of Columbia,11,7551,407
 2020-05-20,Florida,12,47463,2095
 2020-05-20,Georgia,13,38162,1672
-2020-05-20,Guam,66,1134,6
 2020-05-20,Hawaii,15,633,17
 2020-05-20,Idaho,16,2506,77
 2020-05-20,Illinois,17,100713,4547
@@ -4339,7 +4152,6 @@ date,state,fips,cases,deaths
 2020-05-20,New York,36,359235,28540
 2020-05-20,North Carolina,37,20221,721
 2020-05-20,North Dakota,38,2095,49
-2020-05-20,Northern Mariana Islands,69,21,2
 2020-05-20,Ohio,39,29437,1781
 2020-05-20,Oklahoma,40,5532,299
 2020-05-20,Oregon,41,3801,144
@@ -4352,7 +4164,6 @@ date,state,fips,cases,deaths
 2020-05-20,Texas,48,52369,1443
 2020-05-20,Utah,49,7717,90
 2020-05-20,Vermont,50,944,54
-2020-05-20,Virgin Islands,78,69,6
 2020-05-20,Virginia,51,32908,1074
 2020-05-20,Washington,53,20110,1045
 2020-05-20,West Virginia,54,1567,69
@@ -4369,7 +4180,6 @@ date,state,fips,cases,deaths
 2020-05-21,District of Columbia,11,7788,412
 2020-05-21,Florida,12,48667,2143
 2020-05-21,Georgia,13,38969,1749
-2020-05-21,Guam,66,1134,6
 2020-05-21,Hawaii,15,637,17
 2020-05-21,Idaho,16,2534,77
 2020-05-21,Illinois,17,102995,4634
@@ -4394,7 +4204,6 @@ date,state,fips,cases,deaths
 2020-05-21,New York,36,361313,28663
 2020-05-21,North Carolina,37,20934,734
 2020-05-21,North Dakota,38,2229,51
-2020-05-21,Northern Mariana Islands,69,22,2
 2020-05-21,Ohio,39,30168,1836
 2020-05-21,Oklahoma,40,5680,304
 2020-05-21,Oregon,41,3817,145
@@ -4407,7 +4216,6 @@ date,state,fips,cases,deaths
 2020-05-21,Texas,48,53441,1480
 2020-05-21,Utah,49,7876,92
 2020-05-21,Vermont,50,950,54
-2020-05-21,Virgin Islands,78,69,6
 2020-05-21,Virginia,51,34137,1099
 2020-05-21,Washington,53,20280,1054
 2020-05-21,West Virginia,54,1603,71
@@ -4424,7 +4232,6 @@ date,state,fips,cases,deaths
 2020-05-22,District of Columbia,11,7893,418
 2020-05-22,Florida,12,49443,2189
 2020-05-22,Georgia,13,39734,1779
-2020-05-22,Guam,66,1134,6
 2020-05-22,Hawaii,15,632,17
 2020-05-22,Idaho,16,2595,79
 2020-05-22,Illinois,17,105710,4740
@@ -4449,7 +4256,6 @@ date,state,fips,cases,deaths
 2020-05-22,New York,36,362991,28802
 2020-05-22,North Carolina,37,21661,754
 2020-05-22,North Dakota,38,2317,52
-2020-05-22,Northern Mariana Islands,69,22,2
 2020-05-22,Ohio,39,30795,1872
 2020-05-22,Oklahoma,40,5849,307
 2020-05-22,Oregon,41,3864,147
@@ -4462,7 +4268,6 @@ date,state,fips,cases,deaths
 2020-05-22,Texas,48,54369,1498
 2020-05-22,Utah,49,8057,93
 2020-05-22,Vermont,50,952,54
-2020-05-22,Virgin Islands,78,69,6
 2020-05-22,Virginia,51,34950,1136
 2020-05-22,Washington,53,20526,1061
 2020-05-22,West Virginia,54,1705,72
@@ -4479,7 +4284,6 @@ date,state,fips,cases,deaths
 2020-05-23,District of Columbia,11,7966,427
 2020-05-23,Florida,12,50119,2232
 2020-05-23,Georgia,13,40408,1794
-2020-05-23,Guam,66,1134,6
 2020-05-23,Hawaii,15,633,17
 2020-05-23,Idaho,16,2626,79
 2020-05-23,Illinois,17,108100,4817
@@ -4504,7 +4308,6 @@ date,state,fips,cases,deaths
 2020-05-23,New York,36,364745,28900
 2020-05-23,North Carolina,37,22731,763
 2020-05-23,North Dakota,38,2365,52
-2020-05-23,Northern Mariana Islands,69,22,2
 2020-05-23,Ohio,39,31408,1956
 2020-05-23,Oklahoma,40,5960,311
 2020-05-23,Oregon,41,3888,147
@@ -4517,7 +4320,6 @@ date,state,fips,cases,deaths
 2020-05-23,Texas,48,55451,1522
 2020-05-23,Utah,49,8260,97
 2020-05-23,Vermont,50,954,54
-2020-05-23,Virgin Islands,78,69,6
 2020-05-23,Virginia,51,35749,1159
 2020-05-23,Washington,53,20740,1062
 2020-05-23,West Virginia,54,1729,72
@@ -4534,7 +4336,6 @@ date,state,fips,cases,deaths
 2020-05-24,District of Columbia,11,8110,432
 2020-05-24,Florida,12,50859,2236
 2020-05-24,Georgia,13,40989,1799
-2020-05-24,Guam,66,1135,6
 2020-05-24,Hawaii,15,633,17
 2020-05-24,Idaho,16,2650,79
 2020-05-24,Illinois,17,110541,4884
@@ -4559,7 +4360,6 @@ date,state,fips,cases,deaths
 2020-05-24,New York,36,366346,29046
 2020-05-24,North Carolina,37,23231,771
 2020-05-24,North Dakota,38,2418,53
-2020-05-24,Northern Mariana Islands,69,22,2
 2020-05-24,Ohio,39,31911,1969
 2020-05-24,Oklahoma,40,6037,311
 2020-05-24,Oregon,41,3927,148
@@ -4572,7 +4372,6 @@ date,state,fips,cases,deaths
 2020-05-24,Texas,48,56050,1533
 2020-05-24,Utah,49,8392,97
 2020-05-24,Vermont,50,956,54
-2020-05-24,Virgin Islands,78,69,6
 2020-05-24,Virginia,51,36244,1171
 2020-05-24,Washington,53,20989,1069
 2020-05-24,West Virginia,54,1771,72
@@ -4589,7 +4388,6 @@ date,state,fips,cases,deaths
 2020-05-25,District of Columbia,11,8225,440
 2020-05-25,Florida,12,51738,2251
 2020-05-25,Georgia,13,41414,1820
-2020-05-25,Guam,66,1135,6
 2020-05-25,Hawaii,15,633,17
 2020-05-25,Idaho,16,2664,79
 2020-05-25,Illinois,17,112248,4912
@@ -4614,7 +4412,6 @@ date,state,fips,cases,deaths
 2020-05-25,New York,36,367625,29138
 2020-05-25,North Carolina,37,23997,780
 2020-05-25,North Dakota,38,2457,54
-2020-05-25,Northern Mariana Islands,69,22,2
 2020-05-25,Ohio,39,32477,1987
 2020-05-25,Oklahoma,40,6090,313
 2020-05-25,Oregon,41,3949,148
@@ -4627,7 +4424,6 @@ date,state,fips,cases,deaths
 2020-05-25,Texas,48,56490,1536
 2020-05-25,Utah,49,8521,98
 2020-05-25,Vermont,50,962,54
-2020-05-25,Virgin Islands,78,69,6
 2020-05-25,Virginia,51,37727,1208
 2020-05-25,Washington,53,21265,1076
 2020-05-25,West Virginia,54,1782,73
@@ -4644,7 +4440,6 @@ date,state,fips,cases,deaths
 2020-05-26,District of Columbia,11,8334,440
 2020-05-26,Florida,12,52247,2258
 2020-05-26,Georgia,13,42066,1867
-2020-05-26,Guam,66,1139,6
 2020-05-26,Hawaii,15,633,17
 2020-05-26,Idaho,16,2699,81
 2020-05-26,Illinois,17,113486,4960
@@ -4669,7 +4464,6 @@ date,state,fips,cases,deaths
 2020-05-26,New York,36,368669,29241
 2020-05-26,North Carolina,37,24188,789
 2020-05-26,North Dakota,38,2422,54
-2020-05-26,Northern Mariana Islands,69,22,2
 2020-05-26,Ohio,39,33006,2002
 2020-05-26,Oklahoma,40,6137,318
 2020-05-26,Oregon,41,3968,148
@@ -4682,7 +4476,6 @@ date,state,fips,cases,deaths
 2020-05-26,Texas,48,57573,1552
 2020-05-26,Utah,49,8622,101
 2020-05-26,Vermont,50,967,54
-2020-05-26,Virgin Islands,78,69,6
 2020-05-26,Virginia,51,39342,1236
 2020-05-26,Washington,53,21538,1091
 2020-05-26,West Virginia,54,1854,74
@@ -4699,7 +4492,6 @@ date,state,fips,cases,deaths
 2020-05-27,District of Columbia,11,8406,445
 2020-05-27,Florida,12,52626,2318
 2020-05-27,Georgia,13,42713,1904
-2020-05-27,Guam,66,1140,6
 2020-05-27,Hawaii,15,634,17
 2020-05-27,Idaho,16,2731,82
 2020-05-27,Illinois,17,114612,5118
@@ -4724,7 +4516,6 @@ date,state,fips,cases,deaths
 2020-05-27,New York,36,369801,29339
 2020-05-27,North Carolina,37,24787,827
 2020-05-27,North Dakota,38,2442,59
-2020-05-27,Northern Mariana Islands,69,22,2
 2020-05-27,Ohio,39,33439,2044
 2020-05-27,Oklahoma,40,6229,322
 2020-05-27,Oregon,41,4041,148
@@ -4737,7 +4528,6 @@ date,state,fips,cases,deaths
 2020-05-27,Texas,48,59105,1598
 2020-05-27,Utah,49,8710,105
 2020-05-27,Vermont,50,971,54
-2020-05-27,Virgin Islands,78,69,6
 2020-05-27,Virginia,51,40249,1281
 2020-05-27,Washington,53,21825,1106
 2020-05-27,West Virginia,54,1899,74
@@ -4754,7 +4544,6 @@ date,state,fips,cases,deaths
 2020-05-28,District of Columbia,11,8492,453
 2020-05-28,Florida,12,53277,2363
 2020-05-28,Georgia,13,43363,1942
-2020-05-28,Guam,66,1141,6
 2020-05-28,Hawaii,15,637,17
 2020-05-28,Idaho,16,2770,82
 2020-05-28,Illinois,17,116128,5225
@@ -4779,7 +4568,6 @@ date,state,fips,cases,deaths
 2020-05-28,New York,36,371559,29438
 2020-05-28,North Carolina,37,25616,859
 2020-05-28,North Dakota,38,2484,60
-2020-05-28,Northern Mariana Islands,69,22,2
 2020-05-28,Ohio,39,33915,2098
 2020-05-28,Oklahoma,40,6270,326
 2020-05-28,Oregon,41,4087,151
@@ -4792,7 +4580,6 @@ date,state,fips,cases,deaths
 2020-05-28,Texas,48,60820,1618
 2020-05-28,Utah,49,8953,106
 2020-05-28,Vermont,50,974,55
-2020-05-28,Virgin Islands,78,69,6
 2020-05-28,Virginia,51,41401,1338
 2020-05-28,Washington,53,22091,1116
 2020-05-28,West Virginia,54,1935,74
@@ -4809,7 +4596,6 @@ date,state,fips,cases,deaths
 2020-05-29,District of Columbia,11,8538,460
 2020-05-29,Florida,12,54489,2412
 2020-05-29,Georgia,13,43888,1953
-2020-05-29,Guam,66,1141,6
 2020-05-29,Hawaii,15,639,17
 2020-05-29,Idaho,16,2804,82
 2020-05-29,Illinois,17,117794,5308
@@ -4834,7 +4620,6 @@ date,state,fips,cases,deaths
 2020-05-29,New York,36,373108,29535
 2020-05-29,North Carolina,37,26735,888
 2020-05-29,North Dakota,38,2523,62
-2020-05-29,Northern Mariana Islands,69,22,2
 2020-05-29,Ohio,39,34566,2131
 2020-05-29,Oklahoma,40,6338,329
 2020-05-29,Oregon,41,4133,151
@@ -4847,7 +4632,6 @@ date,state,fips,cases,deaths
 2020-05-29,Texas,48,62073,1645
 2020-05-29,Utah,49,9282,107
 2020-05-29,Vermont,50,975,55
-2020-05-29,Virgin Islands,78,69,6
 2020-05-29,Virginia,51,42533,1358
 2020-05-29,Washington,53,22377,1120
 2020-05-29,West Virginia,54,1972,74
@@ -4864,7 +4648,6 @@ date,state,fips,cases,deaths
 2020-05-30,District of Columbia,11,8717,462
 2020-05-30,Florida,12,55416,2446
 2020-05-30,Georgia,13,44336,1973
-2020-05-30,Guam,66,1141,6
 2020-05-30,Hawaii,15,641,17
 2020-05-30,Idaho,16,2840,82
 2020-05-30,Illinois,17,119290,5368
@@ -4889,7 +4672,6 @@ date,state,fips,cases,deaths
 2020-05-30,New York,36,374471,29612
 2020-05-30,North Carolina,37,27761,903
 2020-05-30,North Dakota,38,2557,63
-2020-05-30,Northern Mariana Islands,69,22,2
 2020-05-30,Ohio,39,35034,2149
 2020-05-30,Oklahoma,40,6418,334
 2020-05-30,Oregon,41,4185,153
@@ -4902,7 +4684,6 @@ date,state,fips,cases,deaths
 2020-05-30,Texas,48,63396,1676
 2020-05-30,Utah,49,9551,112
 2020-05-30,Vermont,50,977,55
-2020-05-30,Virgin Islands,78,70,6
 2020-05-30,Virginia,51,43611,1370
 2020-05-30,Washington,53,22618,1126
 2020-05-30,West Virginia,54,1989,75
@@ -4919,7 +4700,6 @@ date,state,fips,cases,deaths
 2020-05-31,District of Columbia,11,8801,466
 2020-05-31,Florida,12,56155,2450
 2020-05-31,Georgia,13,45051,2019
-2020-05-31,Guam,66,1144,6
 2020-05-31,Hawaii,15,642,17
 2020-05-31,Idaho,16,2855,82
 2020-05-31,Illinois,17,120588,5426
@@ -4944,7 +4724,6 @@ date,state,fips,cases,deaths
 2020-05-31,New York,36,375575,29699
 2020-05-31,North Carolina,37,28686,911
 2020-05-31,North Dakota,38,2580,64
-2020-05-31,Northern Mariana Islands,69,22,2
 2020-05-31,Ohio,39,35513,2155
 2020-05-31,Oklahoma,40,6506,334
 2020-05-31,Oregon,41,4243,153
@@ -4957,7 +4736,6 @@ date,state,fips,cases,deaths
 2020-05-31,Texas,48,64974,1683
 2020-05-31,Utah,49,9829,113
 2020-05-31,Vermont,50,981,55
-2020-05-31,Virgin Islands,78,70,6
 2020-05-31,Virginia,51,44607,1375
 2020-05-31,Washington,53,22814,1126
 2020-05-31,West Virginia,54,2010,75
@@ -4974,7 +4752,6 @@ date,state,fips,cases,deaths
 2020-06-01,District of Columbia,11,8857,468
 2020-06-01,Florida,12,56822,2459
 2020-06-01,Georgia,13,45757,2057
-2020-06-01,Guam,66,1144,6
 2020-06-01,Hawaii,15,642,17
 2020-06-01,Idaho,16,2908,83
 2020-06-01,Illinois,17,121666,5458
@@ -4999,7 +4776,6 @@ date,state,fips,cases,deaths
 2020-06-01,New York,36,376520,29766
 2020-06-01,North Carolina,37,29368,923
 2020-06-01,North Dakota,38,2628,64
-2020-06-01,Northern Mariana Islands,69,22,2
 2020-06-01,Ohio,39,35984,2206
 2020-06-01,Oklahoma,40,6573,334
 2020-06-01,Oregon,41,4303,154
@@ -5012,7 +4788,6 @@ date,state,fips,cases,deaths
 2020-06-01,Texas,48,66081,1695
 2020-06-01,Utah,49,10026,113
 2020-06-01,Vermont,50,983,55
-2020-06-01,Virgin Islands,78,70,6
 2020-06-01,Virginia,51,45398,1392
 2020-06-01,Washington,53,23272,1133
 2020-06-01,West Virginia,54,2028,76
@@ -5029,7 +4804,6 @@ date,state,fips,cases,deaths
 2020-06-02,District of Columbia,11,8886,470
 2020-06-02,Florida,12,57439,2529
 2020-06-02,Georgia,13,46063,2070
-2020-06-02,Guam,66,1146,6
 2020-06-02,Hawaii,15,643,17
 2020-06-02,Idaho,16,2935,83
 2020-06-02,Illinois,17,123244,5567
@@ -5054,7 +4828,6 @@ date,state,fips,cases,deaths
 2020-06-02,New York,36,377881,29847
 2020-06-02,North Carolina,37,30052,950
 2020-06-02,North Dakota,38,2649,68
-2020-06-02,Northern Mariana Islands,69,23,2
 2020-06-02,Ohio,39,36350,2258
 2020-06-02,Oklahoma,40,6692,339
 2020-06-02,Oregon,41,4338,157
@@ -5067,7 +4840,6 @@ date,state,fips,cases,deaths
 2020-06-02,Texas,48,67966,1732
 2020-06-02,Utah,49,10237,113
 2020-06-02,Vermont,50,988,55
-2020-06-02,Virgin Islands,78,70,6
 2020-06-02,Virginia,51,46239,1407
 2020-06-02,Washington,53,23608,1139
 2020-06-02,West Virginia,54,2056,78
@@ -5084,7 +4856,6 @@ date,state,fips,cases,deaths
 2020-06-03,District of Columbia,11,9016,473
 2020-06-03,Florida,12,58756,2565
 2020-06-03,Georgia,13,46711,2092
-2020-06-03,Guam,66,1146,6
 2020-06-03,Hawaii,15,643,17
 2020-06-03,Idaho,16,2990,83
 2020-06-03,Illinois,17,124279,5665
@@ -5109,7 +4880,6 @@ date,state,fips,cases,deaths
 2020-06-03,New York,36,378924,29918
 2020-06-03,North Carolina,37,31013,971
 2020-06-03,North Dakota,38,2682,69
-2020-06-03,Northern Mariana Islands,69,24,2
 2020-06-03,Ohio,39,36792,2299
 2020-06-03,Oklahoma,40,6805,341
 2020-06-03,Oregon,41,4399,159
@@ -5122,7 +4892,6 @@ date,state,fips,cases,deaths
 2020-06-03,Texas,48,69546,1766
 2020-06-03,Utah,49,10558,117
 2020-06-03,Vermont,50,990,55
-2020-06-03,Virgin Islands,78,71,6
 2020-06-03,Virginia,51,46905,1428
 2020-06-03,Washington,53,23776,1145
 2020-06-03,West Virginia,54,2077,78
@@ -5139,7 +4908,6 @@ date,state,fips,cases,deaths
 2020-06-04,District of Columbia,11,9120,475
 2020-06-04,Florida,12,60175,2606
 2020-06-04,Georgia,13,47528,2116
-2020-06-04,Guam,66,1148,6
 2020-06-04,Hawaii,15,644,17
 2020-06-04,Idaho,16,3054,83
 2020-06-04,Illinois,17,125149,5772
@@ -5164,7 +4932,6 @@ date,state,fips,cases,deaths
 2020-06-04,New York,36,379977,30011
 2020-06-04,North Carolina,37,32276,993
 2020-06-04,North Dakota,38,2709,69
-2020-06-04,Northern Mariana Islands,69,26,2
 2020-06-04,Ohio,39,37282,2339
 2020-06-04,Oklahoma,40,6907,344
 2020-06-04,Oregon,41,4475,159
@@ -5177,7 +4944,6 @@ date,state,fips,cases,deaths
 2020-06-04,Texas,48,71330,1793
 2020-06-04,Utah,49,10858,117
 2020-06-04,Vermont,50,1026,55
-2020-06-04,Virgin Islands,78,71,6
 2020-06-04,Virginia,51,47856,1445
 2020-06-04,Washington,53,23999,1150
 2020-06-04,West Virginia,54,2102,79
@@ -5194,7 +4960,6 @@ date,state,fips,cases,deaths
 2020-06-05,District of Columbia,11,9199,479
 2020-06-05,Florida,12,61480,2659
 2020-06-05,Georgia,13,48280,2143
-2020-06-05,Guam,66,1148,6
 2020-06-05,Hawaii,15,653,17
 2020-06-05,Idaho,16,3111,83
 2020-06-05,Illinois,17,126317,5834
@@ -5219,7 +4984,6 @@ date,state,fips,cases,deaths
 2020-06-05,New York,36,381019,30066
 2020-06-05,North Carolina,37,33417,1001
 2020-06-05,North Dakota,38,2748,74
-2020-06-05,Northern Mariana Islands,69,26,2
 2020-06-05,Ohio,39,37758,2355
 2020-06-05,Oklahoma,40,7004,345
 2020-06-05,Oregon,41,4585,161
@@ -5232,7 +4996,6 @@ date,state,fips,cases,deaths
 2020-06-05,Texas,48,73323,1821
 2020-06-05,Utah,49,11344,120
 2020-06-05,Vermont,50,1027,55
-2020-06-05,Virgin Islands,78,71,6
 2020-06-05,Virginia,51,48532,1453
 2020-06-05,Washington,53,24546,1160
 2020-06-05,West Virginia,54,2119,84
@@ -5249,7 +5012,6 @@ date,state,fips,cases,deaths
 2020-06-06,District of Columbia,11,9269,483
 2020-06-06,Florida,12,62750,2687
 2020-06-06,Georgia,13,48943,2147
-2020-06-06,Guam,66,1148,6
 2020-06-06,Hawaii,15,661,17
 2020-06-06,Idaho,16,3139,83
 2020-06-06,Illinois,17,127251,5898
@@ -5274,7 +5036,6 @@ date,state,fips,cases,deaths
 2020-06-06,New York,36,382102,30123
 2020-06-06,North Carolina,37,34809,1020
 2020-06-06,North Dakota,38,2819,75
-2020-06-06,Northern Mariana Islands,69,26,2
 2020-06-06,Ohio,39,38111,2370
 2020-06-06,Oklahoma,40,7060,347
 2020-06-06,Oregon,41,4672,163
@@ -5287,7 +5048,6 @@ date,state,fips,cases,deaths
 2020-06-06,Texas,48,75077,1840
 2020-06-06,Utah,49,11866,121
 2020-06-06,Vermont,50,1046,55
-2020-06-06,Virgin Islands,78,71,6
 2020-06-06,Virginia,51,49397,1460
 2020-06-06,Washington,53,24767,1163
 2020-06-06,West Virginia,54,2136,84
@@ -5304,7 +5064,6 @@ date,state,fips,cases,deaths
 2020-06-07,District of Columbia,11,9332,489
 2020-06-07,Florida,12,63930,2699
 2020-06-07,Georgia,13,49371,2148
-2020-06-07,Guam,66,1148,6
 2020-06-07,Hawaii,15,663,17
 2020-06-07,Idaho,16,3153,83
 2020-06-07,Illinois,17,128070,5939
@@ -5329,7 +5088,6 @@ date,state,fips,cases,deaths
 2020-06-07,New York,36,382879,30183
 2020-06-07,North Carolina,37,35663,1024
 2020-06-07,North Dakota,38,2864,75
-2020-06-07,Northern Mariana Islands,69,27,2
 2020-06-07,Ohio,39,38476,2377
 2020-06-07,Oklahoma,40,7151,348
 2020-06-07,Oregon,41,4809,164
@@ -5342,7 +5100,6 @@ date,state,fips,cases,deaths
 2020-06-07,Texas,48,75948,1846
 2020-06-07,Utah,49,12084,121
 2020-06-07,Vermont,50,1063,55
-2020-06-07,Virgin Islands,78,71,6
 2020-06-07,Virginia,51,50681,1472
 2020-06-07,Washington,53,25064,1163
 2020-06-07,West Virginia,54,2144,84
@@ -5359,7 +5116,6 @@ date,state,fips,cases,deaths
 2020-06-08,District of Columbia,11,9389,491
 2020-06-08,Florida,12,64896,2711
 2020-06-08,Georgia,13,49995,2176
-2020-06-08,Guam,66,1149,6
 2020-06-08,Hawaii,15,664,17
 2020-06-08,Idaho,16,3197,83
 2020-06-08,Illinois,17,129543,6142
@@ -5384,7 +5140,6 @@ date,state,fips,cases,deaths
 2020-06-08,New York,36,383591,30239
 2020-06-08,North Carolina,37,36581,1041
 2020-06-08,North Dakota,38,2883,75
-2020-06-08,Northern Mariana Islands,69,28,2
 2020-06-08,Ohio,39,38837,2404
 2020-06-08,Oklahoma,40,7206,348
 2020-06-08,Oregon,41,4927,164
@@ -5397,7 +5152,6 @@ date,state,fips,cases,deaths
 2020-06-08,Texas,48,77326,1856
 2020-06-08,Utah,49,12378,124
 2020-06-08,Vermont,50,1075,55
-2020-06-08,Virgin Islands,78,71,6
 2020-06-08,Virginia,51,51251,1477
 2020-06-08,Washington,53,25593,1168
 2020-06-08,West Virginia,54,2161,84
@@ -5414,7 +5168,6 @@ date,state,fips,cases,deaths
 2020-06-09,District of Columbia,11,9474,495
 2020-06-09,Florida,12,65992,2764
 2020-06-09,Georgia,13,50769,2250
-2020-06-09,Guam,66,1149,6
 2020-06-09,Hawaii,15,670,17
 2020-06-09,Idaho,16,3226,85
 2020-06-09,Illinois,17,130321,6237
@@ -5439,7 +5192,6 @@ date,state,fips,cases,deaths
 2020-06-09,New York,36,384281,30309
 2020-06-09,North Carolina,37,37393,1069
 2020-06-09,North Dakota,38,2904,75
-2020-06-09,Northern Mariana Islands,69,30,2
 2020-06-09,Ohio,39,39162,2421
 2020-06-09,Oklahoma,40,7364,353
 2020-06-09,Oregon,41,5027,169
@@ -5452,7 +5204,6 @@ date,state,fips,cases,deaths
 2020-06-09,Texas,48,79271,1886
 2020-06-09,Utah,49,12639,127
 2020-06-09,Vermont,50,1084,55
-2020-06-09,Virgin Islands,78,72,6
 2020-06-09,Virginia,51,51738,1496
 2020-06-09,Washington,53,25796,1181
 2020-06-09,West Virginia,54,2179,84
@@ -5469,7 +5220,6 @@ date,state,fips,cases,deaths
 2020-06-10,District of Columbia,11,9537,499
 2020-06-10,Florida,12,67363,2800
 2020-06-10,Georgia,13,51465,2292
-2020-06-10,Guam,66,1149,6
 2020-06-10,Hawaii,15,673,17
 2020-06-10,Idaho,16,3262,85
 2020-06-10,Illinois,17,130889,6302
@@ -5494,7 +5244,6 @@ date,state,fips,cases,deaths
 2020-06-10,New York,36,384945,30376
 2020-06-10,North Carolina,37,38305,1096
 2020-06-10,North Dakota,38,2944,76
-2020-06-10,Northern Mariana Islands,69,30,2
 2020-06-10,Ohio,39,39575,2457
 2020-06-10,Oklahoma,40,7480,355
 2020-06-10,Oregon,41,5099,169
@@ -5507,7 +5256,6 @@ date,state,fips,cases,deaths
 2020-06-10,Texas,48,81771,1916
 2020-06-10,Utah,49,12982,128
 2020-06-10,Vermont,50,1095,55
-2020-06-10,Virgin Islands,78,72,6
 2020-06-10,Virginia,51,52177,1514
 2020-06-10,Washington,53,25940,1183
 2020-06-10,West Virginia,54,2193,85
@@ -5524,7 +5272,6 @@ date,state,fips,cases,deaths
 2020-06-11,District of Columbia,11,9589,502
 2020-06-11,Florida,12,69061,2847
 2020-06-11,Georgia,13,52332,2337
-2020-06-11,Guam,66,1152,6
 2020-06-11,Hawaii,15,680,17
 2020-06-11,Idaho,16,3303,86
 2020-06-11,Illinois,17,131731,6388
@@ -5549,7 +5296,6 @@ date,state,fips,cases,deaths
 2020-06-11,New York,36,385669,30431
 2020-06-11,North Carolina,37,39735,1114
 2020-06-11,North Dakota,38,2983,77
-2020-06-11,Northern Mariana Islands,69,30,2
 2020-06-11,Ohio,39,40004,2490
 2020-06-11,Oklahoma,40,7626,357
 2020-06-11,Oregon,41,5252,171
@@ -5562,7 +5308,6 @@ date,state,fips,cases,deaths
 2020-06-11,Texas,48,83772,1942
 2020-06-11,Utah,49,13366,131
 2020-06-11,Vermont,50,1110,55
-2020-06-11,Virgin Islands,78,72,6
 2020-06-11,Virginia,51,52647,1520
 2020-06-11,Washington,53,26172,1198
 2020-06-11,West Virginia,54,2217,86
@@ -5579,7 +5324,6 @@ date,state,fips,cases,deaths
 2020-06-12,District of Columbia,11,9654,506
 2020-06-12,Florida,12,70963,2876
 2020-06-12,Georgia,13,53201,2384
-2020-06-12,Guam,66,1153,6
 2020-06-12,Hawaii,15,694,17
 2020-06-12,Idaho,16,3354,87
 2020-06-12,Illinois,17,132489,6469
@@ -5604,7 +5348,6 @@ date,state,fips,cases,deaths
 2020-06-12,New York,36,386490,30511
 2020-06-12,North Carolina,37,41467,1128
 2020-06-12,North Dakota,38,3019,77
-2020-06-12,Northern Mariana Islands,69,30,2
 2020-06-12,Ohio,39,40424,2508
 2020-06-12,Oklahoma,40,7848,359
 2020-06-12,Oregon,41,5388,174
@@ -5617,7 +5360,6 @@ date,state,fips,cases,deaths
 2020-06-12,Texas,48,86031,1965
 2020-06-12,Utah,49,13681,139
 2020-06-12,Vermont,50,1119,55
-2020-06-12,Virgin Islands,78,72,6
 2020-06-12,Virginia,51,53211,1534
 2020-06-12,Washington,53,26576,1207
 2020-06-12,West Virginia,54,2249,88
@@ -5634,7 +5376,6 @@ date,state,fips,cases,deaths
 2020-06-13,District of Columbia,11,9709,511
 2020-06-13,Florida,12,73544,2924
 2020-06-13,Georgia,13,54178,2411
-2020-06-13,Guam,66,1154,6
 2020-06-13,Hawaii,15,711,17
 2020-06-13,Idaho,16,3399,87
 2020-06-13,Illinois,17,133117,6491
@@ -5659,7 +5400,6 @@ date,state,fips,cases,deaths
 2020-06-13,New York,36,387402,30565
 2020-06-13,North Carolina,37,42911,1135
 2020-06-13,North Dakota,38,3061,77
-2020-06-13,Northern Mariana Islands,69,30,2
 2020-06-13,Ohio,39,40848,2554
 2020-06-13,Oklahoma,40,8073,359
 2020-06-13,Oregon,41,5543,175
@@ -5672,7 +5412,6 @@ date,state,fips,cases,deaths
 2020-06-13,Texas,48,88120,1989
 2020-06-13,Utah,49,14061,139
 2020-06-13,Vermont,50,1125,55
-2020-06-13,Virgin Islands,78,72,6
 2020-06-13,Virginia,51,53869,1541
 2020-06-13,Washington,53,26920,1216
 2020-06-13,West Virginia,54,2274,88
@@ -5689,7 +5428,6 @@ date,state,fips,cases,deaths
 2020-06-14,District of Columbia,11,9767,515
 2020-06-14,Florida,12,75560,2930
 2020-06-14,Georgia,13,54874,2416
-2020-06-14,Guam,66,1154,6
 2020-06-14,Hawaii,15,716,17
 2020-06-14,Idaho,16,3413,88
 2020-06-14,Illinois,17,133719,6512
@@ -5714,7 +5452,6 @@ date,state,fips,cases,deaths
 2020-06-14,New York,36,388096,30605
 2020-06-14,North Carolina,37,44199,1139
 2020-06-14,North Dakota,38,3083,77
-2020-06-14,Northern Mariana Islands,69,30,2
 2020-06-14,Ohio,39,41148,2557
 2020-06-14,Oklahoma,40,8231,359
 2020-06-14,Oregon,41,5644,176
@@ -5727,7 +5464,6 @@ date,state,fips,cases,deaths
 2020-06-14,Texas,48,89542,1995
 2020-06-14,Utah,49,14313,139
 2020-06-14,Vermont,50,1127,55
-2020-06-14,Virgin Islands,78,73,6
 2020-06-14,Virginia,51,54506,1546
 2020-06-14,Washington,53,27135,1220
 2020-06-14,West Virginia,54,2290,88
@@ -5744,7 +5480,6 @@ date,state,fips,cases,deaths
 2020-06-15,District of Columbia,11,9799,515
 2020-06-15,Florida,12,77318,2937
 2020-06-15,Georgia,13,55505,2457
-2020-06-15,Guam,66,1155,6
 2020-06-15,Hawaii,15,724,17
 2020-06-15,Idaho,16,3472,89
 2020-06-15,Illinois,17,134247,6543
@@ -5769,7 +5504,6 @@ date,state,fips,cases,deaths
 2020-06-15,New York,36,388719,30645
 2020-06-15,North Carolina,37,45257,1156
 2020-06-15,North Dakota,38,3104,77
-2020-06-15,Northern Mariana Islands,69,30,2
 2020-06-15,Ohio,39,41576,2573
 2020-06-15,Oklahoma,40,8417,359
 2020-06-15,Oregon,41,5831,180
@@ -5782,7 +5516,6 @@ date,state,fips,cases,deaths
 2020-06-15,Texas,48,91726,2018
 2020-06-15,Utah,49,14757,143
 2020-06-15,Vermont,50,1130,55
-2020-06-15,Virgin Islands,78,73,6
 2020-06-15,Virginia,51,54886,1552
 2020-06-15,Washington,53,27577,1223
 2020-06-15,West Virginia,54,2322,88
@@ -5799,7 +5532,6 @@ date,state,fips,cases,deaths
 2020-06-16,District of Columbia,11,9818,520
 2020-06-16,Florida,12,80101,2992
 2020-06-16,Georgia,13,56302,2492
-2020-06-16,Guam,66,1155,6
 2020-06-16,Hawaii,15,728,17
 2020-06-16,Idaho,16,3543,89
 2020-06-16,Illinois,17,134866,6608
@@ -5824,7 +5556,6 @@ date,state,fips,cases,deaths
 2020-06-16,New York,36,389349,30683
 2020-06-16,North Carolina,37,46105,1185
 2020-06-16,North Dakota,38,3127,77
-2020-06-16,Northern Mariana Islands,69,30,2
 2020-06-16,Ohio,39,42010,2597
 2020-06-16,Oklahoma,40,8645,363
 2020-06-16,Oregon,41,6111,182
@@ -5837,7 +5568,6 @@ date,state,fips,cases,deaths
 2020-06-16,Texas,48,95973,2057
 2020-06-16,Utah,49,15077,145
 2020-06-16,Vermont,50,1130,55
-2020-06-16,Virgin Islands,78,73,6
 2020-06-16,Virginia,51,55331,1570
 2020-06-16,Washington,53,27949,1234
 2020-06-16,West Virginia,54,2341,88
@@ -5854,7 +5584,6 @@ date,state,fips,cases,deaths
 2020-06-17,District of Columbia,11,9847,523
 2020-06-17,Florida,12,82711,3017
 2020-06-17,Georgia,13,57217,2536
-2020-06-17,Guam,66,1157,6
 2020-06-17,Hawaii,15,732,17
 2020-06-17,Idaho,16,3634,89
 2020-06-17,Illinois,17,135416,6687
@@ -5879,7 +5608,6 @@ date,state,fips,cases,deaths
 2020-06-17,New York,36,389910,30722
 2020-06-17,North Carolina,37,47142,1198
 2020-06-17,North Dakota,38,3170,78
-2020-06-17,Northern Mariana Islands,69,30,2
 2020-06-17,Ohio,39,42422,2611
 2020-06-17,Oklahoma,40,8903,364
 2020-06-17,Oregon,41,6235,183
@@ -5892,7 +5620,6 @@ date,state,fips,cases,deaths
 2020-06-17,Texas,48,99466,2099
 2020-06-17,Utah,49,15464,149
 2020-06-17,Vermont,50,1130,55
-2020-06-17,Virgin Islands,78,73,6
 2020-06-17,Virginia,51,55775,1583
 2020-06-17,Washington,53,28270,1229
 2020-06-17,West Virginia,54,2376,88
@@ -5909,7 +5636,6 @@ date,state,fips,cases,deaths
 2020-06-18,District of Columbia,11,9903,527
 2020-06-18,Florida,12,85918,3060
 2020-06-18,Georgia,13,58040,2565
-2020-06-18,Guam,66,1162,6
 2020-06-18,Hawaii,15,750,17
 2020-06-18,Idaho,16,3744,90
 2020-06-18,Illinois,17,136081,6737
@@ -5934,7 +5660,6 @@ date,state,fips,cases,deaths
 2020-06-18,New York,36,390536,30767
 2020-06-18,North Carolina,37,48426,1209
 2020-06-18,North Dakota,38,3199,81
-2020-06-18,Northern Mariana Islands,69,30,2
 2020-06-18,Ohio,39,43122,2633
 2020-06-18,Oklahoma,40,9354,366
 2020-06-18,Oregon,41,6390,187
@@ -5947,7 +5672,6 @@ date,state,fips,cases,deaths
 2020-06-18,Texas,48,102677,2137
 2020-06-18,Utah,49,16015,152
 2020-06-18,Vermont,50,1135,56
-2020-06-18,Virgin Islands,78,74,6
 2020-06-18,Virginia,51,56238,1586
 2020-06-18,Washington,53,28663,1246
 2020-06-18,West Virginia,54,2418,88
@@ -5964,7 +5688,6 @@ date,state,fips,cases,deaths
 2020-06-19,District of Columbia,11,9952,530
 2020-06-19,Florida,12,89740,3103
 2020-06-19,Georgia,13,59117,2596
-2020-06-19,Guam,66,1169,6
 2020-06-19,Hawaii,15,777,17
 2020-06-19,Idaho,16,3871,90
 2020-06-19,Illinois,17,136917,6801
@@ -5989,7 +5712,6 @@ date,state,fips,cases,deaths
 2020-06-19,New York,36,391330,30816
 2020-06-19,North Carolina,37,50014,1223
 2020-06-19,North Dakota,38,3232,82
-2020-06-19,Northern Mariana Islands,69,30,2
 2020-06-19,Ohio,39,43731,2667
 2020-06-19,Oklahoma,40,9706,367
 2020-06-19,Oregon,41,6592,188
@@ -6002,7 +5724,6 @@ date,state,fips,cases,deaths
 2020-06-19,Texas,48,107322,2168
 2020-06-19,Utah,49,16585,155
 2020-06-19,Vermont,50,1144,56
-2020-06-19,Virgin Islands,78,74,6
 2020-06-19,Virginia,51,56793,1602
 2020-06-19,Washington,53,29045,1258
 2020-06-19,West Virginia,54,2468,88
@@ -6019,7 +5740,6 @@ date,state,fips,cases,deaths
 2020-06-20,District of Columbia,11,9984,531
 2020-06-20,Florida,12,93789,3143
 2020-06-20,Georgia,13,60669,2602
-2020-06-20,Guam,66,1191,6
 2020-06-20,Hawaii,15,791,17
 2020-06-20,Idaho,16,4006,90
 2020-06-20,Illinois,17,137535,6846
@@ -6044,7 +5764,6 @@ date,state,fips,cases,deaths
 2020-06-20,New York,36,392037,30839
 2020-06-20,North Carolina,37,51640,1239
 2020-06-20,North Dakota,38,3257,82
-2020-06-20,Northern Mariana Islands,69,30,2
 2020-06-20,Ohio,39,44262,2697
 2020-06-20,Oklahoma,40,10037,368
 2020-06-20,Oregon,41,6682,188
@@ -6057,7 +5776,6 @@ date,state,fips,cases,deaths
 2020-06-20,Texas,48,111594,2186
 2020-06-20,Utah,49,17173,155
 2020-06-20,Vermont,50,1147,56
-2020-06-20,Virgin Islands,78,76,6
 2020-06-20,Virginia,51,57443,1607
 2020-06-20,Washington,53,29466,1268
 2020-06-20,West Virginia,54,2500,88
@@ -6074,7 +5792,6 @@ date,state,fips,cases,deaths
 2020-06-21,District of Columbia,11,10020,533
 2020-06-21,Florida,12,97283,3160
 2020-06-21,Georgia,13,61493,2603
-2020-06-21,Guam,66,1191,6
 2020-06-21,Hawaii,15,802,17
 2020-06-21,Idaho,16,4025,90
 2020-06-21,Illinois,17,138154,6865
@@ -6099,7 +5816,6 @@ date,state,fips,cases,deaths
 2020-06-21,New York,36,392702,30884
 2020-06-21,North Carolina,37,52854,1245
 2020-06-21,North Dakota,38,3294,83
-2020-06-21,Northern Mariana Islands,69,30,2
 2020-06-21,Ohio,39,44808,2700
 2020-06-21,Oklahoma,40,10515,369
 2020-06-21,Oregon,41,6945,190
@@ -6112,7 +5828,6 @@ date,state,fips,cases,deaths
 2020-06-21,Texas,48,114886,2195
 2020-06-21,Utah,49,17567,158
 2020-06-21,Vermont,50,1159,56
-2020-06-21,Virgin Islands,78,76,6
 2020-06-21,Virginia,51,57994,1611
 2020-06-21,Washington,53,29797,1271
 2020-06-21,West Virginia,54,2543,89
@@ -6129,7 +5844,6 @@ date,state,fips,cases,deaths
 2020-06-22,District of Columbia,11,10058,535
 2020-06-22,Florida,12,100209,3172
 2020-06-22,Georgia,13,62705,2607
-2020-06-22,Guam,66,1191,6
 2020-06-22,Hawaii,15,804,17
 2020-06-22,Idaho,16,4267,90
 2020-06-22,Illinois,17,138615,6889
@@ -6154,7 +5868,6 @@ date,state,fips,cases,deaths
 2020-06-22,New York,36,393257,30934
 2020-06-22,North Carolina,37,53840,1250
 2020-06-22,North Dakota,38,3319,83
-2020-06-22,Northern Mariana Islands,69,30,2
 2020-06-22,Ohio,39,45537,2704
 2020-06-22,Oklahoma,40,10733,369
 2020-06-22,Oregon,41,7115,192
@@ -6167,7 +5880,6 @@ date,state,fips,cases,deaths
 2020-06-22,Texas,48,119646,2213
 2020-06-22,Utah,49,18035,158
 2020-06-22,Vermont,50,1163,56
-2020-06-22,Virgin Islands,78,76,6
 2020-06-22,Virginia,51,58465,1620
 2020-06-22,Washington,53,30443,1277
 2020-06-22,West Virginia,54,2571,90
@@ -6184,7 +5896,6 @@ date,state,fips,cases,deaths
 2020-06-23,District of Columbia,11,10094,537
 2020-06-23,Florida,12,103495,3237
 2020-06-23,Georgia,13,64577,2646
-2020-06-23,Guam,66,1194,6
 2020-06-23,Hawaii,15,807,17
 2020-06-23,Idaho,16,4412,90
 2020-06-23,Illinois,17,139282,6925
@@ -6209,7 +5920,6 @@ date,state,fips,cases,deaths
 2020-06-23,New York,36,393855,30970
 2020-06-23,North Carolina,37,54824,1276
 2020-06-23,North Dakota,38,3326,84
-2020-06-23,Northern Mariana Islands,69,30,2
 2020-06-23,Ohio,39,46127,2735
 2020-06-23,Oklahoma,40,11028,371
 2020-06-23,Oregon,41,7317,192
@@ -6222,7 +5932,6 @@ date,state,fips,cases,deaths
 2020-06-23,Texas,48,124726,2246
 2020-06-23,Utah,49,18454,163
 2020-06-23,Vermont,50,1164,56
-2020-06-23,Virgin Islands,78,78,6
 2020-06-23,Virginia,51,58994,1645
 2020-06-23,Washington,53,30778,1285
 2020-06-23,West Virginia,54,2593,92
@@ -6239,7 +5948,6 @@ date,state,fips,cases,deaths
 2020-06-24,District of Columbia,11,10128,541
 2020-06-24,Florida,12,109006,3280
 2020-06-24,Georgia,13,66290,2658
-2020-06-24,Guam,66,1200,6
 2020-06-24,Hawaii,15,821,17
 2020-06-24,Idaho,16,4650,91
 2020-06-24,Illinois,17,140025,6986
@@ -6264,7 +5972,6 @@ date,state,fips,cases,deaths
 2020-06-24,New York,36,394430,31001
 2020-06-24,North Carolina,37,56261,1295
 2020-06-24,North Dakota,38,3370,86
-2020-06-24,Northern Mariana Islands,69,30,2
 2020-06-24,Ohio,39,46759,2755
 2020-06-24,Oklahoma,40,11509,372
 2020-06-24,Oregon,41,7462,195
@@ -6277,7 +5984,6 @@ date,state,fips,cases,deaths
 2020-06-24,Texas,48,131310,2292
 2020-06-24,Utah,49,18915,163
 2020-06-24,Vermont,50,1184,56
-2020-06-24,Virgin Islands,78,80,6
 2020-06-24,Virginia,51,59514,1661
 2020-06-24,Washington,53,31400,1294
 2020-06-24,West Virginia,54,2629,92
@@ -6294,7 +6000,6 @@ date,state,fips,cases,deaths
 2020-06-25,District of Columbia,11,10159,543
 2020-06-25,Florida,12,114010,3326
 2020-06-25,Georgia,13,67796,2704
-2020-06-25,Guam,66,1214,6
 2020-06-25,Hawaii,15,836,17
 2020-06-25,Idaho,16,4869,91
 2020-06-25,Illinois,17,140935,7024
@@ -6319,7 +6024,6 @@ date,state,fips,cases,deaths
 2020-06-25,New York,36,395168,31029
 2020-06-25,North Carolina,37,57538,1305
 2020-06-25,North Dakota,38,3402,87
-2020-06-25,Northern Mariana Islands,69,30,2
 2020-06-25,Ohio,39,47651,2772
 2020-06-25,Oklahoma,40,11947,375
 2020-06-25,Oregon,41,7605,199
@@ -6332,7 +6036,6 @@ date,state,fips,cases,deaths
 2020-06-25,Texas,48,136783,2321
 2020-06-25,Utah,49,19544,164
 2020-06-25,Vermont,50,1191,56
-2020-06-25,Virgin Islands,78,81,6
 2020-06-25,Virginia,51,59946,1675
 2020-06-25,Washington,53,31998,1301
 2020-06-25,West Virginia,54,2693,92
@@ -6349,7 +6052,6 @@ date,state,fips,cases,deaths
 2020-06-26,District of Columbia,11,10185,546
 2020-06-26,Florida,12,122952,3365
 2020-06-26,Georgia,13,69542,2727
-2020-06-26,Guam,66,1217,6
 2020-06-26,Hawaii,15,850,17
 2020-06-26,Idaho,16,5149,91
 2020-06-26,Illinois,17,141812,7059
@@ -6374,7 +6076,6 @@ date,state,fips,cases,deaths
 2020-06-26,New York,36,395972,31075
 2020-06-26,North Carolina,37,59253,1319
 2020-06-26,North Dakota,38,3430,87
-2020-06-26,Northern Mariana Islands,69,30,2
 2020-06-26,Ohio,39,48638,2788
 2020-06-26,Oklahoma,40,12343,377
 2020-06-26,Oregon,41,8008,204
@@ -6387,7 +6088,6 @@ date,state,fips,cases,deaths
 2020-06-26,Texas,48,142582,2362
 2020-06-26,Utah,49,20218,166
 2020-06-26,Vermont,50,1198,56
-2020-06-26,Virgin Islands,78,81,6
 2020-06-26,Virginia,51,60570,1700
 2020-06-26,Washington,53,32489,1305
 2020-06-26,West Virginia,54,2729,92
@@ -6404,7 +6104,6 @@ date,state,fips,cases,deaths
 2020-06-27,District of Columbia,11,10216,548
 2020-06-27,Florida,12,132537,3389
 2020-06-27,Georgia,13,71066,2733
-2020-06-27,Guam,66,1217,6
 2020-06-27,Hawaii,15,856,18
 2020-06-27,Idaho,16,5319,92
 2020-06-27,Illinois,17,142536,7083
@@ -6429,7 +6128,6 @@ date,state,fips,cases,deaths
 2020-06-27,New York,36,396669,31105
 2020-06-27,North Carolina,37,60710,1334
 2020-06-27,North Dakota,38,3467,87
-2020-06-27,Northern Mariana Islands,69,30,2
 2020-06-27,Ohio,39,49455,2804
 2020-06-27,Oklahoma,40,12642,384
 2020-06-27,Oregon,41,8110,204
@@ -6442,7 +6140,6 @@ date,state,fips,cases,deaths
 2020-06-27,Texas,48,148639,2398
 2020-06-27,Utah,49,20735,167
 2020-06-27,Vermont,50,1200,56
-2020-06-27,Virgin Islands,78,81,6
 2020-06-27,Virginia,51,61247,1724
 2020-06-27,Washington,53,33031,1311
 2020-06-27,West Virginia,54,2781,93
@@ -6459,7 +6156,6 @@ date,state,fips,cases,deaths
 2020-06-28,District of Columbia,11,10248,550
 2020-06-28,Florida,12,141067,3418
 2020-06-28,Georgia,13,72800,2735
-2020-06-28,Guam,66,1217,6
 2020-06-28,Hawaii,15,883,18
 2020-06-28,Idaho,16,5543,91
 2020-06-28,Illinois,17,143117,7098
@@ -6484,7 +6180,6 @@ date,state,fips,cases,deaths
 2020-06-28,New York,36,397293,31137
 2020-06-28,North Carolina,37,62178,1338
 2020-06-28,North Dakota,38,3504,88
-2020-06-28,Northern Mariana Islands,69,30,2
 2020-06-28,Ohio,39,50309,2807
 2020-06-28,Oklahoma,40,12944,385
 2020-06-28,Oregon,41,8348,204
@@ -6497,7 +6192,6 @@ date,state,fips,cases,deaths
 2020-06-28,Texas,48,152437,2407
 2020-06-28,Utah,49,21155,167
 2020-06-28,Vermont,50,1202,56
-2020-06-28,Virgin Islands,78,81,6
 2020-06-28,Virginia,51,61736,1732
 2020-06-28,Washington,53,33341,1311
 2020-06-28,West Virginia,54,2831,93
@@ -6514,7 +6208,6 @@ date,state,fips,cases,deaths
 2020-06-29,District of Columbia,11,10292,551
 2020-06-29,Florida,12,146333,3446
 2020-06-29,Georgia,13,74816,2739
-2020-06-29,Guam,66,1224,6
 2020-06-29,Hawaii,15,884,18
 2020-06-29,Idaho,16,5770,91
 2020-06-29,Illinois,17,143885,7115
@@ -6539,7 +6232,6 @@ date,state,fips,cases,deaths
 2020-06-29,New York,36,397684,31143
 2020-06-29,North Carolina,37,63684,1341
 2020-06-29,North Dakota,38,3548,88
-2020-06-29,Northern Mariana Islands,69,30,2
 2020-06-29,Ohio,39,51046,2818
 2020-06-29,Oklahoma,40,13172,385
 2020-06-29,Oregon,41,8509,207
@@ -6552,7 +6244,6 @@ date,state,fips,cases,deaths
 2020-06-29,Texas,48,158756,2430
 2020-06-29,Utah,49,21818,168
 2020-06-29,Vermont,50,1208,56
-2020-06-29,Virgin Islands,78,84,6
 2020-06-29,Virginia,51,62189,1740
 2020-06-29,Washington,53,34036,1321
 2020-06-29,West Virginia,54,2869,93
@@ -6569,7 +6260,6 @@ date,state,fips,cases,deaths
 2020-06-30,District of Columbia,11,10327,551
 2020-06-30,Florida,12,152426,3504
 2020-06-30,Georgia,13,77280,2758
-2020-06-30,Guam,66,1228,6
 2020-06-30,Hawaii,15,901,18
 2020-06-30,Idaho,16,6124,92
 2020-06-30,Illinois,17,144661,7136
@@ -6594,7 +6284,6 @@ date,state,fips,cases,deaths
 2020-06-30,New York,36,398142,31776
 2020-06-30,North Carolina,37,65062,1362
 2020-06-30,North Dakota,38,3585,88
-2020-06-30,Northern Mariana Islands,69,30,2
 2020-06-30,Ohio,39,51789,2863
 2020-06-30,Oklahoma,40,13757,387
 2020-06-30,Oregon,41,8695,210
@@ -6607,7 +6296,6 @@ date,state,fips,cases,deaths
 2020-06-30,Texas,48,166703,2482
 2020-06-30,Utah,49,22364,172
 2020-06-30,Vermont,50,1208,56
-2020-06-30,Virgin Islands,78,90,6
 2020-06-30,Virginia,51,62787,1763
 2020-06-30,Washington,53,34541,1333
 2020-06-30,West Virginia,54,2904,93
@@ -6624,7 +6312,6 @@ date,state,fips,cases,deaths
 2020-07-01,District of Columbia,11,10365,553
 2020-07-01,Florida,12,158989,3549
 2020-07-01,Georgia,13,79589,2779
-2020-07-01,Guam,66,1240,6
 2020-07-01,Hawaii,15,909,18
 2020-07-01,Idaho,16,6379,92
 2020-07-01,Illinois,17,145541,7160
@@ -6649,7 +6336,6 @@ date,state,fips,cases,deaths
 2020-07-01,New York,36,398770,31791
 2020-07-01,North Carolina,37,66815,1389
 2020-07-01,North Dakota,38,3624,89
-2020-07-01,Northern Mariana Islands,69,30,2
 2020-07-01,Ohio,39,52865,2876
 2020-07-01,Oklahoma,40,14112,389
 2020-07-01,Oregon,41,9019,211
@@ -6662,7 +6348,6 @@ date,state,fips,cases,deaths
 2020-07-01,Texas,48,174826,2518
 2020-07-01,Utah,49,22864,173
 2020-07-01,Vermont,50,1210,56
-2020-07-01,Virgin Islands,78,92,6
 2020-07-01,Virginia,51,63203,1786
 2020-07-01,Washington,53,35258,1340
 2020-07-01,West Virginia,54,2979,93
@@ -6679,7 +6364,6 @@ date,state,fips,cases,deaths
 2020-07-02,District of Columbia,11,10390,554
 2020-07-02,Florida,12,169098,3616
 2020-07-02,Georgia,13,82475,2801
-2020-07-02,Guam,66,1249,6
 2020-07-02,Hawaii,15,929,18
 2020-07-02,Idaho,16,6688,93
 2020-07-02,Illinois,17,146407,7197
@@ -6704,7 +6388,6 @@ date,state,fips,cases,deaths
 2020-07-02,New York,36,399642,31814
 2020-07-02,North Carolina,37,68508,1402
 2020-07-02,North Dakota,38,3666,89
-2020-07-02,Northern Mariana Islands,69,30,2
 2020-07-02,Ohio,39,54166,2903
 2020-07-02,Oklahoma,40,14539,395
 2020-07-02,Oregon,41,9344,212
@@ -6717,7 +6400,6 @@ date,state,fips,cases,deaths
 2020-07-02,Texas,48,182260,2562
 2020-07-02,Utah,49,23466,176
 2020-07-02,Vermont,50,1227,56
-2020-07-02,Virgin Islands,78,98,6
 2020-07-02,Virginia,51,63735,1816
 2020-07-02,Washington,53,35921,1343
 2020-07-02,West Virginia,54,3053,93
@@ -6734,7 +6416,6 @@ date,state,fips,cases,deaths
 2020-07-03,District of Columbia,11,10435,555
 2020-07-03,Florida,12,178586,3683
 2020-07-03,Georgia,13,85079,2808
-2020-07-03,Guam,66,1255,6
 2020-07-03,Hawaii,15,957,19
 2020-07-03,Idaho,16,7034,94
 2020-07-03,Illinois,17,147293,7222
@@ -6759,7 +6440,6 @@ date,state,fips,cases,deaths
 2020-07-03,New York,36,400561,31836
 2020-07-03,North Carolina,37,70447,1413
 2020-07-03,North Dakota,38,3731,89
-2020-07-03,Northern Mariana Islands,69,31,2
 2020-07-03,Ohio,39,55257,2903
 2020-07-03,Oklahoma,40,15065,398
 2020-07-03,Oregon,41,9643,215
@@ -6772,7 +6452,6 @@ date,state,fips,cases,deaths
 2020-07-03,Texas,48,189418,2608
 2020-07-03,Utah,49,24070,181
 2020-07-03,Vermont,50,1236,56
-2020-07-03,Virgin Islands,78,111,6
 2020-07-03,Virginia,51,64393,1845
 2020-07-03,Washington,53,36417,1353
 2020-07-03,West Virginia,54,3126,93
@@ -6789,7 +6468,6 @@ date,state,fips,cases,deaths
 2020-07-04,District of Columbia,11,10447,557
 2020-07-04,Florida,12,190044,3701
 2020-07-04,Georgia,13,87592,2809
-2020-07-04,Guam,66,1257,6
 2020-07-04,Hawaii,15,981,19
 2020-07-04,Idaho,16,7431,94
 2020-07-04,Illinois,17,148151,7234
@@ -6814,7 +6492,6 @@ date,state,fips,cases,deaths
 2020-07-04,New York,36,401286,31860
 2020-07-04,North Carolina,37,71734,1414
 2020-07-04,North Dakota,38,3788,89
-2020-07-04,Northern Mariana Islands,69,31,2
 2020-07-04,Ohio,39,56183,2907
 2020-07-04,Oklahoma,40,15645,398
 2020-07-04,Oregon,41,9937,216
@@ -6827,7 +6504,6 @@ date,state,fips,cases,deaths
 2020-07-04,Texas,48,195707,2646
 2020-07-04,Utah,49,24717,181
 2020-07-04,Vermont,50,1238,56
-2020-07-04,Virgin Islands,78,112,6
 2020-07-04,Virginia,51,65109,1849
 2020-07-04,Washington,53,36799,1355
 2020-07-04,West Virginia,54,3205,94
@@ -6844,7 +6520,6 @@ date,state,fips,cases,deaths
 2020-07-05,District of Columbia,11,10482,559
 2020-07-05,Florida,12,200103,3730
 2020-07-05,Georgia,13,89489,2812
-2020-07-05,Guam,66,1257,6
 2020-07-05,Hawaii,15,1005,19
 2020-07-05,Idaho,16,7799,94
 2020-07-05,Illinois,17,148730,7241
@@ -6869,7 +6544,6 @@ date,state,fips,cases,deaths
 2020-07-05,New York,36,401822,31895
 2020-07-05,North Carolina,37,73094,1414
 2020-07-05,North Dakota,38,3825,89
-2020-07-05,Northern Mariana Islands,69,31,2
 2020-07-05,Ohio,39,57151,2911
 2020-07-05,Oklahoma,40,15928,398
 2020-07-05,Oregon,41,10237,218
@@ -6882,7 +6556,6 @@ date,state,fips,cases,deaths
 2020-07-05,Texas,48,200137,2666
 2020-07-05,Utah,49,25005,184
 2020-07-05,Vermont,50,1249,56
-2020-07-05,Virgin Islands,78,112,6
 2020-07-05,Virginia,51,65748,1853
 2020-07-05,Washington,53,37468,1360
 2020-07-05,West Virginia,54,3335,95
@@ -6899,7 +6572,6 @@ date,state,fips,cases,deaths
 2020-07-06,District of Columbia,11,10515,561
 2020-07-06,Florida,12,206439,3777
 2020-07-06,Georgia,13,91015,2829
-2020-07-06,Guam,66,1270,6
 2020-07-06,Hawaii,15,1012,19
 2020-07-06,Idaho,16,8222,94
 2020-07-06,Illinois,17,149428,7250
@@ -6924,7 +6596,6 @@ date,state,fips,cases,deaths
 2020-07-06,New York,36,402338,31911
 2020-07-06,North Carolina,37,74930,1424
 2020-07-06,North Dakota,38,3858,89
-2020-07-06,Northern Mariana Islands,69,31,2
 2020-07-06,Ohio,39,57956,2927
 2020-07-06,Oklahoma,40,16362,399
 2020-07-06,Oregon,41,10413,218
@@ -6937,7 +6608,6 @@ date,state,fips,cases,deaths
 2020-07-06,Texas,48,209350,2726
 2020-07-06,Utah,49,25653,190
 2020-07-06,Vermont,50,1251,56
-2020-07-06,Virgin Islands,78,116,6
 2020-07-06,Virginia,51,66102,1853
 2020-07-06,Washington,53,38517,1370
 2020-07-06,West Virginia,54,3442,95
@@ -6954,7 +6624,6 @@ date,state,fips,cases,deaths
 2020-07-07,District of Columbia,11,10569,561
 2020-07-07,Florida,12,213786,3840
 2020-07-07,Georgia,13,93707,2850
-2020-07-07,Guam,66,1272,6
 2020-07-07,Hawaii,15,1053,19
 2020-07-07,Idaho,16,8582,94
 2020-07-07,Illinois,17,150110,7281
@@ -6979,7 +6648,6 @@ date,state,fips,cases,deaths
 2020-07-07,New York,36,402928,31934
 2020-07-07,North Carolina,37,76258,1446
 2020-07-07,North Dakota,38,3903,89
-2020-07-07,Northern Mariana Islands,69,31,2
 2020-07-07,Ohio,39,58904,2970
 2020-07-07,Oklahoma,40,17220,404
 2020-07-07,Oregon,41,10654,224
@@ -6992,7 +6660,6 @@ date,state,fips,cases,deaths
 2020-07-07,Texas,48,219164,2816
 2020-07-07,Utah,49,26203,194
 2020-07-07,Vermont,50,1254,56
-2020-07-07,Virgin Islands,78,122,6
 2020-07-07,Virginia,51,66740,1881
 2020-07-07,Washington,53,39063,1385
 2020-07-07,West Virginia,54,3505,95
@@ -7009,7 +6676,6 @@ date,state,fips,cases,deaths
 2020-07-08,District of Columbia,11,10642,564
 2020-07-08,Florida,12,223775,3888
 2020-07-08,Georgia,13,96538,2871
-2020-07-08,Guam,66,1276,6
 2020-07-08,Hawaii,15,1076,19
 2020-07-08,Idaho,16,9004,98
 2020-07-08,Illinois,17,151055,7315
@@ -7034,7 +6700,6 @@ date,state,fips,cases,deaths
 2020-07-08,New York,36,403619,31945
 2020-07-08,North Carolina,37,77735,1470
 2020-07-08,North Dakota,38,3975,89
-2020-07-08,Northern Mariana Islands,69,31,2
 2020-07-08,Ohio,39,60181,2991
 2020-07-08,Oklahoma,40,17893,407
 2020-07-08,Oregon,41,10872,228
@@ -7047,7 +6712,6 @@ date,state,fips,cases,deaths
 2020-07-08,Texas,48,229116,2935
 2020-07-08,Utah,49,26921,201
 2020-07-08,Vermont,50,1256,56
-2020-07-08,Virgin Islands,78,144,6
 2020-07-08,Virginia,51,67375,1905
 2020-07-08,Washington,53,39661,1395
 2020-07-08,West Virginia,54,3707,95
@@ -7064,7 +6728,6 @@ date,state,fips,cases,deaths
 2020-07-09,District of Columbia,11,10679,568
 2020-07-09,Florida,12,232710,4008
 2020-07-09,Georgia,13,98693,2880
-2020-07-09,Guam,66,1278,6
 2020-07-09,Hawaii,15,1112,19
 2020-07-09,Idaho,16,9598,101
 2020-07-09,Illinois,17,152188,7333
@@ -7089,7 +6752,6 @@ date,state,fips,cases,deaths
 2020-07-09,New York,36,404207,31979
 2020-07-09,North Carolina,37,79648,1487
 2020-07-09,North Dakota,38,4074,89
-2020-07-09,Northern Mariana Islands,69,31,2
 2020-07-09,Ohio,39,61331,3006
 2020-07-09,Oklahoma,40,18496,410
 2020-07-09,Oregon,41,11247,233
@@ -7102,7 +6764,6 @@ date,state,fips,cases,deaths
 2020-07-09,Texas,48,240025,3037
 2020-07-09,Utah,49,27632,205
 2020-07-09,Vermont,50,1272,56
-2020-07-09,Virgin Islands,78,153,6
 2020-07-09,Virginia,51,67988,1937
 2020-07-09,Washington,53,40369,1410
 2020-07-09,West Virginia,54,3826,95
@@ -7119,7 +6780,6 @@ date,state,fips,cases,deaths
 2020-07-10,District of Columbia,11,10743,568
 2020-07-10,Florida,12,244143,4101
 2020-07-10,Georgia,13,103597,2915
-2020-07-10,Guam,66,1279,6
 2020-07-10,Hawaii,15,1139,19
 2020-07-10,Idaho,16,10073,101
 2020-07-10,Illinois,17,153406,7349
@@ -7144,7 +6804,6 @@ date,state,fips,cases,deaths
 2020-07-10,New York,36,404997,32004
 2020-07-10,North Carolina,37,81821,1503
 2020-07-10,North Dakota,38,4158,89
-2020-07-10,Northern Mariana Islands,69,31,2
 2020-07-10,Ohio,39,62856,3032
 2020-07-10,Oklahoma,40,19092,416
 2020-07-10,Oregon,41,11501,235
@@ -7157,7 +6816,6 @@ date,state,fips,cases,deaths
 2020-07-10,Texas,48,249948,3129
 2020-07-10,Utah,49,28452,207
 2020-07-10,Vermont,50,1277,56
-2020-07-10,Virgin Islands,78,167,6
 2020-07-10,Virginia,51,68931,1958
 2020-07-10,Washington,53,41090,1426
 2020-07-10,West Virginia,54,3983,95
@@ -7174,7 +6832,6 @@ date,state,fips,cases,deaths
 2020-07-11,District of Columbia,11,10801,568
 2020-07-11,Florida,12,254503,4196
 2020-07-11,Georgia,13,106574,2946
-2020-07-11,Guam,66,1281,6
 2020-07-11,Hawaii,15,1181,19
 2020-07-11,Idaho,16,10584,102
 2020-07-11,Illinois,17,154530,7372
@@ -7199,7 +6856,6 @@ date,state,fips,cases,deaths
 2020-07-11,New York,36,405724,32019
 2020-07-11,North Carolina,37,84087,1520
 2020-07-11,North Dakota,38,4247,91
-2020-07-11,Northern Mariana Islands,69,33,2
 2020-07-11,Ohio,39,64214,3036
 2020-07-11,Oklahoma,40,19779,421
 2020-07-11,Oregon,41,11851,235
@@ -7212,7 +6868,6 @@ date,state,fips,cases,deaths
 2020-07-11,Texas,48,258280,3206
 2020-07-11,Utah,49,29071,212
 2020-07-11,Vermont,50,1283,56
-2020-07-11,Virgin Islands,78,181,6
 2020-07-11,Virginia,51,69782,1962
 2020-07-11,Washington,53,41326,1426
 2020-07-11,West Virginia,54,4146,96
@@ -7229,7 +6884,6 @@ date,state,fips,cases,deaths
 2020-07-12,District of Columbia,11,10847,568
 2020-07-12,Florida,12,269803,4241
 2020-07-12,Georgia,13,108389,2951
-2020-07-12,Guam,66,1281,6
 2020-07-12,Hawaii,15,1201,19
 2020-07-12,Idaho,16,10971,102
 2020-07-12,Illinois,17,155355,7391
@@ -7254,7 +6908,6 @@ date,state,fips,cases,deaths
 2020-07-12,New York,36,406403,32029
 2020-07-12,North Carolina,37,85924,1532
 2020-07-12,North Dakota,38,4338,91
-2020-07-12,Northern Mariana Islands,69,33,2
 2020-07-12,Ohio,39,65592,3058
 2020-07-12,Oklahoma,40,20235,422
 2020-07-12,Oregon,41,12170,237
@@ -7267,7 +6920,6 @@ date,state,fips,cases,deaths
 2020-07-12,Texas,48,264811,3246
 2020-07-12,Utah,49,29552,215
 2020-07-12,Vermont,50,1296,56
-2020-07-12,Virgin Islands,78,206,6
 2020-07-12,Virginia,51,70670,1966
 2020-07-12,Washington,53,42181,1438
 2020-07-12,West Virginia,54,4244,96
@@ -7284,7 +6936,6 @@ date,state,fips,cases,deaths
 2020-07-13,District of Columbia,11,10906,568
 2020-07-13,Florida,12,282427,4276
 2020-07-13,Georgia,13,111937,2972
-2020-07-13,Guam,66,1281,6
 2020-07-13,Hawaii,15,1222,21
 2020-07-13,Idaho,16,11531,102
 2020-07-13,Illinois,17,156288,7398
@@ -7309,7 +6960,6 @@ date,state,fips,cases,deaths
 2020-07-13,New York,36,406962,32075
 2020-07-13,North Carolina,37,87750,1547
 2020-07-13,North Dakota,38,4446,91
-2020-07-13,Northern Mariana Islands,69,33,2
 2020-07-13,Ohio,39,66853,3064
 2020-07-13,Oklahoma,40,20745,424
 2020-07-13,Oregon,41,12511,240
@@ -7322,7 +6972,6 @@ date,state,fips,cases,deaths
 2020-07-13,Texas,48,273732,3313
 2020-07-13,Utah,49,30282,216
 2020-07-13,Vermont,50,1301,56
-2020-07-13,Virgin Islands,78,217,6
 2020-07-13,Virginia,51,71642,1968
 2020-07-13,Washington,53,43538,1439
 2020-07-13,West Virginia,54,4313,97
@@ -7339,7 +6988,6 @@ date,state,fips,cases,deaths
 2020-07-14,District of Columbia,11,10946,568
 2020-07-14,Florida,12,291621,4408
 2020-07-14,Georgia,13,114579,2996
-2020-07-14,Guam,66,1281,6
 2020-07-14,Hawaii,15,1243,21
 2020-07-14,Idaho,16,11962,103
 2020-07-14,Illinois,17,157055,7425
@@ -7364,7 +7012,6 @@ date,state,fips,cases,deaths
 2020-07-14,New York,36,407875,32092
 2020-07-14,North Carolina,37,89863,1582
 2020-07-14,North Dakota,38,4497,92
-2020-07-14,Northern Mariana Islands,69,36,2
 2020-07-14,Ohio,39,67995,3069
 2020-07-14,Oklahoma,40,21738,428
 2020-07-14,Oregon,41,12834,247
@@ -7377,7 +7024,6 @@ date,state,fips,cases,deaths
 2020-07-14,Texas,48,284638,3449
 2020-07-14,Utah,49,30774,226
 2020-07-14,Vermont,50,1305,56
-2020-07-14,Virgin Islands,78,243,6
 2020-07-14,Virginia,51,72443,1977
 2020-07-14,Washington,53,44257,1465
 2020-07-14,West Virginia,54,4407,97
@@ -7394,7 +7040,6 @@ date,state,fips,cases,deaths
 2020-07-15,District of Columbia,11,11026,571
 2020-07-15,Florida,12,301802,4520
 2020-07-15,Georgia,13,118147,3030
-2020-07-15,Guam,66,1282,6
 2020-07-15,Hawaii,15,1271,21
 2020-07-15,Idaho,16,12599,111
 2020-07-15,Illinois,17,158451,7435
@@ -7419,7 +7064,6 @@ date,state,fips,cases,deaths
 2020-07-15,New York,36,408709,32115
 2020-07-15,North Carolina,37,91675,1598
 2020-07-15,North Dakota,38,4569,92
-2020-07-15,Northern Mariana Islands,69,36,2
 2020-07-15,Ohio,39,69311,3075
 2020-07-15,Oklahoma,40,22813,432
 2020-07-15,Oregon,41,13129,249
@@ -7432,7 +7076,6 @@ date,state,fips,cases,deaths
 2020-07-15,Texas,48,296478,3590
 2020-07-15,Utah,49,31228,233
 2020-07-15,Vermont,50,1318,56
-2020-07-15,Virgin Islands,78,249,6
 2020-07-15,Virginia,51,73527,1992
 2020-07-15,Washington,53,45004,1486
 2020-07-15,West Virginia,54,4557,98
@@ -7449,7 +7092,6 @@ date,state,fips,cases,deaths
 2020-07-16,District of Columbia,11,11076,574
 2020-07-16,Florida,12,315767,4676
 2020-07-16,Georgia,13,120848,3043
-2020-07-16,Guam,66,1283,6
 2020-07-16,Hawaii,15,1290,21
 2020-07-16,Idaho,16,13261,114
 2020-07-16,Illinois,17,159676,7457
@@ -7474,7 +7116,6 @@ date,state,fips,cases,deaths
 2020-07-16,New York,36,409476,32133
 2020-07-16,North Carolina,37,93769,1617
 2020-07-16,North Dakota,38,4672,93
-2020-07-16,Northern Mariana Islands,69,37,2
 2020-07-16,Ohio,39,70601,3103
 2020-07-16,Oklahoma,40,23441,438
 2020-07-16,Oregon,41,13541,252
@@ -7487,7 +7128,6 @@ date,state,fips,cases,deaths
 2020-07-16,Texas,48,311516,3744
 2020-07-16,Utah,49,31908,234
 2020-07-16,Vermont,50,1325,56
-2020-07-16,Virgin Islands,78,263,6
 2020-07-16,Virginia,51,74431,2007
 2020-07-16,Washington,53,46268,1492
 2020-07-16,West Virginia,54,4657,99
@@ -7504,7 +7144,6 @@ date,state,fips,cases,deaths
 2020-07-17,District of Columbia,11,11115,577
 2020-07-17,Florida,12,327233,4804
 2020-07-17,Georgia,13,124267,3071
-2020-07-17,Guam,66,1283,6
 2020-07-17,Hawaii,15,1312,22
 2020-07-17,Idaho,16,13879,119
 2020-07-17,Illinois,17,161042,7468
@@ -7529,7 +7168,6 @@ date,state,fips,cases,deaths
 2020-07-17,New York,36,410254,32147
 2020-07-17,North Carolina,37,95745,1638
 2020-07-17,North Dakota,38,4796,94
-2020-07-17,Northern Mariana Islands,69,37,2
 2020-07-17,Ohio,39,72280,3112
 2020-07-17,Oklahoma,40,24140,445
 2020-07-17,Oregon,41,13842,256
@@ -7542,7 +7180,6 @@ date,state,fips,cases,deaths
 2020-07-17,Texas,48,321254,3889
 2020-07-17,Utah,49,32572,238
 2020-07-17,Vermont,50,1334,56
-2020-07-17,Virgin Islands,78,283,6
 2020-07-17,Virginia,51,75433,2013
 2020-07-17,Washington,53,47226,1498
 2020-07-17,West Virginia,54,4783,100
@@ -7559,7 +7196,6 @@ date,state,fips,cases,deaths
 2020-07-18,District of Columbia,11,11194,578
 2020-07-18,Florida,12,337561,4894
 2020-07-18,Georgia,13,128341,3105
-2020-07-18,Guam,66,1284,6
 2020-07-18,Hawaii,15,1332,23
 2020-07-18,Idaho,16,14433,120
 2020-07-18,Illinois,17,162299,7486
@@ -7584,7 +7220,6 @@ date,state,fips,cases,deaths
 2020-07-18,New York,36,411006,32167
 2020-07-18,North Carolina,37,98182,1653
 2020-07-18,North Dakota,38,4911,94
-2020-07-18,Northern Mariana Islands,69,37,2
 2020-07-18,Ohio,39,73822,3132
 2020-07-18,Oklahoma,40,25056,451
 2020-07-18,Oregon,41,14231,259
@@ -7597,7 +7232,6 @@ date,state,fips,cases,deaths
 2020-07-18,Texas,48,330059,3972
 2020-07-18,Utah,49,33430,243
 2020-07-18,Vermont,50,1338,56
-2020-07-18,Virgin Islands,78,297,6
 2020-07-18,Virginia,51,76373,2025
 2020-07-18,Washington,53,47889,1509
 2020-07-18,West Virginia,54,4922,100
@@ -7614,7 +7248,6 @@ date,state,fips,cases,deaths
 2020-07-19,District of Columbia,11,11261,578
 2020-07-19,Florida,12,350039,4981
 2020-07-19,Georgia,13,130794,3110
-2020-07-19,Guam,66,1284,6
 2020-07-19,Hawaii,15,1359,23
 2020-07-19,Idaho,16,14960,120
 2020-07-19,Illinois,17,163284,7491
@@ -7639,7 +7272,6 @@ date,state,fips,cases,deaths
 2020-07-19,New York,36,411515,32187
 2020-07-19,North Carolina,37,99956,1661
 2020-07-19,North Dakota,38,5023,96
-2020-07-19,Northern Mariana Islands,69,37,2
 2020-07-19,Ohio,39,74932,3174
 2020-07-19,Oklahoma,40,25265,451
 2020-07-19,Oregon,41,14586,262
@@ -7652,7 +7284,6 @@ date,state,fips,cases,deaths
 2020-07-19,Texas,48,338036,4033
 2020-07-19,Utah,49,34117,243
 2020-07-19,Vermont,50,1350,56
-2020-07-19,Virgin Islands,78,297,6
 2020-07-19,Virginia,51,77430,2027
 2020-07-19,Washington,53,48601,1512
 2020-07-19,West Virginia,54,5042,100
@@ -7669,7 +7300,6 @@ date,state,fips,cases,deaths
 2020-07-20,District of Columbia,11,11339,579
 2020-07-20,Florida,12,360386,5071
 2020-07-20,Georgia,13,132788,3113
-2020-07-20,Guam,66,1288,6
 2020-07-20,Hawaii,15,1371,23
 2020-07-20,Idaho,16,15380,123
 2020-07-20,Illinois,17,164552,7500
@@ -7694,7 +7324,6 @@ date,state,fips,cases,deaths
 2020-07-20,New York,36,412034,32203
 2020-07-20,North Carolina,37,101286,1676
 2020-07-20,North Dakota,38,5130,97
-2020-07-20,Northern Mariana Islands,69,37,2
 2020-07-20,Ohio,39,76168,3189
 2020-07-20,Oklahoma,40,25433,452
 2020-07-20,Oregon,41,14907,264
@@ -7707,7 +7336,6 @@ date,state,fips,cases,deaths
 2020-07-20,Texas,48,345672,4160
 2020-07-20,Utah,49,34526,249
 2020-07-20,Vermont,50,1360,56
-2020-07-20,Virgin Islands,78,308,6
 2020-07-20,Virginia,51,78375,2031
 2020-07-20,Washington,53,49949,1521
 2020-07-20,West Virginia,54,5142,100
@@ -7724,7 +7352,6 @@ date,state,fips,cases,deaths
 2020-07-21,District of Columbia,11,11427,580
 2020-07-21,Florida,12,369826,5205
 2020-07-21,Georgia,13,135865,3186
-2020-07-21,Guam,66,1296,6
 2020-07-21,Hawaii,15,1396,23
 2020-07-21,Idaho,16,15899,127
 2020-07-21,Illinois,17,165534,7521
@@ -7749,7 +7376,6 @@ date,state,fips,cases,deaths
 2020-07-21,New York,36,412889,32218
 2020-07-21,North Carolina,37,103154,1702
 2020-07-21,North Dakota,38,5211,98
-2020-07-21,Northern Mariana Islands,69,38,2
 2020-07-21,Ohio,39,77215,3219
 2020-07-21,Oklahoma,40,26326,461
 2020-07-21,Oregon,41,15257,272
@@ -7762,7 +7388,6 @@ date,state,fips,cases,deaths
 2020-07-21,Texas,48,355594,4319
 2020-07-21,Utah,49,35089,255
 2020-07-21,Vermont,50,1366,56
-2020-07-21,Virgin Islands,78,308,6
 2020-07-21,Virginia,51,79371,2048
 2020-07-21,Washington,53,50746,1531
 2020-07-21,West Virginia,54,5199,101
@@ -7779,7 +7404,6 @@ date,state,fips,cases,deaths
 2020-07-22,District of Columbia,11,11529,580
 2020-07-22,Florida,12,379611,5344
 2020-07-22,Georgia,13,139120,3264
-2020-07-22,Guam,66,1299,6
 2020-07-22,Hawaii,15,1413,24
 2020-07-22,Idaho,16,16395,136
 2020-07-22,Illinois,17,167142,7544
@@ -7804,7 +7428,6 @@ date,state,fips,cases,deaths
 2020-07-22,New York,36,413595,32228
 2020-07-22,North Carolina,37,105236,1729
 2020-07-22,North Dakota,38,5371,100
-2020-07-22,Northern Mariana Islands,69,38,2
 2020-07-22,Ohio,39,78742,3235
 2020-07-22,Oklahoma,40,27301,474
 2020-07-22,Oregon,41,15436,274
@@ -7817,7 +7440,6 @@ date,state,fips,cases,deaths
 2020-07-22,Texas,48,366561,4522
 2020-07-22,Utah,49,35677,262
 2020-07-22,Vermont,50,1366,56
-2020-07-22,Virgin Islands,78,336,7
 2020-07-22,Virginia,51,80393,2051
 2020-07-22,Washington,53,51442,1534
 2020-07-22,West Virginia,54,5461,102
@@ -7834,7 +7456,6 @@ date,state,fips,cases,deaths
 2020-07-23,District of Columbia,11,11571,581
 2020-07-23,Florida,12,389860,5517
 2020-07-23,Georgia,13,143857,3288
-2020-07-23,Guam,66,1301,6
 2020-07-23,Hawaii,15,1468,25
 2020-07-23,Idaho,16,16862,142
 2020-07-23,Illinois,17,168766,7563
@@ -7859,7 +7480,6 @@ date,state,fips,cases,deaths
 2020-07-23,New York,36,414405,32270
 2020-07-23,North Carolina,37,107140,1754
 2020-07-23,North Dakota,38,5497,101
-2020-07-23,Northern Mariana Islands,69,38,2
 2020-07-23,Ohio,39,80186,3256
 2020-07-23,Oklahoma,40,27969,477
 2020-07-23,Oregon,41,15765,277
@@ -7872,7 +7492,6 @@ date,state,fips,cases,deaths
 2020-07-23,Texas,48,376104,4714
 2020-07-23,Utah,49,36178,271
 2020-07-23,Vermont,50,1377,56
-2020-07-23,Virgin Islands,78,342,7
 2020-07-23,Virginia,51,81237,2054
 2020-07-23,Washington,53,52255,1548
 2020-07-23,West Virginia,54,5550,103
@@ -7889,7 +7508,6 @@ date,state,fips,cases,deaths
 2020-07-24,District of Columbia,11,11649,581
 2020-07-24,Florida,12,402304,5652
 2020-07-24,Georgia,13,147732,3368
-2020-07-24,Guam,66,1306,6
 2020-07-24,Hawaii,15,1526,25
 2020-07-24,Idaho,16,17411,148
 2020-07-24,Illinois,17,170376,7580
@@ -7914,7 +7532,6 @@ date,state,fips,cases,deaths
 2020-07-24,New York,36,415163,32278
 2020-07-24,North Carolina,37,109295,1769
 2020-07-24,North Dakota,38,5618,103
-2020-07-24,Northern Mariana Islands,69,38,2
 2020-07-24,Ohio,39,81746,3297
 2020-07-24,Oklahoma,40,29116,484
 2020-07-24,Oregon,41,16172,285
@@ -7927,7 +7544,6 @@ date,state,fips,cases,deaths
 2020-07-24,Texas,48,383662,4876
 2020-07-24,Utah,49,37063,277
 2020-07-24,Vermont,50,1385,56
-2020-07-24,Virgin Islands,78,352,7
 2020-07-24,Virginia,51,82364,2067
 2020-07-24,Washington,53,53279,1591
 2020-07-24,West Virginia,54,5695,103
@@ -7944,7 +7560,6 @@ date,state,fips,cases,deaths
 2020-07-25,District of Columbia,11,11717,581
 2020-07-25,Florida,12,414503,5776
 2020-07-25,Georgia,13,151262,3421
-2020-07-25,Guam,66,1306,6
 2020-07-25,Hawaii,15,1597,25
 2020-07-25,Idaho,16,17920,150
 2020-07-25,Illinois,17,171669,7593
@@ -7969,7 +7584,6 @@ date,state,fips,cases,deaths
 2020-07-25,New York,36,415911,32295
 2020-07-25,North Carolina,37,111366,1801
 2020-07-25,North Dakota,38,5740,103
-2020-07-25,Northern Mariana Islands,69,40,2
 2020-07-25,Ohio,39,83184,3297
 2020-07-25,Oklahoma,40,30081,496
 2020-07-25,Oregon,41,16492,286
@@ -7982,7 +7596,6 @@ date,state,fips,cases,deaths
 2020-07-25,Texas,48,391609,5002
 2020-07-25,Utah,49,37623,278
 2020-07-25,Vermont,50,1396,56
-2020-07-25,Virgin Islands,78,352,7
 2020-07-25,Virginia,51,83609,2075
 2020-07-25,Washington,53,53884,1592
 2020-07-25,West Virginia,54,5821,103
@@ -7999,7 +7612,6 @@ date,state,fips,cases,deaths
 2020-07-26,District of Columbia,11,11780,581
 2020-07-26,Florida,12,423847,5853
 2020-07-26,Georgia,13,153476,3424
-2020-07-26,Guam,66,1306,6
 2020-07-26,Hawaii,15,1660,25
 2020-07-26,Idaho,16,18262,150
 2020-07-26,Illinois,17,173079,7595
@@ -8024,7 +7636,6 @@ date,state,fips,cases,deaths
 2020-07-26,New York,36,416443,32305
 2020-07-26,North Carolina,37,112881,1807
 2020-07-26,North Dakota,38,5880,103
-2020-07-26,Northern Mariana Islands,69,40,2
 2020-07-26,Ohio,39,84073,3307
 2020-07-26,Oklahoma,40,31285,496
 2020-07-26,Oregon,41,16764,291
@@ -8037,7 +7648,6 @@ date,state,fips,cases,deaths
 2020-07-26,Texas,48,395738,5090
 2020-07-26,Utah,49,37973,278
 2020-07-26,Vermont,50,1400,56
-2020-07-26,Virgin Islands,78,361,7
 2020-07-26,Virginia,51,84567,2078
 2020-07-26,Washington,53,54422,1596
 2020-07-26,West Virginia,54,5960,103
@@ -8054,7 +7664,6 @@ date,state,fips,cases,deaths
 2020-07-27,District of Columbia,11,11858,582
 2020-07-27,Florida,12,432739,5930
 2020-07-27,Georgia,13,155907,3435
-2020-07-27,Guam,66,1315,6
 2020-07-27,Hawaii,15,1688,25
 2020-07-27,Idaho,16,18836,159
 2020-07-27,Illinois,17,174442,7619
@@ -8079,7 +7688,6 @@ date,state,fips,cases,deaths
 2020-07-27,New York,36,417056,32322
 2020-07-27,North Carolina,37,114689,1815
 2020-07-27,North Dakota,38,5990,103
-2020-07-27,Northern Mariana Islands,69,40,2
 2020-07-27,Ohio,39,85177,3344
 2020-07-27,Oklahoma,40,32529,495
 2020-07-27,Oregon,41,17122,289
@@ -8092,7 +7700,6 @@ date,state,fips,cases,deaths
 2020-07-27,Texas,48,402295,6292
 2020-07-27,Utah,49,38439,285
 2020-07-27,Vermont,50,1402,56
-2020-07-27,Virgin Islands,78,375,7
 2020-07-27,Virginia,51,86072,2082
 2020-07-27,Washington,53,55548,1611
 2020-07-27,West Virginia,54,6054,106
@@ -8109,7 +7716,6 @@ date,state,fips,cases,deaths
 2020-07-28,District of Columbia,11,11945,583
 2020-07-28,Florida,12,441969,6116
 2020-07-28,Georgia,13,160038,3488
-2020-07-28,Guam,66,1318,6
 2020-07-28,Hawaii,15,1734,25
 2020-07-28,Idaho,16,19318,168
 2020-07-28,Illinois,17,175588,7645
@@ -8134,7 +7740,6 @@ date,state,fips,cases,deaths
 2020-07-28,New York,36,417591,32333
 2020-07-28,North Carolina,37,116376,1847
 2020-07-28,North Dakota,38,6145,104
-2020-07-28,Northern Mariana Islands,69,40,2
 2020-07-28,Ohio,39,86497,3382
 2020-07-28,Oklahoma,40,33757,509
 2020-07-28,Oregon,41,17419,305
@@ -8147,7 +7752,6 @@ date,state,fips,cases,deaths
 2020-07-28,Texas,48,412744,6515
 2020-07-28,Utah,49,38877,290
 2020-07-28,Vermont,50,1405,56
-2020-07-28,Virgin Islands,78,375,7
 2020-07-28,Virginia,51,86994,2095
 2020-07-28,Washington,53,56576,1633
 2020-07-28,West Virginia,54,6173,111
@@ -8164,7 +7768,6 @@ date,state,fips,cases,deaths
 2020-07-29,District of Columbia,11,11999,584
 2020-07-29,Florida,12,451415,6332
 2020-07-29,Georgia,13,163547,3566
-2020-07-29,Guam,66,1320,6
 2020-07-29,Hawaii,15,1842,25
 2020-07-29,Idaho,16,19810,176
 2020-07-29,Illinois,17,176967,7661
@@ -8189,7 +7792,6 @@ date,state,fips,cases,deaths
 2020-07-29,New York,36,418302,32342
 2020-07-29,North Carolina,37,118100,1889
 2020-07-29,North Dakota,38,6231,106
-2020-07-29,Northern Mariana Islands,69,40,2
 2020-07-29,Ohio,39,87893,3422
 2020-07-29,Oklahoma,40,34605,523
 2020-07-29,Oregon,41,17805,313
@@ -8202,7 +7804,6 @@ date,state,fips,cases,deaths
 2020-07-29,Texas,48,421817,6831
 2020-07-29,Utah,49,39339,297
 2020-07-29,Vermont,50,1406,56
-2020-07-29,Virgin Islands,78,385,8
 2020-07-29,Virginia,51,87993,2125
 2020-07-29,Washington,53,57300,1643
 2020-07-29,West Virginia,54,6326,112

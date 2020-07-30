@@ -14,7 +14,7 @@ var playButton, prevButton, nextButton;
 var targetValue, currentValue = 0;
 var sliderSVG, xsl, slider, handle, label;
 var chartSVG, xscaleChart, xAxis, yscaleChart, yAxis, minCases, maxCases, casesPlot, deathsPlot, dataset, diffDays, filteredData;
-var bars, tooltip, tooltipLine;
+var bars, tooltip, tooltipLine, bartooltip, tipBox, barTipBox;
 var margin = {
         top: 10,
         right: 30,
@@ -131,6 +131,7 @@ async function init() {
     prevButton.on("click", previous);
 
     tooltip = d3.select('#tooltip');
+    bartooltip = d3.select('#bartooltip');
     tooltipLine = chartSVG.append('line');
     barselect = d3.select("#barSelect");
 
@@ -294,7 +295,7 @@ function deathsLine(data) {
     line = chartSVG.append("path")
         .datum(data)
         .attr("fill", "none")
-        .attr("stroke", "red")
+        .attr("stroke", "#d92626")
         .attr("stroke-width", 3.5)
         .attr("d", d3.line()
             .x(function(d) {
@@ -568,7 +569,7 @@ function createChartSVG() {
 function initInfoMap() {
     infoMap = [];
     infoMap.push({
-        "data": "<h3>Jan. 21, 2020: First confirmed case in the United States</h3><p align='left'>A man in his 30s from Washington state, who traveled to Wuhan, is diagnosed with novel coronavirus. Japan, South Korea and Thailand also report their first cases one day prior.</p>"
+        "data": "<h3>Jan. 21, 2020: First confirmed case in the United States</h3><p align='left'>CDC Confirms First US Coronavirus Case: A Washington state resident becomes the first person in the United States with a confirmed case of the 2019 novel coronavirus, having returned from Wuhan on January 15. The CDC soon after deploys a team to help with the investigation, including potential use of contact tracing</p>"
     });
     infoMap.push({
         "data": "<h3>Mar. 1, 2020: 1st death reported in United States</h3><p align='left'>The first COVID-19 death is reported in Washington state, after a man with no travel history to China dies on Feb. 28 at Evergreen Health Medical Center in Kirkland, Washington.Two deaths that occurred Feb. 26 at a nearby nursing home would later be recorded as the first COVID-19 deaths to occur in the United States. Later still, a death in Santa Clara, California, on Feb. 6 would be deemed the country's first COVID-19 fatality after an April autopsy.</p>"
@@ -577,14 +578,14 @@ function initInfoMap() {
         "data": "<h3>Mar. 13, 2020: Trump declares national emergency</h3><p align='left'>President Donald Trump declares a U.S. national emergency, which he says will open up $50 billion in federal funding to fight COVID-19.</p>"
     });
     infoMap.push({
-        "data": "<h3>Apr. 16, 2020: Max deaths in one day</h3><p align='left'>The country reports a record high of 4,928 in one day.</p>"
+        "data": "<h3>Apr. 16, 2020:	U.S. Coronavirus Death Toll Hits New Single-Day Record</h3><p align='left'>The U.S. coronavirus death toll reached 4,928 in 24 hours on Thursday, nearly doubling the previous single-day record, according to data compiled by Johns Hopkins University.</p>"
     });
     infoMap.push({
         "data": "<h3>Jun. 1, 2020: Lift of Stay-at-home order</h3><p align='left'>Multiple states have lifted the stay-at-home order; outdoor gatherings of up to a hundred are allowed. Meanwhile, the total number of cases continued to increase</p>"
     });
     //infoMap.push({"data":"<h3>June 29, 2020</h3><p align='left'>The US government starts Lockdown process across the country</p><h3>June 27, 2020</h3><p align='left'>The US government eases the Lockdown and the cases starts to rise across the country</p>"});
     infoMap.push({
-        "data": "<h3>Jul. 25, 2020: 78,427 Cases in one day</h3><p align='left'>Nationwide, cases increased by 78,427, the highest daily count on record, according to data compiled by Johns Hopkins University.</p>"
+        "data": "<h3>Jul. 25, 2020: 78,427 Cases in one day</h3><p align='left'>Nationwide, cases increased by 78,427, the highest daily count on record, according to data compiled by Johns Hopkins University.</p><p align='left'>California and Florida becomes the top most infected states by pushing New York and New Jersey to 3rd and 5th places</p>"
     });
 
     coords.push({
