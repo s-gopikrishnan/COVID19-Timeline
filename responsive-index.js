@@ -18,11 +18,11 @@ var bars, tooltip, tooltipLine, bartooltip, tipBox, barTipBox;
 var margin = {
         top: 10,
         right: 30,
-        bottom: 30,
+        bottom: 50,
         left: 40
     },
     width = 820 - margin.left - margin.right,
-    height = 280 - margin.top - margin.bottom;
+    height = 300 - margin.top - margin.bottom;
 var slmargin = {
         top: 25,
         right: 0,
@@ -119,6 +119,14 @@ async function init() {
     updateSlider(chartStartDate);
     casesPlot = casesLine(filteredData);
     deathsPlot = deathsLine(filteredData);
+
+
+    // Handmade legend
+    chartSVG.append("circle").attr("cx", (width / 2) - 120).attr("cy", height + 30).attr("r", 6).style("fill", "steelblue")
+    chartSVG.append("circle").attr("cx", (width / 2)).attr("cy", height + 30).attr("r", 6).style("fill", "#d92626")
+    chartSVG.append("text").attr("x", (width / 2) - 110).attr("y", height + 32).text("New Cases").style("font-size", "12px").attr("alignment-baseline", "middle")
+    chartSVG.append("text").attr("x", (width / 2) + 10).attr("y", height + 32).text("New Deaths").style("font-size", "12px").attr("alignment-baseline", "middle")
+
     infoUpdate(currentSlide);
     clearAnnotation();
     annotate();
