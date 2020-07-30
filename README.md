@@ -1,5 +1,8 @@
-# data-viz-d3
-Narrative Visualization
+# COVID19 Timeline
+Narrative Visualization using D3.js
+
+https://s-gopikrishnan.github.io/COVID19-Timeline/
+
 
 Sources
 
