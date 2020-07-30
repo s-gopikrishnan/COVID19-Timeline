@@ -18,7 +18,7 @@ var bars, tooltip, tooltipLine, bartooltip, tipBox, barTipBox;
 var margin = {
         top: 10,
         right: 30,
-        bottom: 50,
+        bottom: 20,
         left: 40
     },
     width = 820 - margin.left - margin.right,
@@ -123,12 +123,11 @@ async function init() {
     casesPlot = casesLine(filteredData);
     deathsPlot = deathsLine(filteredData);
 
-
-    // Handmade legend
-    chartSVG.append("circle").attr("cx", (width / 2) - 120).attr("cy", height + 30).attr("r", 6).style("fill", casesColor)
-    chartSVG.append("circle").attr("cx", (width / 2)).attr("cy", height + 30).attr("r", 6).style("fill", deathsColor)
-    chartSVG.append("text").attr("x", (width / 2) - 110).attr("y", height + 32).text("New Cases").style("font-size", "12px").attr("alignment-baseline", "middle")
-    chartSVG.append("text").attr("x", (width / 2) + 10).attr("y", height + 32).text("New Deaths").style("font-size", "12px").attr("alignment-baseline", "middle")
+    //legends
+    chartSVG.append("circle").attr("cx", (width / 2) - 120).attr("cy", 0).attr("r", 6).style("fill", casesColor)
+    chartSVG.append("circle").attr("cx", (width / 2)).attr("cy", 0).attr("r", 6).style("fill", deathsColor)
+    chartSVG.append("text").attr("x", (width / 2) - 110).attr("y", 2).text("New Cases").style("font-size", "12px").attr("alignment-baseline", "middle")
+    chartSVG.append("text").attr("x", (width / 2) + 10).attr("y", 2).text("New Deaths").style("font-size", "12px").attr("alignment-baseline", "middle")
 
     bars = barchart(states);
 
@@ -158,11 +157,12 @@ async function init() {
     var intro = introJs();
     intro.setOptions({
         showBullets: true,
-        showProgress: true,
-        exitOnOverlayClick: false,
+        //showProgress: true,
+        exitOnOverlayClick: true,
         showStepNumbers: false,
         keyboardNavigation: true
     });
+    await new Promise(r => setTimeout(r, 800));
 
     intro.start();
 }
@@ -471,7 +471,9 @@ function infoUpdate() {
 }
 
 function annotate() {
-    console.log();
+    console.log("timeParse(coords[currentSlide].date) - " + timeParse(coords[currentSlide].date).setHours(0, 0, 0, 0));
+    console.log("xscaleBar.invert(currentValue) - " + xsl.invert(currentValue).setHours(0, 0, 0, 0));
+    if (timeParse(coords[currentSlide].date).setHours(0, 0, 0, 0) != xsl.invert(currentValue).setHours(0, 0, 0, 0)) return;
     var xcoord = 0,
         ycoord = 0,
         x2coord = 0,
@@ -604,7 +606,7 @@ function initInfoMap() {
         "data": "<h3>Mar. 1, 2020: 1st death reported in United States</h3><p align='left'>The first COVID-19 death is reported in Washington state, after a man with no travel history to China dies on Feb. 28 at Evergreen Health Medical Center in Kirkland, Washington.Two deaths that occurred Feb. 26 at a nearby nursing home would later be recorded as the first COVID-19 deaths to occur in the United States. Later still, a death in Santa Clara, California, on Feb. 6 would be deemed the country's first COVID-19 fatality after an April autopsy.</p>"
     });
     infoMap.push({
-        "data": "<h3>Mar. 13, 2020: Trump declares national emergency</h3><p align='left'>President Donald Trump declares a U.S. national emergency, which he says will open up $50 billion in federal funding to fight COVID-19.</p>"
+        "data": "<h3>Mar. 13, 2020: Trump declares national emergency</h3><p align='left'>President Donald Trump declares a U.S. national emergency, which he says will open up $50 billion in federal funding to fight COVID-19.</p><h3>Mar. 22, 2020: New York Is Now an Epicenter of the Pandemic</h3><p align='left'>It now accounts for roughly 5 percent of the world’s confirmed cases, making it an epicenter of the pandemic and increasing pressure on officials to take more drastic measures.</p>"
     });
     infoMap.push({
         "data": "<h3>Apr. 16, 2020:	U.S. Coronavirus Death Toll Hits New Single-Day Record</h3><p align='left'>The U.S. coronavirus death toll reached 4,928 in 24 hours on Thursday, nearly doubling the previous single-day record, according to data compiled by Johns Hopkins University.</p>"
@@ -614,7 +616,7 @@ function initInfoMap() {
     });
     //infoMap.push({"data":"<h3>June 29, 2020</h3><p align='left'>The US government starts Lockdown process across the country</p><h3>June 27, 2020</h3><p align='left'>The US government eases the Lockdown and the cases starts to rise across the country</p>"});
     infoMap.push({
-        "data": "<h3>Jul. 25, 2020: 78,427 Cases in one day</h3><p align='left'>Nationwide, cases increased by 78,427, the highest daily count on record, according to data compiled by Johns Hopkins University.</p><p align='left'>California and Florida becomes the top most infected states by pushing New York and New Jersey to 3rd and 5th places</p>"
+        "data": "<h3>Jul. 25, 2020: 78,427 Cases in one day</h3><p align='left'>Nationwide, cases increased by 78,427, the highest daily count on record, according to data compiled by Johns Hopkins University.</p><p align='left'>California (467k Cases) and Florida (432k Cases) becomes the top most infected states by pushing New York and New Jersey to 3rd and 5th places</p>"
     });
 
     coords.push({
@@ -631,7 +633,7 @@ function initInfoMap() {
         "x": "3/1/2020",
         "date": "3/3/2020",
         "y": 1,
-        "ax": 50,
+        "ax": 90,
         "ay": -150,
         "text": "1st death in the US",
         "textx": 0,
@@ -641,17 +643,20 @@ function initInfoMap() {
         "x": "3/13/2020",
         "date": "3/25/2020",
         "y": 351,
-        "ax": 50,
+        "ax": 90,
         "ay": -150,
         "text": "National Emergency declared",
         "textx": 0,
-        "texty": 0
+        "texty": 0,
+        "bartext": "NY - Epicenter of the Pandemic",
+        "state": "New York",
+        "cases": 33117,
     });
     coords.push({
         "x": "4/16/2020",
         "date": "4/26/2020",
         "y": 4928,
-        "ax": 50,
+        "ax": 90,
         "ay": -150,
         "text": "Max deaths in one day",
         "textx": 0,
