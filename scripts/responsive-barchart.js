@@ -50,6 +50,13 @@ function barchart(states) {
         .on('mouseout', hideBarTooltip);
  */
     drawBarchart(filteredStateData);
+    barsvg.append("text")
+        .attr("id", "nodata")
+        .attr("x", (bwidth / 2) - 150)
+        .attr("y", bheight / 2)
+        .text("No data available for the selected date and case type")
+        .style("font-size", "14px").attr("alignment-baseline", "middle")
+        .style("display", "none");
 }
 
 function changeBars() {
@@ -233,6 +240,14 @@ function updateBars(h) {
                 console.log("removing coz 0 data");
                 barsvg.selectAll("rect").remove();
             } */
+    }
+
+    if (filteredBarData.length == 0) {
+        barsvg.select("#nodata")
+            .style("display", "block")
+    } else {
+        barsvg.select("#nodata")
+            .style("display", "none")
     }
 
     barsvg.selectAll("rect")
