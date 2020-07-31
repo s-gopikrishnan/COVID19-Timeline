@@ -12,7 +12,7 @@ var navTimer;
 var chartStartDate, startDate, endDate;
 var playButton, prevButton, nextButton;
 var targetValue, currentValue = 0;
-var sliderSVG, xsl, slider, handle, label;
+var sliderSVG, xsl, slider, handle, label, intro;
 var chartSVG, xscaleChart, xAxis, yscaleChart, yAxis, minCases, maxCases, casesPlot, deathsPlot, dataset, diffDays, filteredData;
 var bars, tooltip, tooltipLine, bartooltip, tipBox, barTipBox;
 ///////////// Line chart coords
@@ -160,7 +160,7 @@ async function init() {
     annotate();
     toggleSceneBtns();
 
-    var intro = introJs();
+    intro = introJs();
     intro.setOptions({
         showBullets: true,
         //showProgress: true,
@@ -239,6 +239,7 @@ function previous() {
 
 function nextslide() {
     clearAnnotation();
+    intro.hideHints();
     if (++currentSlide < coords.length) {
         navTimer = setInterval(moveForward, 50);
     } else {
@@ -458,6 +459,9 @@ function createButtons() {
     d3.select("#scene-btn").append("button")
         .attr("id", "next-button")
         .text("Next")
+        .attr("data-intro", "Lets Go!")
+        .attr("data-step", "7")
+        .attr("data-position", "top")
 }
 
 function clearAnnotation() {
@@ -528,6 +532,7 @@ function createSlider() {
         .attr("transform",
             "translate(" + slmargin.left + "," + slmargin.top + ")")
         .attr("data-intro", 'You can also use the slider to navigate the scenes')
+        .attr("data-step", "2")
         .attr("data-position", "top");
 
     slider = sliderSVG.append("g")
