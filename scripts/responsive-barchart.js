@@ -61,6 +61,7 @@ function barchart(states) {
 
 function changeBars() {
     updateBars(bstartDate);
+    annotateBars();
 }
 
 function drawBarchart(data) {
@@ -183,6 +184,7 @@ function updateBars(h) {
             .attr("fill", casesColor)
     } else if ('deaths' == barselect.node().value) {
         // filter data set and redraw plot
+        clearBarAnnotation();
         var filteredBarData = bdataset.filter(function(d) {
             return (d.dateStr == dateToString(h) && d.deaths > 0);
         });
@@ -276,8 +278,17 @@ function createBarChartSVG() {
             "translate(" + barmargin.left + "," + barmargin.top + ")");
 }
 
+function clearBarAnnotation() {
+    barsvg.selectAll("#antCir").remove();
+    barsvg.selectAll("#antPath").remove();
+    barsvg.selectAll("#antText").remove();
+}
+
 function annotateBars() {
-    if ('cases' != barselect.node().value || coords[currentSlide].state == null) return;
+    if ('cases' != barselect.node().value || coords[currentSlide].state == null) {
+        clearBarAnnotation();
+        return;
+    }
     var xcoord = 0,
         ycoord = 0,
         x2coord = 0,

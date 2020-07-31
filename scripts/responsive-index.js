@@ -15,14 +15,31 @@ var targetValue, currentValue = 0;
 var sliderSVG, xsl, slider, handle, label;
 var chartSVG, xscaleChart, xAxis, yscaleChart, yAxis, minCases, maxCases, casesPlot, deathsPlot, dataset, diffDays, filteredData;
 var bars, tooltip, tooltipLine, bartooltip, tipBox, barTipBox;
+///////////// Line chart coords
+var chartwidth = 880,
+    chartheight = 320;
 var margin = {
         top: 10,
         right: 30,
         bottom: 20,
         left: 40
     },
-    width = 820 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
+    width = chartwidth - margin.left - margin.right,
+    height = chartheight - margin.top - margin.bottom;
+
+//////////Bar chart Vars
+
+var barsvg, bdataset, bstartDate, filteredStateData, xdomainBar, xAxisBar, xscaleBar, maxCasesBar, minCasesBar, yscaleBar, yAxisBar, barselect;
+var barmargin = {
+        top: 20,
+        right: 30,
+        bottom: 80,
+        left: 50
+    },
+    bwidth = chartwidth - barmargin.left - barmargin.right,
+    bheight = chartheight - barmargin.top - barmargin.bottom;
+
+///////////// Slider coords
 var slmargin = {
         top: 25,
         right: 0,
@@ -37,17 +54,6 @@ var deathsColor = "#f90606",
     casesColor = "#4682b4",
     casesHighlight = "#2b506e";
 
-//////////Bar chart Vars
-
-var barsvg, bdataset, bstartDate, filteredStateData, xdomainBar, xAxisBar, xscaleBar, maxCasesBar, minCasesBar, yscaleBar, yAxisBar, barselect;
-var barmargin = {
-        top: 20,
-        right: 30,
-        bottom: 80,
-        left: 50
-    },
-    bwidth = 820 - barmargin.left - barmargin.right,
-    bheight = 320 - barmargin.top - barmargin.bottom;
 
 
 async function init() {
@@ -510,7 +516,6 @@ function annotate() {
         .attr("y", y2coord + coords[currentSlide].texty)
         .text(coords[currentSlide].text);
 
-    annotateBars();
 }
 
 function createSlider() {
