@@ -118,14 +118,14 @@
 
 <body onload='init()'>
     <!-- Navbar -->
-    <div class="topnav" id="title" style="color: #fff;">
+    <div class="topnav" id="title" style="color: #fff;" data-intro="Hello there! Let's find out the different features of this presentation" data-step="1" data-position="right">
         <h2 align="center">A Timeline of the Coronavirus Pandemic - US</h2>
     </div>
     <div class="column left">
         <div style="height: 20px;">
             <br>
         </div>
-        <div id="scene-btn" class="card" data-intro='Use these buttons to navigate through different scenes' data-step="1" data-position="bottom" style="padding:16px 0 16px 0">
+        <div id="scene-btn" class="card" data-intro='Use these buttons to navigate through different scenes' data-step="2" data-position="bottom" style="padding:16px 0 16px 0">
             <!-- <button id="prev-button">Prev</button>
              <div id="scene-btn"></div> 
             <button id="next-button">Next</button> -->
@@ -133,20 +133,20 @@
         <div style="height: 20px;">
             <br>
         </div>
-        <div id="sliderdiv" class="card" data-intro='You can also use the slider to navigate the scenes' data-step="2" data-position="bottom">
+        <div id="sliderdiv" class="card" data-intro='You can also use the slider to navigate the scenes' data-step="3" data-position="bottom">
             <br>
         </div>
         <div style="height: 20px;">
             <br>
         </div>
-        <div id="info" class="card" data-intro='Important information about the current scene is shown here' data-step="3"></div>
+        <div id="info" class="card" data-intro='Important information about the current scene is shown here' data-step="4"></div>
     </div>
 
     <div class="main">
         <h4>US Daily new cases and deaths</h4>
-        <div id="my_dataviz" data-intro='Mouse over the plot for more details' data-step="4"></div>
+        <div id="my_dataviz" data-intro='Mouse over the plot for more details' data-step="5"></div>
         <h4>Total cases by state</h4>
-        <select id="barSelect" data-intro='Switch between Confirmed cases & deaths' data-step="5">
+        <select id="barSelect" data-intro='Switch between Confirmed cases & deaths' data-step="6">
             <option value="cases">Confirmed Cases</option>
             <option value="deaths">Deaths</option>
         </select>

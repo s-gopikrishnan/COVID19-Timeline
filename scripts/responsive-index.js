@@ -460,7 +460,7 @@ function createButtons() {
         .attr("id", "next-button")
         .text("Next")
         .attr("data-intro", "Lets Go!")
-        .attr("data-step", "7")
+        .attr("data-step", "8")
         .attr("data-position", "top")
 }
 

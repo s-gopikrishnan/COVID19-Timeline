@@ -272,7 +272,7 @@ function createBarChartSVG() {
         .attr("width", bwidth + barmargin.left + barmargin.right)
         .attr("height", bheight + barmargin.top + barmargin.bottom)
         .attr("data-intro", 'Mouse over the bars for more details')
-        .attr("data-step", "6")
+        .attr("data-step", "7")
         .attr("data-position", "top")
         .append("g")
         .attr("transform",
