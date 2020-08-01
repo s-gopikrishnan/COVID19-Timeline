@@ -519,6 +519,7 @@ function annotate() {
         .attr("x", x2coord + coords[currentSlide].textx)
         .attr("y", y2coord + coords[currentSlide].texty)
         .text(coords[currentSlide].text);
+    annotateBars();
 
 }
 
