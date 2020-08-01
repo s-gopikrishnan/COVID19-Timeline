@@ -531,10 +531,7 @@ function createSlider() {
         .attr("height", slheight)
         .append("g")
         .attr("transform",
-            "translate(" + slmargin.left + "," + slmargin.top + ")")
-        .attr("data-intro", 'You can also use the slider to navigate the scenes')
-        .attr("data-step", "2")
-        .attr("data-position", "top");
+            "translate(" + slmargin.left + "," + slmargin.top + ")");
 
     slider = sliderSVG.append("g")
         .attr("class", "slider")
