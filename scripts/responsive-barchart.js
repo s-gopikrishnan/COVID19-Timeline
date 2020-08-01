@@ -130,6 +130,8 @@ function updateBars(h) {
 
     if ('cases' == barselect.node().value) {
         // filter data set and redraw plot
+        yscaleLegendBar.text("Total Cases (Logarithmic)")
+
         filteredBarData = bdataset.filter(function(d) {
             return d.dateStr == dateToString(h);
         });
@@ -185,6 +187,7 @@ function updateBars(h) {
     } else if ('deaths' == barselect.node().value) {
         // filter data set and redraw plot
         clearBarAnnotation();
+        yscaleLegendBar.text("Total Deaths (Logarithmic)")
         var filteredBarData = bdataset.filter(function(d) {
             return (d.dateStr == dateToString(h) && d.deaths > 0);
         });
@@ -266,7 +269,7 @@ function dateToString(d) {
 }
 
 function createBarChartSVG() {
-    return d3.select("#my_barchart")
+    var svg = d3.select("#my_barchart")
         .append("svg")
         .attr("id", "chartsvg")
         .attr("width", bwidth + barmargin.left + barmargin.right)
@@ -277,6 +280,27 @@ function createBarChartSVG() {
         .append("g")
         .attr("transform",
             "translate(" + barmargin.left + "," + barmargin.top + ")");
+
+    yscaleLegendBar = svg.append('g')
+        .attr("transform",
+            "translate(-50," + (bheight / 2) + ")")
+        .append("text")
+        .style("text-anchor", "middle")
+        .style("font-size", "12px")
+        .style("font-weight", "bold")
+        .text("Total Cases (Logarithmic)")
+        .attr("transform", "rotate(-90)");
+
+    xscaleLegendBar = svg.append('g')
+        .attr("transform",
+            "translate(" + ((bwidth / 2) - 5) + "," + (bheight + barmargin.bottom) + ")")
+        .append("text")
+        .style("text-anchor", "middle")
+        .style("font-size", "12px")
+        .style("font-weight", "bold")
+        .text("States")
+
+    return svg;
 }
 
 function clearBarAnnotation() {

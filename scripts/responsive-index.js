@@ -14,18 +14,18 @@ var playButton, prevButton, nextButton;
 var targetValue, currentValue = 0;
 var sliderSVG, xsl, slider, handle, label, intro;
 var chartSVG, xscaleChart, xAxis, yscaleChart, yAxis, minCases, maxCases, casesPlot, deathsPlot, dataset, diffDays, filteredData;
-var bars, tooltip, tooltipLine, bartooltip, tipBox, barTipBox;
+var bars, tooltip, tooltipLine, bartooltip, tipBox, barTipBox, yscaleLegend, xscaleLegend, yscaleLegendBar, xscaleLegendBar;
 ///////////// Line chart coords
 var chartwidth = 880,
     chartheight = 320;
 var margin = {
         top: 10,
         right: 30,
-        bottom: 20,
-        left: 40
+        bottom: 40,
+        left: 80
     },
-    width = chartwidth - margin.left - margin.right,
-    height = chartheight - margin.top - margin.bottom;
+    width,
+    height;
 
 //////////Bar chart Vars
 
@@ -34,10 +34,10 @@ var barmargin = {
         top: 20,
         right: 30,
         bottom: 80,
-        left: 50
+        left: 75
     },
-    bwidth = chartwidth - barmargin.left - barmargin.right,
-    bheight = chartheight - barmargin.top - barmargin.bottom;
+    bwidth,
+    bheight;
 
 ///////////// Slider coords
 var slmargin = {
@@ -46,8 +46,8 @@ var slmargin = {
         bottom: 0,
         left: 15
     },
-    slwidth = 400 - slmargin.left - slmargin.right,
-    slheight = 100 - slmargin.top - slmargin.bottom;
+    slwidth,
+    slheight;
 var moving = false;
 var deathsColor = "#f90606",
     deathsHighlight = "#c70505",
@@ -57,6 +57,12 @@ var deathsColor = "#f90606",
 
 
 async function init() {
+    width = document.getElementById("my_dataviz").offsetWidth - margin.left - margin.right,
+        height = chartheight - margin.top - margin.bottom;
+    bwidth = document.getElementById("my_barchart").offsetWidth - barmargin.left - barmargin.right,
+        bheight = chartheight - barmargin.top - barmargin.bottom;
+    slwidth = document.getElementById("sliderdiv").offsetWidth - slmargin.left - slmargin.right,
+        slheight = 100 - slmargin.top - slmargin.bottom;
 
     const dailyData = await d3.csv("assets/US-daily.csv",
         function(d) {
@@ -595,7 +601,7 @@ function createSlider() {
 }
 
 function createChartSVG() {
-    return d3.select("#my_dataviz")
+    var svg = d3.select("#my_dataviz")
         .append("svg")
         .attr("id", "chartsvg")
         .attr("width", width + margin.left + margin.right)
@@ -603,6 +609,26 @@ function createChartSVG() {
         .append("g")
         .attr("transform",
             "translate(" + margin.left + "," + margin.top + ")");
+    yscaleLegend = svg.append('g')
+        .attr("transform",
+            "translate(-50," + (height / 2) + ")")
+        .append("text")
+        .style("text-anchor", "middle")
+        .style("font-size", "12px")
+        .style("font-weight", "bold")
+        .text("Daily Cases / Deaths")
+        .attr("transform", "rotate(-90)");
+
+    xscaleLegend = svg.append('g')
+        .attr("transform",
+            "translate(" + ((width / 2) - 5) + "," + (height + 30) + ")")
+        .append("text")
+        .style("text-anchor", "middle")
+        .style("font-size", "12px")
+        .style("font-weight", "bold")
+        .text("Date")
+
+    return svg;
 }
 
 function initInfoMap() {
@@ -632,7 +658,7 @@ function initInfoMap() {
     //infoMap.push({"data":"<h3>June 29, 2020</h3><p align='left'>The US government starts Lockdown process across the country</p><h3>June 27, 2020</h3><p align='left'>The US government eases the Lockdown and the cases starts to rise across the country</p>"});
     infoMap.push({
         "data": "<h3>July 25, 2020 — 78,427 Cases in one day</h3><p align='left'>Nationwide, cases increased by 78,427, the highest daily count on record, according to data compiled by Johns Hopkins University.</p><p align='left'>California (467k Cases) and Florida (432k Cases) becomes the top most infected states by pushing New York and New Jersey to 3rd and 5th places.</p><p align='left'>COVID-19 hospitalizations are up 79 percent in three weeks in Florida. </p>" +
-            "<h3>July 27, 2020 — Medical Experts urging the country to shut down</h3><p align='left'>American medical experts are urging political leaders to shut down the United States to contain the pandemic after the country surpassed 4 million Covid-19 cases and recorded more than 1,000 daily deaths for four straight days.</p>"
+            "<h3>July 27, 2020 — Medical Experts urging the country to shut down</h3><p align='left'>American medical experts are urging political leaders to shut down the United States to contain the pandemic after the country surpassed <b>4 million Covid-19 cases</b> and recorded more than 1,000 daily deaths for four straight days.</p>"
     });
 
     coords.push({
