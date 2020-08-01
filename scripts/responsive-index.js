@@ -497,15 +497,17 @@ function annotate() {
     chartSVG.append("circle")
         .transition().duration(900)
         .attr("id", "antCir")
+        .style("opacity", "0.5")
+        .style("border", "2px")
         .attr("cx", function() {
             xcoord = xscaleChart(timeParse(coords[currentSlide].x));
             return xcoord;
         })
         .attr("cy", function() {
             ycoord = yscaleChart(coords[currentSlide].y);
-            return ycoord;
+            return ycoord + 1;
         })
-        .attr("r", 3);
+        .attr("r", 10);
     console.log("xcoord:" + xcoord + ", ycoord:" + ycoord + " - currentSlide]: " + currentSlide);
     x2coord = xcoord + coords[currentSlide].ax;
     y2coord = ycoord + coords[currentSlide].ay;
