@@ -29,6 +29,10 @@ table {
     border-radius: 5px;
 }
 
+.slider {
+    font-size: 14px;
+}
+
 .topnav {
     overflow: hidden;
     background-color: #333;
@@ -233,4 +237,88 @@ button {
     background-color: #eee;
     border-radius: 5px;
     box-shadow: 4px 4px #ccc;
+}
+
+#info p {
+    font-size: 14px;
+    text-align: left;
+}
+
+button {
+    position: relative;
+    background: #f08080;
+    padding-right: 26px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    margin: 0;
+    padding: 0 12px;
+    width: 60px;
+    cursor: pointer;
+    height: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin-left: 5px;
+}
+
+button:hover {
+    background-color: #696969;
+}
+
+button:disabled {
+    background-color: #d6d6d6;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
+}
+
+.numbtns {
+    width: 30px
+}
+
+.numbtns:disabled {
+    background-color: steelblue;
+    border-color: #000;
+    color: white;
+    font-size: 15px;
+    width: 35px;
+    height: 35px;
+}
+
+.ticks {
+    font-size: 10px;
+}
+
+.track,
+.track-inset,
+.track-overlay {
+    stroke-linecap: round;
+}
+
+.track {
+    stroke: #000;
+    stroke-opacity: 0.3;
+    stroke-width: 10px;
+}
+
+.track-inset {
+    stroke: #dcdcdc;
+    stroke-width: 8px;
+}
+
+.track-overlay {
+    pointer-events: stroke;
+    stroke-width: 50px;
+    stroke: transparent;
+    cursor: crosshair;
+}
+
+.handle {
+    fill: #fff;
+    stroke: #000;
+    stroke-opacity: 0.5;
+    stroke-width: 1.25px;
+}
+
+circle {
+    fill: lightgray;
+    stroke: black;
 }
