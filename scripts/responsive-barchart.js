@@ -313,7 +313,10 @@ function annotateBars() {
     if ('cases' != barselect.node().value || coords[currentSlide].state == null) {
         clearBarAnnotation();
         return;
+    } else if (timeParse(coords[currentSlide].date).setHours(0, 0, 0, 0) != xsl.invert(currentValue).setHours(0, 0, 0, 0)) {
+        return;
     }
+
     var xcoord = 0,
         ycoord = 0,
         x2coord = 0,
